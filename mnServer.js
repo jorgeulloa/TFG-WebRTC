@@ -225,6 +225,7 @@ io.sockets.on('connection', function(socket){
 
         socket.emit('updateListaNombres', {names: tempNames});
         socket.broadcast.emit('updateListaNombres', {names: tempNames});
+        socket.emit('lockOpen');
     });
 
     socket.on('wannabePrincipal', function(data){
