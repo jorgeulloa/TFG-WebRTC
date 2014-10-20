@@ -1,0 +1,185 @@
+nav{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top:0;
+	left:0;
+	background-color: #333;
+	border-bottom:5px solid;
+	border-color: #265893;
+	list-style: none;
+	z-index: 10;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2em;
+}
+
+nav a{
+	text-decoration: none;
+	color: #ccc;
+	margin:5px;
+
+}
+
+#logo{
+	margin-top:15px;
+	font-size: 2.2em;
+	/*font-family: 'Bubbler One', sans-serif;*/
+	font-family: 'Roboto', sans-serif;
+}
+
+nav a:hover{
+	color: white;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav li{
+	margin: 35px 0px;
+	float:left;
+}
+
+nav li li a{
+   width:250px;/*el ancho de los links del submenu, debe ser fijo, esto servirá para crear la animación mas adelante */
+   display:block;
+}
+
+nav li ul {
+   width: 250px;
+   margin:0;
+   display:none;
+   background:#F8F8F8;
+   border:1px #ccc solid;
+   position: absolute;
+   left: 100%;
+   top:-1px;
+}
+nav li:hover ul {
+   display: block;
+}
+
+#titleControl{
+	color:#ccc;
+}
+
+#modeControl{
+	border:1px #ccc solid;
+}
+
+#rolControl{
+	border:1px solid #ccc;
+}
+
+
+#content{
+	margin-top:90px;
+}
+
+#welcome{
+	width:100%;
+	margin: auto;
+	text-align: center;
+}
+
+#leftDiv{
+	width: 30%;
+	height: 100%;
+	float: left;
+	margin: auto;
+	text-align:center;
+}
+
+#centerDiv{
+	width: 35%;
+	height: 100%;
+	float: left;
+	margin: auto;
+	text-align:center;
+	vertical-align: center;
+}
+
+#myVideo{
+	width:90%;
+	height: 280px;
+	margin:auto;
+}
+
+#rightDiv{
+	width: 35%;
+	height: 100%;
+	float: left;
+	margin: auto;
+	text-align:center;
+}
+
+#hideShowControl{
+	width:100%;
+	height:300px;
+	background-color: #eee;
+}
+
+#hideShowControl a{
+	text-decoration: none;
+	margin:auto;
+	color: #666;
+}
+
+#hideShowControl a:hover{
+	color: #265893;
+}
+
+#chat{
+	margin-top: 65px;
+}
+
+#chatArea{
+	resize:vertical;
+	max-height:300px; 
+	min-height:200px;
+}
+
+#shareArea{
+	margin:auto;
+	text-align: center;
+	width:70%;
+}
+#paintArea{
+	border: 2px solid #ccc;
+	background-color: #0B3B17;
+	margin: auto;
+	margin-top:0px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+input#idVideo{
+	width:30%;
+}
+
+#listaUsuarios{
+	font-family: 'Roboto', sans-serif;
+	color: #222;
+	background-color: #eee;
+	border: 1px #ccc solid;
+}
+
+#listaParticipantes{
+	list-style: none;
+	font-family: 'Roboto', sans-serif;
+	color: #444;
+	text-align: left;
+}
+
+body{
+	background-color: #eee;
+	font-family: 'Roboto', sans-serif;
+}
+
+#nombreUsuario{
+	font-family: 'Roboto', sans-serif;
+}
+
+#menuControls{
+	font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,290 @@
+<html>
+  <head>
+    <title>MN Space</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="erizo.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="mnClient.js"></script>
+    <script type="text/javascript" src="principalVideo.js"></script>
+    <script type="text/javascript" src="aula.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript" src="drawCanvas.js"></script>
+    <script type="text/javascript" src="ytVideos.js"></script>
+    <script type="text/javascript" src="blackboard.js"></script>
+    <script type="text/javascript" src="prezi.js"></script>
+    <script type="text/javascript" src="prezi_player.js"></script>
+
+    
+    <link href='http://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      function mazo()
+      {  
+        var socket = io.connect('http://localhost:3005');
+        socket.on('connected', function(data){
+          console.log(data);
+        });
+      }
+    </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css"> 
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row-fluid"><div class="span12">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div id="menuControls" class="container">
+          <a class="brand" href="#"><img src="/images/logoRTC.png" width="20px" height="20px"/> MNspace</a>
+          <ul class="nav">
+            <li id="supMenuIndex" class="active"><a onclick="javascript: loadClassView();"><i class="icon-home"></i> Class</a></li>
+            <li id="supMenuDebate"><a onclick="javascript: loadDebateView();"><i class="icon-user"></i> Debate</a></li>
+            <li id="supAbout"><a href="/about.html" target="_blank"><i class="icon-info-sign"></i> About</a></li>
+            <li>
+              <div id="principalControls"><button style="margin-left:30px;" type="button" class="btn btn-info btn-lg" id="principalRolBtn" onclick="javascript: cambiarAModoPrincipal();"><i class="icon-hand-up"></i> Principal</button>
+              <img class="" id="imgLock" width="17px;" height="17px" src="images/open.png" onclick="javascript: toggleLockPrincipalRol();"></div>
+            </li>
+            <li>
+              <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
+            </li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
+  </div></div>
+
+    
+      <div class="row-fluid" style="margin-top:16px; text-align:center;"><div class="span3">
+        
+      <div class="alert alert-warning" id="disconnectedUser" style="display:none;">
+        <button data-hide="alert" type="button" class="close">&times;</button>
+        <strong><span id="userDiscon"></span></strong> has just disconnected.
+      </div>
+
+      <div class="alert alert-info" id="connectedUser" style="display:none;">
+        <button data-hide="alert" type="button" class="close">&times;</button>
+        <strong><span id="userCon"></span></strong> has just connected.
+      </div>
+
+      <div class="alert alert-info" id="toPrincipal" style="display:none;">
+        <button data-hide="alert" type="button" class="close">&times;</button>
+        <strong><span id="toPrincipalName"></span></strong> wants to be Principal.
+      </div>
+
+      <div class="alert alert-info" id="newModerator" style="display:none;">
+        <button data-hide="alert" type="button" class="close">&times;</button>
+        <strong><span id="moderatorNameAlert"></span></strong> is the moderator of the discussion
+      </div>
+
+      <div class="alert alert-error" id="cannotOpenLock" style="display:none;">
+        <button data-hide="alert" type="button" class="close">&times;</button>
+        The lock can only be openned by the user that closed it.
+      </div>
+
+      <script>
+        //Gestión del cerrado de alertas
+        $(function(){
+          $("[data-hide]").on("click", function(){
+              $(this).closest("." + $(this).attr("data-hide")).hide();
+          });
+        });
+      </script>
+
+        <div id="otrosVideos"></div>
+      </div>
+
+      <div class="span6">
+        <!-- Mi vídeo -->
+        <div id="videoDestacado">
+          <div id="myVideo">
+            <!--<div class="well span6 offset3">Nobody has been placed on the preferred site. Be the first by clicking on <div class="well well-small"><i class="icon-hand-up"></i> Principal</div></div>-->
+            <div class="hero-unit">
+              <blockquote class="push-left"><p>Nobody has been placed on the principal site. Be the first by clicking on <button onclick="javascript: cambiarAModoPrincipal();" class="btn btn-info"><i class="icon-hand-up"></i> Principal</button></p><br>
+              <small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small>
+              </blockquote>
+              <br>
+            </div>
+          </div>
+          <div id="divPrincipalName"><small id="principalName"></small></div>
+        </div>
+
+        <div class="chrono" id="chronoArea" style="margin-top:20px; display:none;">
+          <span style="font-size:25px;">Time: </span>
+          <span id="timer" style="font-size:40px;"> </span><span style="font-size:25px;">secs</span><br><br>
+          <div id="moderatorName"></div>
+            <div id="debateControlPanel" style="display:none;">
+            <div class="input-append" id="debateDuration"><br><br>
+              <span class="add-on">Set timer</span> 
+              <input placeholder="Duration" class="span3" id="durationDebate" value="30" type="text">
+              <button class="btn" type="button" onclick="javascript:updateDebateDuration();">Reset</button>
+            </div><br>
+            
+            <button id="btnStartTimer" onclick="javascript: startTimer();">Start Timer</button><br><br>
+            <div class="input-prepend span12">
+              <span class="add-on">Next </span>
+              <select class="selectNamesList" id="prependedInput">
+                
+              </select>
+            </div><br>
+            <button id="btnChangeNow" onclick="javascript:videoDebateChangeNow();">Change Now</button>
+            <br>
+            <!--<button id="btnResetTimer" onclick="javascript: resetTimer();">Reset Timer</button>-->
+          </div>
+          <div id="pideTurno"><br>
+            <button id="btnPideTurno" class="btn btn-large" onclick="javascript: pideTurno();">Turn!</button><br><br>
+            <button id="btnQuitaTurno" class="btn btn-small" onclick="javascript: quitaTurno();" disabled="true">Quit Turn!</button>
+          </div>
+        </div>
+
+        <div class="tabbable" id="moduleArea" style="margin-top:20px;"> <!-- Only required for left/right tabs -->
+          <ul class="nav nav-tabs">
+            <li id="activeBlackboard" class="active"><a href="#tab1" data-toggle="tab" onclick="changeToBlackboardMode();">Blackboard</a></li>
+            <li id="activeYouTube"><a href="#tab2" data-toggle="tab">YouTube</a></li>
+            <li id="activePrezi"><a href="#tab3" data-toggle="tab">Prezi</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+              <!--Canvas Sharing-->
+              <div id="canvasSharing">
+                <div id="canvasDiv" style="width:100%;">
+                </div>
+                <div style="width:100%;">
+                  <button class="btn" type="button" id="clearCanvas"><i class="icon-retweet"></i> Reset</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="tab2">
+              <!--Youtube Player-->
+
+              <div class="alert alert-error" id="idYouTubeAlert" style="display:none;">
+                <button data-hide="alert" type="button" class="close">&times;</button>
+                You must provide a YouTube video ID :(
+              </div>
+
+                <div class="input-append" id="idInput"><br><br>
+                  <input placeholder="Video ID" class="span8" id="idVideoYT" type="text">
+                  <button class="btn" type="button" onclick="javascript:loadYTVideo();">Go!</button>
+                </div>
+              <div id="yt" style="display:none;">
+                <div id="player"></div>
+                  <div id="ytcontrols">
+                    <button type="button" id="btnPlay" value="play" onclick="playVideo();"><i class="icon-play"></i> Play</button>
+                    <button type="button" id="btnStop" onclick="stopVideo();"><i class="icon-stop"></i> Stop</button>
+                    <input type="button" id="btnChangeVideo" value="Change Video" onclick="changeVideo();">
+                  </div> 
+                </div>
+            </div>
+            <div class="tab-pane" id="tab3">
+              <!--Prezi Player-->
+
+              <div class="alert alert-error" id="idPreziAlert" style="display:none;">
+                <button data-hide="alert" type="button" class="close">&times;</button>
+                You must provide a Prezi content ID :(
+              </div>
+              <div class="alert alert-error" id="idPreziAlertFirstStep" style="display:none;">
+                <button data-hide="alert" type="button" class="close">&times;</button>
+                You are already in the first step.
+              </div>
+
+                <div class="input-append" id="idInputPrezi"><br><br>
+                  <input placeholder="Prezi ID" class="span8" id="idPrezi" type="text">
+                  <button class="btn" type="button" onclick="javascript:loadPrezi();">Go!</button>
+                </div>
+              <div id="prezi" style="display:none;">
+                <div id="prezi-player"></div>
+                  <div id="preziControls">
+                    <!-- CONTROLES PREZI -->
+                    <button type="button" id="btnPrevPrezi" value="prev" onclick="prevStep();"><i class="icon-step-backward"></i> Prev</button>
+                    <button type="button" id="btnNextPrezi" value="next" onclick="nextStep();"s><i class="icon-step-forward"></i> Next</button>
+                    
+                  </div> 
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="span3" height="100%">
+        <!-- show-hide control -->
+        <div id="shareArea" class="">
+          <!--<div id="listaUsuarios" class="panel panel-default" style="text-align:center;">
+            <div class="panel-title">Participantes</div>
+            <div class="panel-body">
+              <ul id="listaParticipantes">
+              </ul>
+            </div>
+          </div>-->
+
+          <div id="listaUsuarios" class="acordion" style="text-align:center;">
+            <div class="acordion-heading"><h4 style="color: #08C;">Participants  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne"><i class="icon-chevron-up" id="imgAcordion" onclick="javascript:changeImgAcordion();"></i></a></h4></div>
+            <div id="collapseOne" class="accordion-body collapse in">
+              <div class="accordion-inner">
+                <ul id="listaParticipantes">
+                </ul>
+              </div>         
+            </div>
+          </div>
+
+          <div id="videoAux" class="text-center" style="width: 70%; height: 120px; margin: 2%; float:left; margin-top:9%; text-align:center;">
+
+          </div>
+
+          <!-- SlideShare -->
+          <div id="ss" style="display:none;">
+            <div id="playerSS"></div>
+            <div id="sscontrols">
+              <button onclick="flashMovie.first();updateSlideNumber();" type="button" value="First">First</button>
+              <button onclick="flashMovie.previous();updateSlideNumber();" type="button" value="Previous">Previous</button>
+              <button onclick="jumpTo();updateSlideNumber();" type="button" value="Go to">Go to</button>
+              <input type="text" id="slidenumber" size="2" value="1" onkeydown="if (event.keyCode == 13) { jumpTo(); }"/>
+              <button onclick="flashMovie.next();updateSlideNumber();" type="button" value="Next">Next</button>
+              <button onclick="flashMovie.last();updateSlideNumber();" type="button" value="Last">Last</button>
+            </div>
+          </div>
+
+          <!-- YouTube -->
+          <div id="yt" style="display:none;">
+            <div id="player"></div>
+            <div id="ytcontrols">
+              <input type="button" id="btnPlay" value="Play" onclick="playVideo();">
+              <input type="button" id="btnStop" value="Stop" onclick="stopVideo();">
+              <input type="button" id="btnChangeVideo" value="Change Video" onclick="changeVideo();">
+            </div> 
+          </div>
+        </div>
+
+        <!-- Chat -->
+        <div class="span12" id="chatSite" style="margin-top:0px;">
+          <form style="text-align:center;" action="javascript:enviaChat();" id="chat" autocomplete="off">
+            <div class="input-append" style="text-align:center;">
+              <input class="span8" id="txtChat" type="text">
+              <button class="btn" type="submit"><i class="icon-envelope"></i> Send</button>
+            </div><br>
+            <textarea class="span10" cols="100" id="chatArea" disabled style="background-color:#fff; color:#08C;"></textarea>
+          </form>
+        </div>
+      </div>
+     
+    </div>
+
+    <footer>
+      <p>&copy; Marco Nattero | 2014 - ETSIT UPM</p>
+    </footer>
+    <script>
+      initCanvas();
+    </script>
+    <script type="text/javascript" src="debate.js"></script>
+    
+
+  </body>
+</html>

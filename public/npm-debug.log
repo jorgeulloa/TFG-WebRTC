@@ -1,0 +1,1679 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'socket.io-client' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink /usr/bin/node
+5 warn package.json licode@0.1.0 No repository field.
+6 warn package.json vows@0.6.4 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'socket.io-client', null ]
+9 verbose cache add name=undefined spec="socket.io-client" args=["socket.io-client",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'socket.io-client',
+10 verbose parsed url   path: 'socket.io-client',
+10 verbose parsed url   href: 'socket.io-client' }
+11 silly lockFile 4e0afff2-socket-io-client socket.io-client
+12 verbose lock socket.io-client /root/.npm/4e0afff2-socket-io-client.lock
+13 silly lockFile 4e0afff2-socket-io-client socket.io-client
+14 silly lockFile 4e0afff2-socket-io-client socket.io-client
+15 verbose addNamed [ 'socket.io-client', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 2972a950-socket-io-client socket.io-client@
+18 verbose lock socket.io-client@ /root/.npm/2972a950-socket-io-client.lock
+19 silly addNameRange { name: 'socket.io-client', range: '*', hasData: false }
+20 verbose url raw socket.io-client
+21 verbose url resolving [ 'https://registry.npmjs.org/', './socket.io-client' ]
+22 verbose url resolved https://registry.npmjs.org/socket.io-client
+23 info trying registry request attempt 1 at 11:49:40
+24 verbose etag "51W5ESTWHVCB8IGZH4DDQ7TY1"
+25 http GET https://registry.npmjs.org/socket.io-client
+26 http 304 https://registry.npmjs.org/socket.io-client
+27 silly registry.get cb [ 304,
+27 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:40 GMT',
+27 silly registry.get     server: 'Apache',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:41 GMT',
+27 silly registry.get     'cache-control': 'max-age=1',
+27 silly registry.get     etag: '"51W5ESTWHVCB8IGZH4DDQ7TY1"',
+27 silly registry.get     'x-served-by': 'cache-am70-AMS',
+27 silly registry.get     'x-cache': 'HIT',
+27 silly registry.get     'x-cache-hits': '1',
+27 silly registry.get     'x-timer': 'S1396090180.731968403,VS0,VE280',
+27 silly registry.get     vary: 'Accept',
+27 silly registry.get     'content-length': '0',
+27 silly registry.get     'keep-alive': 'timeout=10, max=50',
+27 silly registry.get     connection: 'Keep-Alive' } ]
+28 verbose etag socket.io-client from cache
+29 silly addNameRange number 2 { name: 'socket.io-client', range: '*', hasData: true }
+30 silly addNameRange versions [ 'socket.io-client',
+30 silly addNameRange   [ '0.7.0',
+30 silly addNameRange     '0.7.1',
+30 silly addNameRange     '0.7.2',
+30 silly addNameRange     '0.7.3',
+30 silly addNameRange     '0.7.4',
+30 silly addNameRange     '0.7.5',
+30 silly addNameRange     '0.7.9',
+30 silly addNameRange     '0.7.10',
+30 silly addNameRange     '0.7.11',
+30 silly addNameRange     '0.8.0',
+30 silly addNameRange     '0.8.1',
+30 silly addNameRange     '0.8.2',
+30 silly addNameRange     '0.8.3',
+30 silly addNameRange     '0.8.4',
+30 silly addNameRange     '0.8.5',
+30 silly addNameRange     '0.8.6',
+30 silly addNameRange     '0.8.7',
+30 silly addNameRange     '0.9.0',
+30 silly addNameRange     '0.9.1',
+30 silly addNameRange     '0.9.1-1',
+30 silly addNameRange     '0.9.2',
+30 silly addNameRange     '0.9.3',
+30 silly addNameRange     '0.9.4',
+30 silly addNameRange     '0.9.5',
+30 silly addNameRange     '0.9.6',
+30 silly addNameRange     '0.9.7',
+30 silly addNameRange     '0.9.8',
+30 silly addNameRange     '0.9.9',
+30 silly addNameRange     '0.9.10',
+30 silly addNameRange     '0.9.11',
+30 silly addNameRange     '0.9.15',
+30 silly addNameRange     '0.9.16',
+30 silly addNameRange     '1.0.0-pre' ] ]
+31 verbose addNamed [ 'socket.io-client', '0.9.16' ]
+32 verbose addNamed [ '0.9.16', '0.9.16' ]
+33 silly lockFile c81dc0af-socket-io-client-0-9-16 socket.io-client@0.9.16
+34 verbose lock socket.io-client@0.9.16 /root/.npm/c81dc0af-socket-io-client-0-9-16.lock
+35 silly lockFile c81dc0af-socket-io-client-0-9-16 socket.io-client@0.9.16
+36 silly lockFile c81dc0af-socket-io-client-0-9-16 socket.io-client@0.9.16
+37 silly lockFile 2972a950-socket-io-client socket.io-client@
+38 silly lockFile 2972a950-socket-io-client socket.io-client@
+39 silly resolved [ { name: 'socket.io-client',
+39 silly resolved     description: 'Socket.IO client for the browser and node.js',
+39 silly resolved     version: '0.9.16',
+39 silly resolved     main: './lib/io.js',
+39 silly resolved     browserify: './dist/socket.io.js',
+39 silly resolved     homepage: 'http://socket.io',
+39 silly resolved     keywords: [ 'websocket', 'socket', 'realtime', 'socket.io', 'comet', 'ajax' ],
+39 silly resolved     author: { name: 'Guillermo Rauch', email: 'guillermo@learnboost.com' },
+39 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+39 silly resolved     repository:
+39 silly resolved      { type: 'git',
+39 silly resolved        url: 'https://github.com/LearnBoost/socket.io-client.git' },
+39 silly resolved     dependencies:
+39 silly resolved      { 'uglify-js': '1.2.5',
+39 silly resolved        ws: '0.4.x',
+39 silly resolved        xmlhttprequest: '1.4.2',
+39 silly resolved        'active-x-obfuscator': '0.0.1' },
+39 silly resolved     devDependencies:
+39 silly resolved      { expresso: '*',
+39 silly resolved        express: '2.5.x',
+39 silly resolved        jade: '*',
+39 silly resolved        stylus: '*',
+39 silly resolved        'socket.io': '0.9.16',
+39 silly resolved        'socket.io-client': '0.9.16',
+39 silly resolved        should: '*' },
+39 silly resolved     engines: { node: '>= 0.4.0' },
+39 silly resolved     readme: 'socket.io\n=========\n\n#### Sockets for the rest of us\n\nThe `socket.io` client is basically a simple HTTP Socket interface implementation.\nIt looks similar to WebSocket while providing additional features and\nleveraging other transports when WebSocket is not supported by the user\'s\nbrowser.\n\n```js\nvar socket = io.connect(\'http://domain.com\');\nsocket.on(\'connect\', function () {\n  // socket connected\n});\nsocket.on(\'custom event\', function () {\n  // server emitted a custom event\n});\nsocket.on(\'disconnect\', function () {\n  // socket disconnected\n});\nsocket.send(\'hi there\');\n```\n\n### Recipes\n\n#### Utilizing namespaces (ie: multiple sockets)\n\nIf you want to namespace all the messages and events emitted to a particular\nendpoint, simply specify it as part of the `connect` uri:\n\n```js\nvar chat = io.connect(\'http://localhost/chat\');\nchat.on(\'connect\', function () {\n  // chat socket connected\n});\n\nvar news = io.connect(\'/news\'); // io.connect auto-detects host\nnews.on(\'connect\', function () {\n  // news socket connected\n});\n```\n\n#### Emitting custom events\n\nTo ease with the creation of applications, you can emit custom events outside\nof the global `message` event.\n\n```js\nvar socket = io.connect();\nsocket.emit(\'server custom event\', { my: \'data\' });\n```\n\n#### Forcing disconnection\n\n```js\nvar socket = io.connect();\nsocket.on(\'connect\', function () {\n  socket.disconnect();\n});\n```\n\n### Documentation \n\n#### io#connect\n\n```js\nio.connect(uri, [options]);\n```\n\n##### Options:\n\n- *resource*\n\n    socket.io\n\n  The resource is what allows the `socket.io` server to identify incoming connections by `socket.io` clients. In other words, any HTTP server can implement socket.io and still serve other normal, non-realtime HTTP requests.\n\n- *transports*\n\n```js\n[\'websocket\', \'flashsocket\', \'htmlfile\', \'xhr-multipart\', \'xhr-polling\', \'jsonp-polling\']\n```\n\n  A list of the transports to attempt to utilize (in order of preference).\n\n- *\'connect timeout\'*\n\n```js\n5000\n```\n\n  The amount of milliseconds a transport has to create a connection before we consider it timed out.\n  \n- *\'try multiple transports\'*\n\n```js\ntrue\n```\n\n  A boolean indicating if we should try other transports when the  connectTimeout occurs.\n  \n- *reconnect*\n\n```js\ntrue\n```\n\n  A boolean indicating if we should automatically reconnect if a connection is disconnected. \n  \n- *\'reconnection delay\'*\n\n```js\n500\n```\n\n  The amount of milliseconds before we try to connect to the server again. We are using a exponential back off algorithm for the following reconnections, on each reconnect attempt this value will get multiplied (500 > 1000 > 2000 > 4000 > 8000).\n  \n\n- *\'max reconnection attempts\'*\n\n```js\n10\n```\n\n  The amount of attempts should we make using the current transport to connect to the server? After this we will do one final attempt, and re-try with all enabled transport methods before we give up.\n\n##### Properties:\n\n- *options*\n\n  The passed in options combined with the defaults.\n\n- *connected*\n\n  Whether the socket is connected or not.\n  \n- *connecting*\n\n  Whether the socket is connecting or not.\n\n- *reconnecting*\n\n  Whether we are reconnecting or not.\n  \n- *transport*  \n\n  The transport instance.\n\n##### Methods:\n  \n- *connect(λ)*\n\n  Establishes a connection. If λ is supplied as argument, it will be called once the connection is established.\n  \n- *send(message)*\n  \n  A string of data to send.\n  \n- *disconnect*\n\n  Closes the connection.\n  \n- *on(event, λ)*\n\n  Adds a listener for the event *event*.\n\n- *once(event, λ)*\n\n  Adds a one time listener for the event *event*. The listener is removed after the first time the event is fired.\n  \n- *removeListener(event, λ)*\n\n  Removes the listener λ for the event *event*.\n  \n##### Events:\n\n- *connect*\n\n  Fired when the connection is established and the handshake successful.\n  \n- *connecting(transport_type)*\n\n    Fired when a connection is attempted, passing the transport name.\n  \n- *connect_failed*\n\n    Fired when the connection timeout occurs after the last connection attempt.\n  This only fires if the `connectTimeout` option is set.\n  If the `tryTransportsOnConnectTimeout` option is set, this only fires once all\n  possible transports have been tried.\n  \n- *message(message)*\n  \n  Fired when a message arrives from the server\n\n- *close*\n\n  Fired when the connection is closed. Be careful with using this event, as some transports will fire it even under temporary, expected disconnections (such as XHR-Polling).\n  \n- *disconnect*\n\n  Fired when the connection is considered disconnected.\n  \n- *reconnect(transport_type,reconnectionAttempts)*\n\n  Fired when the connection has been re-established. This only fires if the `reconnect` option is set.\n\n- *reconnecting(reconnectionDelay,reconnectionAttempts)*\n\n  Fired when a reconnection is attempted, passing the next delay for the next reconnection.\n\n- *reconnect_failed*\n\n  Fired when all reconnection attempts have failed and we where unsuccessful in reconnecting to the server.  \n\n### Contributors\n\nGuillermo Rauch &lt;guillermo@learnboost.com&gt;\n\nArnout Kazemier &lt;info@3rd-eden.com&gt;\n\n### License \n\n(The MIT License)\n\nCopyright (c) 2010 LearnBoost &lt;dev@learnboost.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+39 silly resolved     readmeFilename: 'README.md',
+39 silly resolved     bugs: { url: 'https://github.com/LearnBoost/socket.io-client/issues' },
+39 silly resolved     _id: 'socket.io-client@0.9.16',
+39 silly resolved     _from: 'socket.io-client@' } ]
+40 info install socket.io-client@0.9.16 into /home/marco/TFG/licode
+41 info installOne socket.io-client@0.9.16
+42 info /home/marco/TFG/licode/node_modules/socket.io-client unbuild
+43 info preuninstall socket.io-client@0.9.16
+44 info uninstall socket.io-client@0.9.16
+45 verbose true,/home/marco/TFG/licode/node_modules,/home/marco/TFG/licode/node_modules unbuild socket.io-client@0.9.16
+46 info postuninstall socket.io-client@0.9.16
+47 verbose tar unpack /root/.npm/socket.io-client/0.9.16/package.tgz
+48 silly lockFile 21d62285-de-node-modules-socket-io-client tar:///home/marco/TFG/licode/node_modules/socket.io-client
+49 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client /root/.npm/21d62285-de-node-modules-socket-io-client.lock
+50 silly lockFile f8a1c3a2-ket-io-client-0-9-16-package-tgz tar:///root/.npm/socket.io-client/0.9.16/package.tgz
+51 verbose lock tar:///root/.npm/socket.io-client/0.9.16/package.tgz /root/.npm/f8a1c3a2-ket-io-client-0-9-16-package-tgz.lock
+52 silly gunzTarPerm modes [ '755', '644' ]
+53 silly gunzTarPerm extractEntry package.json
+54 silly gunzTarPerm extractEntry .npmignore
+55 silly gunzTarPerm extractEntry README.md
+56 silly gunzTarPerm extractEntry History.md
+57 silly gunzTarPerm extractEntry Makefile
+58 silly gunzTarPerm extractEntry bin/builder.js
+59 silly gunzTarPerm extractEntry components/component-bind/index.js
+60 silly gunzTarPerm extractEntry components/component-bind/component.json
+61 silly gunzTarPerm extractEntry components/component-emitter/index.js
+62 silly gunzTarPerm extractEntry components/component-emitter/component.json
+63 silly gunzTarPerm extractEntry components/component-json/index.js
+64 silly gunzTarPerm extractEntry components/component-json/component.json
+65 silly gunzTarPerm extractEntry components/component-json-fallback/index.js
+66 silly gunzTarPerm extractEntry components/component-json-fallback/component.json
+67 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/component.json
+68 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/emitter.js
+69 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/index.js
+70 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/parser.js
+71 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/socket.js
+72 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transport.js
+73 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/util.js
+74 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/flashsocket.js
+75 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/index.js
+76 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/polling-jsonp.js
+77 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/polling-xhr.js
+78 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/polling.js
+79 silly gunzTarPerm extractEntry components/learnboost-engine.io-client/lib/transports/websocket.js
+80 silly gunzTarPerm extractEntry components/learnboost-socket.io-protocol/index.js
+81 silly gunzTarPerm extractEntry components/learnboost-socket.io-protocol/component.json
+82 silly gunzTarPerm extractEntry components/timoxley-to-array/index.js
+83 silly gunzTarPerm extractEntry components/timoxley-to-array/component.json
+84 silly gunzTarPerm extractEntry components/visionmedia-debug/debug.js
+85 silly gunzTarPerm extractEntry components/visionmedia-debug/index.js
+86 silly gunzTarPerm extractEntry components/visionmedia-debug/component.json
+87 silly gunzTarPerm extractEntry dist/socket.io.js
+88 silly gunzTarPerm extractEntry dist/socket.io.min.js
+89 silly gunzTarPerm extractEntry dist/WebSocketMain.swf
+90 silly gunzTarPerm extractEntry dist/WebSocketMainInsecure.swf
+91 silly gunzTarPerm extractEntry lib/events.js
+92 silly gunzTarPerm extractEntry lib/io.js
+93 silly gunzTarPerm extractEntry lib/json.js
+94 silly gunzTarPerm extractEntry lib/namespace.js
+95 silly gunzTarPerm extractEntry lib/parser.js
+96 silly gunzTarPerm extractEntry lib/socket.js
+97 silly gunzTarPerm extractEntry lib/transport.js
+98 silly gunzTarPerm extractEntry lib/util.js
+99 silly gunzTarPerm extractEntry lib/transports/flashsocket.js
+100 silly gunzTarPerm extractEntry lib/transports/htmlfile.js
+101 silly gunzTarPerm extractEntry lib/transports/jsonp-polling.js
+102 silly gunzTarPerm extractEntry lib/transports/websocket.js
+103 silly gunzTarPerm extractEntry lib/transports/xhr-polling.js
+104 silly gunzTarPerm extractEntry lib/transports/xhr.js
+105 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/.npmignore
+106 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/README.md
+107 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/swfobject.js
+108 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/web_socket.js
+109 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/WebSocketMain.swf
+110 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/WebSocketMainInsecure.zip
+111 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/IWebSocketLogger.as
+112 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/WebSocket.as
+113 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/WebSocketEvent.as
+114 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/WebSocketMain.as
+115 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/WebSocketMainInsecure.as
+116 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/build.sh
+117 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/adobe/net/proxies/RFC2817Socket.as
+118 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/gsolo/encryption/MD5.as
+119 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/Crypto.as
+120 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/MozillaRootCertificates.as
+121 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509Certificate.as
+122 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/cert/X509CertificateCollection.as
+123 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/HMAC.as
+124 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/IHMAC.as
+125 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/IHash.as
+126 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MAC.as
+127 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MD2.as
+128 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/MD5.as
+129 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA1.as
+130 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA224.as
+131 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHA256.as
+132 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/hash/SHABase.as
+133 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/ARC4.as
+134 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/IPRNG.as
+135 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/Random.as
+136 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/prng/TLSPRF.as
+137 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/rsa/RSAKey.as
+138 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ISymmetricKey.as
+139 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/AESKey.as
+140 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CBCMode.as
+141 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CFB8Mode.as
+142 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CFBMode.as
+143 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/CTRMode.as
+144 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/DESKey.as
+145 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ECBMode.as
+146 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/ICipher.as
+147 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IMode.as
+148 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IPad.as
+149 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IStreamCipher.as
+150 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/BlowFishKey.as
+151 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/IVMode.as
+152 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/NullPad.as
+153 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/OFBMode.as
+154 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/PKCS5.as
+155 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/SSLPad.as
+156 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/SimpleIVMode.as
+157 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TLSPad.as
+158 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/TripleDESKey.as
+159 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/XTeaKey.as
+160 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/aeskey.pl
+161 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/symmetric/dump.txt
+162 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ITestHarness.as
+163 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/AESKeyTest.as
+164 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BigIntegerTest.as
+165 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/BlowFishKeyTest.as
+166 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CBCModeTest.as
+167 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFB8ModeTest.as
+168 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CFBModeTest.as
+169 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/CTRModeTest.as
+170 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/DESKeyTest.as
+171 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ECBModeTest.as
+172 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/HMACTest.as
+173 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/ARC4Test.as
+174 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD2Test.as
+175 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/MD5Test.as
+176 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/OFBModeTest.as
+177 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/RSAKeyTest.as
+178 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA1Test.as
+179 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA224Test.as
+180 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/SHA256Test.as
+181 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TLSPRFTest.as
+182 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TestCase.as
+183 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/TripleDESKeyTest.as
+184 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tests/XTeaKeyTest.as
+185 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSConfig.as
+186 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/BulkCiphers.as
+187 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/IConnectionState.as
+188 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/ISecurityParameters.as
+189 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/KeyExchanges.as
+190 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/MACs.as
+191 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLConnectionState.as
+192 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLEvent.as
+193 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/SSLSecurityParameters.as
+194 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/CipherSuites.as
+195 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSConnectionState.as
+196 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSEngine.as
+197 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSError.as
+198 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSEvent.as
+199 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSecurityParameters.as
+200 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSocket.as
+201 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSSocketEvent.as
+202 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/crypto/tls/TLSTest.as
+203 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/BarrettReduction.as
+204 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/BigInteger.as
+205 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/ClassicReduction.as
+206 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/IReduction.as
+207 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/MontgomeryReduction.as
+208 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/NullReduction.as
+209 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/math/bi_internal.as
+210 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/ArrayUtil.as
+211 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/Base64.as
+212 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/Hex.as
+213 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/Memory.as
+214 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PEM.as
+215 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ByteString.as
+216 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/IAsn1Type.as
+217 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Integer.as
+218 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/OID.as
+219 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/ObjectIdentifier.as
+220 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/DER.as
+221 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/PrintableString.as
+222 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Sequence.as
+223 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Set.as
+224 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/Type.as
+225 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/flash-src/com/hurlant/util/der/UTCTime.as
+226 silly gunzTarPerm extractEntry lib/vendor/web-socket-js/sample.html
+227 silly gunzTarPerm extractEntry test/events.test.js
+228 silly gunzTarPerm extractEntry test/io.test.js
+229 silly gunzTarPerm extractEntry test/parser.test.js
+230 silly gunzTarPerm extractEntry test/socket.test.js
+231 silly gunzTarPerm extractEntry test/util.test.js
+232 silly gunzTarPerm extractEntry test/worker.js
+233 silly gunzTarPerm extractEntry test/node/builder.common.js
+234 silly gunzTarPerm extractEntry test/node/builder.test.js
+235 silly lockFile 21d62285-de-node-modules-socket-io-client tar:///home/marco/TFG/licode/node_modules/socket.io-client
+236 silly lockFile 21d62285-de-node-modules-socket-io-client tar:///home/marco/TFG/licode/node_modules/socket.io-client
+237 silly lockFile f8a1c3a2-ket-io-client-0-9-16-package-tgz tar:///root/.npm/socket.io-client/0.9.16/package.tgz
+238 silly lockFile f8a1c3a2-ket-io-client-0-9-16-package-tgz tar:///root/.npm/socket.io-client/0.9.16/package.tgz
+239 info preinstall socket.io-client@0.9.16
+240 verbose readDependencies using package.json deps
+241 verbose readDependencies using package.json deps
+242 verbose cache add [ 'uglify-js@1.2.5', null ]
+243 verbose cache add name=undefined spec="uglify-js@1.2.5" args=["uglify-js@1.2.5",null]
+244 verbose parsed url { protocol: null,
+244 verbose parsed url   slashes: null,
+244 verbose parsed url   auth: null,
+244 verbose parsed url   host: null,
+244 verbose parsed url   port: null,
+244 verbose parsed url   hostname: null,
+244 verbose parsed url   hash: null,
+244 verbose parsed url   search: null,
+244 verbose parsed url   query: null,
+244 verbose parsed url   pathname: 'uglify-js@1.2.5',
+244 verbose parsed url   path: 'uglify-js@1.2.5',
+244 verbose parsed url   href: 'uglify-js@1.2.5' }
+245 verbose cache add name="uglify-js" spec="1.2.5" args=["uglify-js","1.2.5"]
+246 verbose parsed url { protocol: null,
+246 verbose parsed url   slashes: null,
+246 verbose parsed url   auth: null,
+246 verbose parsed url   host: null,
+246 verbose parsed url   port: null,
+246 verbose parsed url   hostname: null,
+246 verbose parsed url   hash: null,
+246 verbose parsed url   search: null,
+246 verbose parsed url   query: null,
+246 verbose parsed url   pathname: '1.2.5',
+246 verbose parsed url   path: '1.2.5',
+246 verbose parsed url   href: '1.2.5' }
+247 verbose addNamed [ 'uglify-js', '1.2.5' ]
+248 verbose addNamed [ '1.2.5', '1.2.5' ]
+249 silly lockFile 7bec4d6c-uglify-js-1-2-5 uglify-js@1.2.5
+250 verbose lock uglify-js@1.2.5 /root/.npm/7bec4d6c-uglify-js-1-2-5.lock
+251 verbose cache add [ 'ws@0.4.x', null ]
+252 verbose cache add name=undefined spec="ws@0.4.x" args=["ws@0.4.x",null]
+253 verbose parsed url { protocol: null,
+253 verbose parsed url   slashes: null,
+253 verbose parsed url   auth: null,
+253 verbose parsed url   host: null,
+253 verbose parsed url   port: null,
+253 verbose parsed url   hostname: null,
+253 verbose parsed url   hash: null,
+253 verbose parsed url   search: null,
+253 verbose parsed url   query: null,
+253 verbose parsed url   pathname: 'ws@0.4.x',
+253 verbose parsed url   path: 'ws@0.4.x',
+253 verbose parsed url   href: 'ws@0.4.x' }
+254 verbose cache add name="ws" spec="0.4.x" args=["ws","0.4.x"]
+255 verbose parsed url { protocol: null,
+255 verbose parsed url   slashes: null,
+255 verbose parsed url   auth: null,
+255 verbose parsed url   host: null,
+255 verbose parsed url   port: null,
+255 verbose parsed url   hostname: null,
+255 verbose parsed url   hash: null,
+255 verbose parsed url   search: null,
+255 verbose parsed url   query: null,
+255 verbose parsed url   pathname: '0.4.x',
+255 verbose parsed url   path: '0.4.x',
+255 verbose parsed url   href: '0.4.x' }
+256 verbose addNamed [ 'ws', '0.4.x' ]
+257 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+258 silly lockFile 5d9e9ce0-ws-0-4-x ws@0.4.x
+259 verbose lock ws@0.4.x /root/.npm/5d9e9ce0-ws-0-4-x.lock
+260 verbose cache add [ 'active-x-obfuscator@0.0.1', null ]
+261 verbose cache add name=undefined spec="active-x-obfuscator@0.0.1" args=["active-x-obfuscator@0.0.1",null]
+262 verbose parsed url { protocol: null,
+262 verbose parsed url   slashes: null,
+262 verbose parsed url   auth: null,
+262 verbose parsed url   host: null,
+262 verbose parsed url   port: null,
+262 verbose parsed url   hostname: null,
+262 verbose parsed url   hash: null,
+262 verbose parsed url   search: null,
+262 verbose parsed url   query: null,
+262 verbose parsed url   pathname: 'active-x-obfuscator@0.0.1',
+262 verbose parsed url   path: 'active-x-obfuscator@0.0.1',
+262 verbose parsed url   href: 'active-x-obfuscator@0.0.1' }
+263 verbose cache add name="active-x-obfuscator" spec="0.0.1" args=["active-x-obfuscator","0.0.1"]
+264 verbose parsed url { protocol: null,
+264 verbose parsed url   slashes: null,
+264 verbose parsed url   auth: null,
+264 verbose parsed url   host: null,
+264 verbose parsed url   port: null,
+264 verbose parsed url   hostname: null,
+264 verbose parsed url   hash: null,
+264 verbose parsed url   search: null,
+264 verbose parsed url   query: null,
+264 verbose parsed url   pathname: '0.0.1',
+264 verbose parsed url   path: '0.0.1',
+264 verbose parsed url   href: '0.0.1' }
+265 verbose addNamed [ 'active-x-obfuscator', '0.0.1' ]
+266 verbose addNamed [ '0.0.1', '0.0.1' ]
+267 silly lockFile 8a542afc-active-x-obfuscator-0-0-1 active-x-obfuscator@0.0.1
+268 verbose lock active-x-obfuscator@0.0.1 /root/.npm/8a542afc-active-x-obfuscator-0-0-1.lock
+269 verbose cache add [ 'xmlhttprequest@1.4.2', null ]
+270 verbose cache add name=undefined spec="xmlhttprequest@1.4.2" args=["xmlhttprequest@1.4.2",null]
+271 verbose parsed url { protocol: null,
+271 verbose parsed url   slashes: null,
+271 verbose parsed url   auth: null,
+271 verbose parsed url   host: null,
+271 verbose parsed url   port: null,
+271 verbose parsed url   hostname: null,
+271 verbose parsed url   hash: null,
+271 verbose parsed url   search: null,
+271 verbose parsed url   query: null,
+271 verbose parsed url   pathname: 'xmlhttprequest@1.4.2',
+271 verbose parsed url   path: 'xmlhttprequest@1.4.2',
+271 verbose parsed url   href: 'xmlhttprequest@1.4.2' }
+272 verbose cache add name="xmlhttprequest" spec="1.4.2" args=["xmlhttprequest","1.4.2"]
+273 verbose parsed url { protocol: null,
+273 verbose parsed url   slashes: null,
+273 verbose parsed url   auth: null,
+273 verbose parsed url   host: null,
+273 verbose parsed url   port: null,
+273 verbose parsed url   hostname: null,
+273 verbose parsed url   hash: null,
+273 verbose parsed url   search: null,
+273 verbose parsed url   query: null,
+273 verbose parsed url   pathname: '1.4.2',
+273 verbose parsed url   path: '1.4.2',
+273 verbose parsed url   href: '1.4.2' }
+274 verbose addNamed [ 'xmlhttprequest', '1.4.2' ]
+275 verbose addNamed [ '1.4.2', '1.4.2' ]
+276 silly lockFile 55d2242a-xmlhttprequest-1-4-2 xmlhttprequest@1.4.2
+277 verbose lock xmlhttprequest@1.4.2 /root/.npm/55d2242a-xmlhttprequest-1-4-2.lock
+278 silly addNameRange { name: 'ws', range: '>=0.4.0-0 <0.5.0-0', hasData: false }
+279 verbose url raw uglify-js/1.2.5
+280 verbose url resolving [ 'https://registry.npmjs.org/', './uglify-js/1.2.5' ]
+281 verbose url resolved https://registry.npmjs.org/uglify-js/1.2.5
+282 info trying registry request attempt 1 at 11:49:41
+283 verbose etag "2K8UNP8YXXKFXCAFLL6OJNJGH"
+284 http GET https://registry.npmjs.org/uglify-js/1.2.5
+285 verbose url raw ws
+286 verbose url resolving [ 'https://registry.npmjs.org/', './ws' ]
+287 verbose url resolved https://registry.npmjs.org/ws
+288 info trying registry request attempt 1 at 11:49:41
+289 verbose etag "88GGK20448ZVEKUKTEE9MW2DI"
+290 http GET https://registry.npmjs.org/ws
+291 verbose url raw active-x-obfuscator/0.0.1
+292 verbose url resolving [ 'https://registry.npmjs.org/', './active-x-obfuscator/0.0.1' ]
+293 verbose url resolved https://registry.npmjs.org/active-x-obfuscator/0.0.1
+294 info trying registry request attempt 1 at 11:49:41
+295 verbose etag "3F3J32G61UHF5WEFZXNHE1FPG"
+296 http GET https://registry.npmjs.org/active-x-obfuscator/0.0.1
+297 verbose url raw xmlhttprequest/1.4.2
+298 verbose url resolving [ 'https://registry.npmjs.org/', './xmlhttprequest/1.4.2' ]
+299 verbose url resolved https://registry.npmjs.org/xmlhttprequest/1.4.2
+300 info trying registry request attempt 1 at 11:49:41
+301 verbose etag "9ZTIOSDMIAWI40NBGEILHPN4"
+302 http GET https://registry.npmjs.org/xmlhttprequest/1.4.2
+303 http 304 https://registry.npmjs.org/uglify-js/1.2.5
+304 silly registry.get cb [ 304,
+304 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:41 GMT',
+304 silly registry.get     server: 'Apache',
+304 silly registry.get     via: '1.1 varnish',
+304 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:41 GMT',
+304 silly registry.get     'cache-control': 'max-age=1',
+304 silly registry.get     etag: '"2K8UNP8YXXKFXCAFLL6OJNJGH"',
+304 silly registry.get     'x-served-by': 'cache-am71-AMS',
+304 silly registry.get     'x-cache': 'HIT',
+304 silly registry.get     'x-cache-hits': '1',
+304 silly registry.get     'x-timer': 'S1396090181.559798717,VS0,VE89',
+304 silly registry.get     vary: 'Accept',
+304 silly registry.get     'content-length': '0',
+304 silly registry.get     'keep-alive': 'timeout=10, max=50',
+304 silly registry.get     connection: 'Keep-Alive' } ]
+305 verbose etag uglify-js/1.2.5 from cache
+306 silly lockFile 7bec4d6c-uglify-js-1-2-5 uglify-js@1.2.5
+307 silly lockFile 7bec4d6c-uglify-js-1-2-5 uglify-js@1.2.5
+308 http 304 https://registry.npmjs.org/active-x-obfuscator/0.0.1
+309 silly registry.get cb [ 304,
+309 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:41 GMT',
+309 silly registry.get     server: 'Apache',
+309 silly registry.get     via: '1.1 varnish',
+309 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:41 GMT',
+309 silly registry.get     'cache-control': 'max-age=1',
+309 silly registry.get     etag: '"3F3J32G61UHF5WEFZXNHE1FPG"',
+309 silly registry.get     'x-served-by': 'cache-am76-AMS',
+309 silly registry.get     'x-cache': 'HIT',
+309 silly registry.get     'x-cache-hits': '1',
+309 silly registry.get     'x-timer': 'S1396090181.601947546,VS0,VE88',
+309 silly registry.get     vary: 'Accept',
+309 silly registry.get     'content-length': '0',
+309 silly registry.get     'keep-alive': 'timeout=10, max=50',
+309 silly registry.get     connection: 'Keep-Alive' } ]
+310 verbose etag active-x-obfuscator/0.0.1 from cache
+311 silly lockFile 8a542afc-active-x-obfuscator-0-0-1 active-x-obfuscator@0.0.1
+312 silly lockFile 8a542afc-active-x-obfuscator-0-0-1 active-x-obfuscator@0.0.1
+313 http 304 https://registry.npmjs.org/xmlhttprequest/1.4.2
+314 silly registry.get cb [ 304,
+314 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:41 GMT',
+314 silly registry.get     server: 'Apache',
+314 silly registry.get     via: '1.1 varnish',
+314 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:41 GMT',
+314 silly registry.get     'cache-control': 'max-age=1',
+314 silly registry.get     etag: '"9ZTIOSDMIAWI40NBGEILHPN4"',
+314 silly registry.get     'x-served-by': 'cache-am77-AMS',
+314 silly registry.get     'x-cache': 'HIT',
+314 silly registry.get     'x-cache-hits': '1',
+314 silly registry.get     'x-timer': 'S1396090181.641706467,VS0,VE88',
+314 silly registry.get     vary: 'Accept',
+314 silly registry.get     'content-length': '0',
+314 silly registry.get     'keep-alive': 'timeout=10, max=50',
+314 silly registry.get     connection: 'Keep-Alive' } ]
+315 verbose etag xmlhttprequest/1.4.2 from cache
+316 silly lockFile 55d2242a-xmlhttprequest-1-4-2 xmlhttprequest@1.4.2
+317 silly lockFile 55d2242a-xmlhttprequest-1-4-2 xmlhttprequest@1.4.2
+318 http 304 https://registry.npmjs.org/ws
+319 silly registry.get cb [ 304,
+319 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:41 GMT',
+319 silly registry.get     server: 'Apache',
+319 silly registry.get     via: '1.1 varnish',
+319 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:41 GMT',
+319 silly registry.get     'cache-control': 'max-age=1',
+319 silly registry.get     etag: '"88GGK20448ZVEKUKTEE9MW2DI"',
+319 silly registry.get     'x-served-by': 'cache-am72-AMS',
+319 silly registry.get     'x-cache': 'HIT',
+319 silly registry.get     'x-cache-hits': '1',
+319 silly registry.get     'x-timer': 'S1396090181.602296352,VS0,VE179',
+319 silly registry.get     vary: 'Accept',
+319 silly registry.get     'content-length': '0',
+319 silly registry.get     'keep-alive': 'timeout=10, max=50',
+319 silly registry.get     connection: 'Keep-Alive' } ]
+320 verbose etag ws from cache
+321 silly addNameRange number 2 { name: 'ws', range: '>=0.4.0-0 <0.5.0-0', hasData: true }
+322 silly addNameRange versions [ 'ws',
+322 silly addNameRange   [ '0.2.6',
+322 silly addNameRange     '0.2.8',
+322 silly addNameRange     '0.2.9',
+322 silly addNameRange     '0.3.0',
+322 silly addNameRange     '0.3.1',
+322 silly addNameRange     '0.3.2',
+322 silly addNameRange     '0.3.3',
+322 silly addNameRange     '0.3.4',
+322 silly addNameRange     '0.3.4-2',
+322 silly addNameRange     '0.3.5',
+322 silly addNameRange     '0.3.5-2',
+322 silly addNameRange     '0.3.5-3',
+322 silly addNameRange     '0.3.5-4',
+322 silly addNameRange     '0.3.6',
+322 silly addNameRange     '0.3.7',
+322 silly addNameRange     '0.3.8',
+322 silly addNameRange     '0.3.9',
+322 silly addNameRange     '0.4.0',
+322 silly addNameRange     '0.4.1',
+322 silly addNameRange     '0.4.2',
+322 silly addNameRange     '0.4.3',
+322 silly addNameRange     '0.4.5',
+322 silly addNameRange     '0.4.6',
+322 silly addNameRange     '0.4.7',
+322 silly addNameRange     '0.4.8',
+322 silly addNameRange     '0.4.9',
+322 silly addNameRange     '0.4.10',
+322 silly addNameRange     '0.4.11',
+322 silly addNameRange     '0.4.12',
+322 silly addNameRange     '0.4.13',
+322 silly addNameRange     '0.4.14',
+322 silly addNameRange     '0.4.15',
+322 silly addNameRange     '0.4.16',
+322 silly addNameRange     '0.4.17',
+322 silly addNameRange     '0.4.18',
+322 silly addNameRange     '0.4.19',
+322 silly addNameRange     '0.4.20',
+322 silly addNameRange     '0.4.21',
+322 silly addNameRange     '0.4.22',
+322 silly addNameRange     '0.4.23',
+322 silly addNameRange     '0.4.24',
+322 silly addNameRange     '0.4.25',
+322 silly addNameRange     '0.4.27',
+322 silly addNameRange     '0.4.28',
+322 silly addNameRange     '0.4.29',
+322 silly addNameRange     '0.4.30',
+322 silly addNameRange     '0.4.31' ] ]
+323 verbose addNamed [ 'ws', '0.4.31' ]
+324 verbose addNamed [ '0.4.31', '0.4.31' ]
+325 silly lockFile 53e67403-ws-0-4-31 ws@0.4.31
+326 verbose lock ws@0.4.31 /root/.npm/53e67403-ws-0-4-31.lock
+327 silly lockFile 53e67403-ws-0-4-31 ws@0.4.31
+328 silly lockFile 53e67403-ws-0-4-31 ws@0.4.31
+329 silly lockFile 5d9e9ce0-ws-0-4-x ws@0.4.x
+330 silly lockFile 5d9e9ce0-ws-0-4-x ws@0.4.x
+331 silly resolved [ { name: 'uglify-js',
+331 silly resolved     description: 'JavaScript parser and compressor/beautifier toolkit',
+331 silly resolved     author:
+331 silly resolved      { name: 'Mihai Bazon',
+331 silly resolved        email: 'mihai.bazon@gmail.com',
+331 silly resolved        url: 'http://mihai.bazon.net/blog' },
+331 silly resolved     version: '1.2.5',
+331 silly resolved     main: './uglify-js.js',
+331 silly resolved     bin: { uglifyjs: './bin/uglifyjs' },
+331 silly resolved     repository: { type: 'git', url: 'git@github.com:mishoo/UglifyJS.git' },
+331 silly resolved     readme: '<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"\n               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">\n<html xmlns="http://www.w3.org/1999/xhtml"\nlang="en" xml:lang="en">\n<head>\n<title>UglifyJS &ndash; a JavaScript parser/compressor/beautifier</title>\n<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>\n<meta name="generator" content="Org-mode"/>\n<meta name="generated" content="2011-12-09 14:59:08 EET"/>\n<meta name="author" content="Mihai Bazon"/>\n<meta name="description" content="a JavaScript parser/compressor/beautifier in JavaScript"/>\n<meta name="keywords" content="javascript, js, parser, compiler, compressor, mangle, minify, minifier"/>\n<style type="text/css">\n <!--/*--><![CDATA[/*><!--*/\n  html { font-family: Times, serif; font-size: 12pt; }\n  .title  { text-align: center; }\n  .todo   { color: red; }\n  .done   { color: green; }\n  .tag    { background-color: #add8e6; font-weight:normal }\n  .target { }\n  .timestamp { color: #bebebe; }\n  .timestamp-kwd { color: #5f9ea0; }\n  .right  {margin-left:auto; margin-right:0px;  text-align:right;}\n  .left   {margin-left:0px;  margin-right:auto; text-align:left;}\n  .center {margin-left:auto; margin-right:auto; text-align:center;}\n  p.verse { margin-left: 3% }\n  pre {\n\tborder: 1pt solid #AEBDCC;\n\tbackground-color: #F3F5F7;\n\tpadding: 5pt;\n\tfont-family: courier, monospace;\n        font-size: 90%;\n        overflow:auto;\n  }\n  table { border-collapse: collapse; }\n  td, th { vertical-align: top;  }\n  th.right  { text-align:center;  }\n  th.left   { text-align:center;   }\n  th.center { text-align:center; }\n  td.right  { text-align:right;  }\n  td.left   { text-align:left;   }\n  td.center { text-align:center; }\n  dt { font-weight: bold; }\n  div.figure { padding: 0.5em; }\n  div.figure p { text-align: center; }\n  div.inlinetask {\n    padding:10px;\n    border:2px solid gray;\n    margin:10px;\n    background: #ffffcc;\n  }\n  textarea { overflow-x: auto; }\n  .linenr { font-size:smaller }\n  .code-highlighted {background-color:#ffff00;}\n  .org-info-js_info-navigation { border-style:none; }\n  #org-info-js_console-label { font-size:10px; font-weight:bold;\n                               white-space:nowrap; }\n  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;\n                                 font-weight:bold; }\n  /*]]>*/-->\n</style>\n<link rel="stylesheet" type="text/css" href="docstyle.css" />\n<script type="text/javascript">\n<!--/*--><![CDATA[/*><!--*/\n function CodeHighlightOn(elem, id)\n {\n   var target = document.getElementById(id);\n   if(null != target) {\n     elem.cacheClassElem = elem.className;\n     elem.cacheClassTarget = target.className;\n     target.className = "code-highlighted";\n     elem.className   = "code-highlighted";\n   }\n }\n function CodeHighlightOff(elem, id)\n {\n   var target = document.getElementById(id);\n   if(elem.cacheClassElem)\n     elem.className = elem.cacheClassElem;\n   if(elem.cacheClassTarget)\n     target.className = elem.cacheClassTarget;\n }\n/*]]>*///-->\n</script>\n\n</head>\n<body>\n\n<div id="preamble">\n\n</div>\n\n<div id="content">\n<h1 class="title">UglifyJS &ndash; a JavaScript parser/compressor/beautifier</h1>\n\n\n<div id="table-of-contents">\n<h2>Table of Contents</h2>\n<div id="text-table-of-contents">\n<ul>\n<li><a href="#sec-1">1 UglifyJS &mdash; a JavaScript parser/compressor/beautifier </a>\n<ul>\n<li><a href="#sec-1-1">1.1 Unsafe transformations </a>\n<ul>\n<li><a href="#sec-1-1-1">1.1.1 Calls involving the global Array constructor </a></li>\n<li><a href="#sec-1-1-2">1.1.2 <code>obj.toString()</code> ==&gt; <code>obj+“”</code> </a></li>\n</ul>\n</li>\n<li><a href="#sec-1-2">1.2 Install (NPM) </a></li>\n<li><a href="#sec-1-3">1.3 Install latest code from GitHub </a></li>\n<li><a href="#sec-1-4">1.4 Usage </a>\n<ul>\n<li><a href="#sec-1-4-1">1.4.1 API </a></li>\n<li><a href="#sec-1-4-2">1.4.2 Beautifier shortcoming &ndash; no more comments </a></li>\n<li><a href="#sec-1-4-3">1.4.3 Use as a code pre-processor </a></li>\n</ul>\n</li>\n<li><a href="#sec-1-5">1.5 Compression &ndash; how good is it? </a></li>\n<li><a href="#sec-1-6">1.6 Bugs? </a></li>\n<li><a href="#sec-1-7">1.7 Links </a></li>\n<li><a href="#sec-1-8">1.8 License </a></li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n\n<div id="outline-container-1" class="outline-2">\n<h2 id="sec-1"><span class="section-number-2">1</span> UglifyJS &mdash; a JavaScript parser/compressor/beautifier </h2>\n<div class="outline-text-2" id="text-1">\n\n\n<p>\nThis package implements a general-purpose JavaScript\nparser/compressor/beautifier toolkit.  It is developed on <a href="http://nodejs.org/">NodeJS</a>, but it\nshould work on any JavaScript platform supporting the CommonJS module system\n(and if your platform of choice doesn\'t support CommonJS, you can easily\nimplement it, or discard the <code>exports.*</code> lines from UglifyJS sources).\n</p>\n<p>\nThe tokenizer/parser generates an abstract syntax tree from JS code.  You\ncan then traverse the AST to learn more about the code, or do various\nmanipulations on it.  This part is implemented in <a href="../lib/parse-js.js">parse-js.js</a> and it\'s a\nport to JavaScript of the excellent <a href="http://marijn.haverbeke.nl/parse-js/">parse-js</a> Common Lisp library from <a href="http://marijn.haverbeke.nl/">Marijn Haverbeke</a>.\n</p>\n<p>\n( See <a href="http://github.com/mishoo/cl-uglify-js">cl-uglify-js</a> if you\'re looking for the Common Lisp version of\nUglifyJS. )\n</p>\n<p>\nThe second part of this package, implemented in <a href="../lib/process.js">process.js</a>, inspects and\nmanipulates the AST generated by the parser to provide the following:\n</p>\n<ul>\n<li>ability to re-generate JavaScript code from the AST.  Optionally\n  indented&mdash;you can use this if you want to “beautify” a program that has\n  been compressed, so that you can inspect the source.  But you can also run\n  our code generator to print out an AST without any whitespace, so you\n  achieve compression as well.\n\n</li>\n<li>shorten variable names (usually to single characters).  Our mangler will\n  analyze the code and generate proper variable names, depending on scope\n  and usage, and is smart enough to deal with globals defined elsewhere, or\n  with <code>eval()</code> calls or <code>with{}</code> statements.  In short, if <code>eval()</code> or\n  <code>with{}</code> are used in some scope, then all variables in that scope and any\n  variables in the parent scopes will remain unmangled, and any references\n  to such variables remain unmangled as well.\n\n</li>\n<li>various small optimizations that may lead to faster code but certainly\n  lead to smaller code.  Where possible, we do the following:\n\n<ul>\n<li>foo["bar"]  ==&gt;  foo.bar\n\n</li>\n<li>remove block brackets <code>{}</code>\n\n</li>\n<li>join consecutive var declarations:\n    var a = 10; var b = 20; ==&gt; var a=10,b=20;\n\n</li>\n<li>resolve simple constant expressions: 1 +2 * 3 ==&gt; 7.  We only do the\n    replacement if the result occupies less bytes; for example 1/3 would\n    translate to 0.333333333333, so in this case we don\'t replace it.\n\n</li>\n<li>consecutive statements in blocks are merged into a sequence; in many\n    cases, this leaves blocks with a single statement, so then we can remove\n    the block brackets.\n\n</li>\n<li>various optimizations for IF statements:\n\n<ul>\n<li>if (foo) bar(); else baz(); ==&gt; foo?bar():baz();\n</li>\n<li>if (!foo) bar(); else baz(); ==&gt; foo?baz():bar();\n</li>\n<li>if (foo) bar(); ==&gt; foo&amp;&amp;bar();\n</li>\n<li>if (!foo) bar(); ==&gt; foo||bar();\n</li>\n<li>if (foo) return bar(); else return baz(); ==&gt; return foo?bar():baz();\n</li>\n<li>if (foo) return bar(); else something(); ==&gt; {if(foo)return bar();something()}\n\n</li>\n</ul>\n\n</li>\n<li>remove some unreachable code and warn about it (code that follows a\n    <code>return</code>, <code>throw</code>, <code>break</code> or <code>continue</code> statement, except\n    function/variable declarations).\n\n</li>\n<li>act a limited version of a pre-processor (c.f. the pre-processor of\n    C/C++) to allow you to safely replace selected global symbols with\n    specified values.  When combined with the optimisations above this can\n    make UglifyJS operate slightly more like a compilation process, in\n    that when certain symbols are replaced by constant values, entire code\n    blocks may be optimised away as unreachable.\n</li>\n</ul>\n\n</li>\n</ul>\n\n\n\n</div>\n\n<div id="outline-container-1-1" class="outline-3">\n<h3 id="sec-1-1"><span class="section-number-3">1.1</span> <span class="target">Unsafe transformations</span>  </h3>\n<div class="outline-text-3" id="text-1-1">\n\n\n<p>\nThe following transformations can in theory break code, although they\'re\nprobably safe in most practical cases.  To enable them you need to pass the\n<code>--unsafe</code> flag.\n</p>\n\n</div>\n\n<div id="outline-container-1-1-1" class="outline-4">\n<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> Calls involving the global Array constructor </h4>\n<div class="outline-text-4" id="text-1-1-1">\n\n\n<p>\nThe following transformations occur:\n</p>\n\n\n\n<pre class="src src-js"><span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3, 4)  =&gt; [1,2,3,4]\nArray(a, b, c)         =&gt; [a,b,c]\n<span class="org-keyword">new</span> <span class="org-type">Array</span>(5)           =&gt; Array(5)\n<span class="org-keyword">new</span> <span class="org-type">Array</span>(a)           =&gt; Array(a)\n</pre>\n\n\n<p>\nThese are all safe if the Array name isn\'t redefined.  JavaScript does allow\none to globally redefine Array (and pretty much everything, in fact) but I\npersonally don\'t see why would anyone do that.\n</p>\n<p>\nUglifyJS does handle the case where Array is redefined locally, or even\nglobally but with a <code>function</code> or <code>var</code> declaration.  Therefore, in the\nfollowing cases UglifyJS <b>doesn\'t touch</b> calls or instantiations of Array:\n</p>\n\n\n\n<pre class="src src-js"><span class="org-comment-delimiter">// </span><span class="org-comment">case 1.  globally declared variable</span>\n  <span class="org-keyword">var</span> <span class="org-variable-name">Array</span>;\n  <span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3);\n  Array(a, b);\n\n  <span class="org-comment-delimiter">// </span><span class="org-comment">or (can be declared later)</span>\n  <span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3);\n  <span class="org-keyword">var</span> <span class="org-variable-name">Array</span>;\n\n  <span class="org-comment-delimiter">// </span><span class="org-comment">or (can be a function)</span>\n  <span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3);\n  <span class="org-keyword">function</span> <span class="org-function-name">Array</span>() { ... }\n\n<span class="org-comment-delimiter">// </span><span class="org-comment">case 2.  declared in a function</span>\n  (<span class="org-keyword">function</span>(){\n    a = <span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3);\n    b = Array(5, 6);\n    <span class="org-keyword">var</span> <span class="org-variable-name">Array</span>;\n  })();\n\n  <span class="org-comment-delimiter">// </span><span class="org-comment">or</span>\n  (<span class="org-keyword">function</span>(<span class="org-variable-name">Array</span>){\n    <span class="org-keyword">return</span> Array(5, 6, 7);\n  })();\n\n  <span class="org-comment-delimiter">// </span><span class="org-comment">or</span>\n  (<span class="org-keyword">function</span>(){\n    <span class="org-keyword">return</span> <span class="org-keyword">new</span> <span class="org-type">Array</span>(1, 2, 3, 4);\n    <span class="org-keyword">function</span> <span class="org-function-name">Array</span>() { ... }\n  })();\n\n  <span class="org-comment-delimiter">// </span><span class="org-comment">etc.</span>\n</pre>\n\n\n</div>\n\n</div>\n\n<div id="outline-container-1-1-2" class="outline-4">\n<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> <code>obj.toString()</code> ==&gt; <code>obj+“”</code> </h4>\n<div class="outline-text-4" id="text-1-1-2">\n\n\n</div>\n</div>\n\n</div>\n\n<div id="outline-container-1-2" class="outline-3">\n<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Install (NPM) </h3>\n<div class="outline-text-3" id="text-1-2">\n\n\n<p>\nUglifyJS is now available through NPM &mdash; <code>npm install uglify-js</code> should do\nthe job.\n</p>\n</div>\n\n</div>\n\n<div id="outline-container-1-3" class="outline-3">\n<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Install latest code from GitHub </h3>\n<div class="outline-text-3" id="text-1-3">\n\n\n\n\n\n<pre class="src src-sh"><span class="org-comment-delimiter">## </span><span class="org-comment">clone the repository</span>\nmkdir -p /where/you/wanna/put/it\n<span class="org-builtin">cd</span> /where/you/wanna/put/it\ngit clone git://github.com/mishoo/UglifyJS.git\n\n<span class="org-comment-delimiter">## </span><span class="org-comment">make the module available to Node</span>\nmkdir -p ~/.node_libraries/\n<span class="org-builtin">cd</span> ~/.node_libraries/\nln -s /where/you/wanna/put/it/UglifyJS/uglify-js.js\n\n<span class="org-comment-delimiter">## </span><span class="org-comment">and if you want the CLI script too:</span>\nmkdir -p ~/bin\n<span class="org-builtin">cd</span> ~/bin\nln -s /where/you/wanna/put/it/UglifyJS/bin/uglifyjs\n  <span class="org-comment-delimiter"># </span><span class="org-comment">(then add ~/bin to your $PATH if it\'s not there already)</span>\n</pre>\n\n\n</div>\n\n</div>\n\n<div id="outline-container-1-4" class="outline-3">\n<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Usage </h3>\n<div class="outline-text-3" id="text-1-4">\n\n\n<p>\nThere is a command-line tool that exposes the functionality of this library\nfor your shell-scripting needs:\n</p>\n\n\n\n<pre class="src src-sh">uglifyjs [ options... ] [ filename ]\n</pre>\n\n\n<p>\n<code>filename</code> should be the last argument and should name the file from which\nto read the JavaScript code.  If you don\'t specify it, it will read code\nfrom STDIN.\n</p>\n<p>\nSupported options:\n</p>\n<ul>\n<li><code>-b</code> or <code>--beautify</code> &mdash; output indented code; when passed, additional\n  options control the beautifier:\n\n<ul>\n<li><code>-i N</code> or <code>--indent N</code> &mdash; indentation level (number of spaces)\n\n</li>\n<li><code>-q</code> or <code>--quote-keys</code> &mdash; quote keys in literal objects (by default,\n    only keys that cannot be identifier names will be quotes).\n\n</li>\n</ul>\n\n</li>\n<li><code>--ascii</code> &mdash; pass this argument to encode non-ASCII characters as\n  <code>\\uXXXX</code> sequences.  By default UglifyJS won\'t bother to do it and will\n  output Unicode characters instead.  (the output is always encoded in UTF8,\n  but if you pass this option you\'ll only get ASCII).\n\n</li>\n<li><code>-nm</code> or <code>--no-mangle</code> &mdash; don\'t mangle names.\n\n</li>\n<li><code>-nmf</code> or <code>--no-mangle-functions</code> &ndash; in case you want to mangle variable\n  names, but not touch function names.\n\n</li>\n<li><code>-ns</code> or <code>--no-squeeze</code> &mdash; don\'t call <code>ast_squeeze()</code> (which does various\n  optimizations that result in smaller, less readable code).\n\n</li>\n<li><code>-mt</code> or <code>--mangle-toplevel</code> &mdash; mangle names in the toplevel scope too\n  (by default we don\'t do this).\n\n</li>\n<li><code>--no-seqs</code> &mdash; when <code>ast_squeeze()</code> is called (thus, unless you pass\n  <code>--no-squeeze</code>) it will reduce consecutive statements in blocks into a\n  sequence.  For example, "a = 10; b = 20; foo();" will be written as\n  "a=10,b=20,foo();".  In various occasions, this allows us to discard the\n  block brackets (since the block becomes a single statement).  This is ON\n  by default because it seems safe and saves a few hundred bytes on some\n  libs that I tested it on, but pass <code>--no-seqs</code> to disable it.\n\n</li>\n<li><code>--no-dead-code</code> &mdash; by default, UglifyJS will remove code that is\n  obviously unreachable (code that follows a <code>return</code>, <code>throw</code>, <code>break</code> or\n  <code>continue</code> statement and is not a function/variable declaration).  Pass\n  this option to disable this optimization.\n\n</li>\n<li><code>-nc</code> or <code>--no-copyright</code> &mdash; by default, <code>uglifyjs</code> will keep the initial\n  comment tokens in the generated code (assumed to be copyright information\n  etc.).  If you pass this it will discard it.\n\n</li>\n<li><code>-o filename</code> or <code>--output filename</code> &mdash; put the result in <code>filename</code>.  If\n  this isn\'t given, the result goes to standard output (or see next one).\n\n</li>\n<li><code>--overwrite</code> &mdash; if the code is read from a file (not from STDIN) and you\n  pass <code>--overwrite</code> then the output will be written in the same file.\n\n</li>\n<li><code>--ast</code> &mdash; pass this if you want to get the Abstract Syntax Tree instead\n  of JavaScript as output.  Useful for debugging or learning more about the\n  internals.\n\n</li>\n<li><code>-v</code> or <code>--verbose</code> &mdash; output some notes on STDERR (for now just how long\n  each operation takes).\n\n</li>\n<li><code>-d SYMBOL[=VALUE]</code> or <code>--define SYMBOL[=VALUE]</code> &mdash; will replace\n  all instances of the specified symbol where used as an identifier\n  (except where symbol has properly declared by a var declaration or\n  use as function parameter or similar) with the specified value. This\n  argument may be specified multiple times to define multiple\n  symbols - if no value is specified the symbol will be replaced with\n  the value <code>true</code>, or you can specify a numeric value (such as\n  <code>1024</code>), a quoted string value (such as ="object"= or\n  =\'https://github.com\'<code>), or the name of another symbol or keyword   (such as =null</code> or <code>document</code>).\n  This allows you, for example, to assign meaningful names to key\n  constant values but discard the symbolic names in the uglified\n  version for brevity/efficiency, or when used wth care, allows\n  UglifyJS to operate as a form of <b>conditional compilation</b>\n  whereby defining appropriate values may, by dint of the constant\n  folding and dead code removal features above, remove entire\n  superfluous code blocks (e.g. completely remove instrumentation or\n  trace code for production use).\n  Where string values are being defined, the handling of quotes are\n  likely to be subject to the specifics of your command shell\n  environment, so you may need to experiment with quoting styles\n  depending on your platform, or you may find the option\n  <code>--define-from-module</code> more suitable for use.\n\n</li>\n<li><code>-define-from-module SOMEMODULE</code> &mdash; will load the named module (as\n  per the NodeJS <code>require()</code> function) and iterate all the exported\n  properties of the module defining them as symbol names to be defined\n  (as if by the <code>--define</code> option) per the name of each property\n  (i.e. without the module name prefix) and given the value of the\n  property. This is a much easier way to handle and document groups of\n  symbols to be defined rather than a large number of <code>--define</code>\n  options.\n\n</li>\n<li><code>--unsafe</code> &mdash; enable other additional optimizations that are known to be\n  unsafe in some contrived situations, but could still be generally useful.\n  For now only these:\n\n<ul>\n<li>foo.toString()  ==&gt;  foo+""\n</li>\n<li>new Array(x,&hellip;)  ==&gt; [x,&hellip;]\n</li>\n<li>new Array(x) ==&gt; Array(x)\n\n</li>\n</ul>\n\n</li>\n<li><code>--max-line-len</code> (default 32K characters) &mdash; add a newline after around\n  32K characters.  I\'ve seen both FF and Chrome croak when all the code was\n  on a single line of around 670K.  Pass &ndash;max-line-len 0 to disable this\n  safety feature.\n\n</li>\n<li><code>--reserved-names</code> &mdash; some libraries rely on certain names to be used, as\n  pointed out in issue #92 and #81, so this option allow you to exclude such\n  names from the mangler.  For example, to keep names <code>require</code> and <code>$super</code>\n  intact you\'d specify &ndash;reserved-names "require,$super".\n\n</li>\n<li><code>--inline-script</code> &ndash; when you want to include the output literally in an\n  HTML <code>&lt;script&gt;</code> tag you can use this option to prevent <code>&lt;/script</code> from\n  showing up in the output.\n\n</li>\n<li><code>--lift-vars</code> &ndash; when you pass this, UglifyJS will apply the following\n  transformations (see the notes in API, <code>ast_lift_variables</code>):\n\n<ul>\n<li>put all <code>var</code> declarations at the start of the scope\n</li>\n<li>make sure a variable is declared only once\n</li>\n<li>discard unused function arguments\n</li>\n<li>discard unused inner (named) functions\n</li>\n<li>finally, try to merge assignments into that one <code>var</code> declaration, if\n    possible.\n</li>\n</ul>\n\n</li>\n</ul>\n\n\n\n</div>\n\n<div id="outline-container-1-4-1" class="outline-4">\n<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> API </h4>\n<div class="outline-text-4" id="text-1-4-1">\n\n\n<p>\nTo use the library from JavaScript, you\'d do the following (example for\nNodeJS):\n</p>\n\n\n\n<pre class="src src-js"><span class="org-keyword">var</span> <span class="org-variable-name">jsp</span> = require(<span class="org-string">"uglify-js"</span>).parser;\n<span class="org-keyword">var</span> <span class="org-variable-name">pro</span> = require(<span class="org-string">"uglify-js"</span>).uglify;\n\n<span class="org-keyword">var</span> <span class="org-variable-name">orig_code</span> = <span class="org-string">"... JS code here"</span>;\n<span class="org-keyword">var</span> <span class="org-variable-name">ast</span> = jsp.parse(orig_code); <span class="org-comment-delimiter">// </span><span class="org-comment">parse code and get the initial AST</span>\nast = pro.ast_mangle(ast); <span class="org-comment-delimiter">// </span><span class="org-comment">get a new AST with mangled names</span>\nast = pro.ast_squeeze(ast); <span class="org-comment-delimiter">// </span><span class="org-comment">get an AST with compression optimizations</span>\n<span class="org-keyword">var</span> <span class="org-variable-name">final_code</span> = pro.gen_code(ast); <span class="org-comment-delimiter">// </span><span class="org-comment">compressed code here</span>\n</pre>\n\n\n<p>\nThe above performs the full compression that is possible right now.  As you\ncan see, there are a sequence of steps which you can apply.  For example if\nyou want compressed output but for some reason you don\'t want to mangle\nvariable names, you would simply skip the line that calls\n<code>pro.ast_mangle(ast)</code>.\n</p>\n<p>\nSome of these functions take optional arguments.  Here\'s a description:\n</p>\n<ul>\n<li><code>jsp.parse(code, strict_semicolons)</code> &ndash; parses JS code and returns an AST.\n  <code>strict_semicolons</code> is optional and defaults to <code>false</code>.  If you pass\n  <code>true</code> then the parser will throw an error when it expects a semicolon and\n  it doesn\'t find it.  For most JS code you don\'t want that, but it\'s useful\n  if you want to strictly sanitize your code.\n\n</li>\n<li><code>pro.ast_lift_variables(ast)</code> &ndash; merge and move <code>var</code> declarations to the\n  scop of the scope; discard unused function arguments or variables; discard\n  unused (named) inner functions.  It also tries to merge assignments\n  following the <code>var</code> declaration into it.\n\n<p>\n  If your code is very hand-optimized concerning <code>var</code> declarations, this\n  lifting variable declarations might actually increase size.  For me it\n  helps out.  On jQuery it adds 865 bytes (243 after gzip).  YMMV.  Also\n  note that (since it\'s not enabled by default) this operation isn\'t yet\n  heavily tested (please report if you find issues!).\n</p>\n<p>\n  Note that although it might increase the image size (on jQuery it gains\n  865 bytes, 243 after gzip) it\'s technically more correct: in certain\n  situations, dead code removal might drop variable declarations, which\n  would not happen if the variables are lifted in advance.\n</p>\n<p>\n  Here\'s an example of what it does:\n</p></li>\n</ul>\n\n\n\n\n\n<pre class="src src-js"><span class="org-keyword">function</span> <span class="org-function-name">f</span>(<span class="org-variable-name">a</span>, <span class="org-variable-name">b</span>, <span class="org-variable-name">c</span>, <span class="org-variable-name">d</span>, <span class="org-variable-name">e</span>) {\n    <span class="org-keyword">var</span> <span class="org-variable-name">q</span>;\n    <span class="org-keyword">var</span> <span class="org-variable-name">w</span>;\n    w = 10;\n    q = 20;\n    <span class="org-keyword">for</span> (<span class="org-keyword">var</span> <span class="org-variable-name">i</span> = 1; i &lt; 10; ++i) {\n        <span class="org-keyword">var</span> <span class="org-variable-name">boo</span> = foo(a);\n    }\n    <span class="org-keyword">for</span> (<span class="org-keyword">var</span> <span class="org-variable-name">i</span> = 0; i &lt; 1; ++i) {\n        <span class="org-keyword">var</span> <span class="org-variable-name">boo</span> = bar(c);\n    }\n    <span class="org-keyword">function</span> <span class="org-function-name">foo</span>(){ ... }\n    <span class="org-keyword">function</span> <span class="org-function-name">bar</span>(){ ... }\n    <span class="org-keyword">function</span> <span class="org-function-name">baz</span>(){ ... }\n}\n\n<span class="org-comment-delimiter">// </span><span class="org-comment">transforms into ==&gt;</span>\n\n<span class="org-keyword">function</span> <span class="org-function-name">f</span>(<span class="org-variable-name">a</span>, <span class="org-variable-name">b</span>, <span class="org-variable-name">c</span>) {\n    <span class="org-keyword">var</span> <span class="org-variable-name">i</span>, <span class="org-variable-name">boo</span>, <span class="org-variable-name">w</span> = 10, <span class="org-variable-name">q</span> = 20;\n    <span class="org-keyword">for</span> (i = 1; i &lt; 10; ++i) {\n        boo = foo(a);\n    }\n    <span class="org-keyword">for</span> (i = 0; i &lt; 1; ++i) {\n        boo = bar(c);\n    }\n    <span class="org-keyword">function</span> <span class="org-function-name">foo</span>() { ... }\n    <span class="org-keyword">function</span> <span class="org-function-name">bar</span>() { ... }\n}\n</pre>\n\n\n<ul>\n<li><code>pro.ast_mangle(ast, options)</code> &ndash; generates a new AST containing mangled\n  (compressed) variable and function names.  It supports the following\n  options:\n\n<ul>\n<li><code>toplevel</code> &ndash; mangle toplevel names (by default we don\'t touch them).\n</li>\n<li><code>except</code> &ndash; an array of names to exclude from compression.\n</li>\n<li><code>defines</code> &ndash; an object with properties named after symbols to\n    replace (see the <code>--define</code> option for the script) and the values\n    representing the AST replacement value.\n\n</li>\n</ul>\n\n</li>\n<li><code>pro.ast_squeeze(ast, options)</code> &ndash; employs further optimizations designed\n  to reduce the size of the code that <code>gen_code</code> would generate from the\n  AST.  Returns a new AST.  <code>options</code> can be a hash; the supported options\n  are:\n\n<ul>\n<li><code>make_seqs</code> (default true) which will cause consecutive statements in a\n    block to be merged using the "sequence" (comma) operator\n\n</li>\n<li><code>dead_code</code> (default true) which will remove unreachable code.\n\n</li>\n</ul>\n\n</li>\n<li><code>pro.gen_code(ast, options)</code> &ndash; generates JS code from the AST.  By\n  default it\'s minified, but using the <code>options</code> argument you can get nicely\n  formatted output.  <code>options</code> is, well, optional :-) and if you pass it it\n  must be an object and supports the following properties (below you can see\n  the default values):\n\n<ul>\n<li><code>beautify: false</code> &ndash; pass <code>true</code> if you want indented output\n</li>\n<li><code>indent_start: 0</code> (only applies when <code>beautify</code> is <code>true</code>) &ndash; initial\n    indentation in spaces\n</li>\n<li><code>indent_level: 4</code> (only applies when <code>beautify</code> is <code>true</code>) --\n    indentation level, in spaces (pass an even number)\n</li>\n<li><code>quote_keys: false</code> &ndash; if you pass <code>true</code> it will quote all keys in\n    literal objects\n</li>\n<li><code>space_colon: false</code> (only applies when <code>beautify</code> is <code>true</code>) &ndash; wether\n    to put a space before the colon in object literals\n</li>\n<li><code>ascii_only: false</code> &ndash; pass <code>true</code> if you want to encode non-ASCII\n    characters as <code>\\uXXXX</code>.\n</li>\n<li><code>inline_script: false</code> &ndash; pass <code>true</code> to escape occurrences of\n    <code>&lt;/script</code> in strings\n</li>\n</ul>\n\n</li>\n</ul>\n\n\n</div>\n\n</div>\n\n<div id="outline-container-1-4-2" class="outline-4">\n<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Beautifier shortcoming &ndash; no more comments </h4>\n<div class="outline-text-4" id="text-1-4-2">\n\n\n<p>\nThe beautifier can be used as a general purpose indentation tool.  It\'s\nuseful when you want to make a minified file readable.  One limitation,\nthough, is that it discards all comments, so you don\'t really want to use it\nto reformat your code, unless you don\'t have, or don\'t care about, comments.\n</p>\n<p>\nIn fact it\'s not the beautifier who discards comments &mdash; they are dumped at\nthe parsing stage, when we build the initial AST.  Comments don\'t really\nmake sense in the AST, and while we could add nodes for them, it would be\ninconvenient because we\'d have to add special rules to ignore them at all\nthe processing stages.\n</p>\n</div>\n\n</div>\n\n<div id="outline-container-1-4-3" class="outline-4">\n<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> Use as a code pre-processor </h4>\n<div class="outline-text-4" id="text-1-4-3">\n\n\n<p>\nThe <code>--define</code> option can be used, particularly when combined with the\nconstant folding logic, as a form of pre-processor to enable or remove\nparticular constructions, such as might be used for instrumenting\ndevelopment code, or to produce variations aimed at a specific\nplatform.\n</p>\n<p>\nThe code below illustrates the way this can be done, and how the\nsymbol replacement is performed.\n</p>\n\n\n\n<pre class="src src-js">CLAUSE1: <span class="org-keyword">if</span> (<span class="org-keyword">typeof</span> DEVMODE === <span class="org-string">\'undefined\'</span>) {\n    DEVMODE = <span class="org-constant">true</span>;\n}\n\n<span class="org-function-name">CLAUSE2</span>: <span class="org-keyword">function</span> init() {\n    <span class="org-keyword">if</span> (DEVMODE) {\n        console.log(<span class="org-string">"init() called"</span>);\n    }\n    ....\n    DEVMODE &amp;amp;&amp;amp; console.log(<span class="org-string">"init() complete"</span>);\n}\n\n<span class="org-function-name">CLAUSE3</span>: <span class="org-keyword">function</span> reportDeviceStatus(<span class="org-variable-name">device</span>) {\n    <span class="org-keyword">var</span> <span class="org-variable-name">DEVMODE</span> = device.mode, <span class="org-variable-name">DEVNAME</span> = device.name;\n    <span class="org-keyword">if</span> (DEVMODE === <span class="org-string">\'open\'</span>) {\n        ....\n    }\n}\n</pre>\n\n\n<p>\nWhen the above code is normally executed, the undeclared global\nvariable <code>DEVMODE</code> will be assigned the value <b>true</b> (see <code>CLAUSE1</code>)\nand so the <code>init()</code> function (<code>CLAUSE2</code>) will write messages to the\nconsole log when executed, but in <code>CLAUSE3</code> a locally declared\nvariable will mask access to the <code>DEVMODE</code> global symbol.\n</p>\n<p>\nIf the above code is processed by UglifyJS with an argument of\n<code>--define DEVMODE=false</code> then UglifyJS will replace <code>DEVMODE</code> with the\nboolean constant value <b>false</b> within <code>CLAUSE1</code> and <code>CLAUSE2</code>, but it\nwill leave <code>CLAUSE3</code> as it stands because there <code>DEVMODE</code> resolves to\na validly declared variable.\n</p>\n<p>\nAnd more so, the constant-folding features of UglifyJS will recognise\nthat the <code>if</code> condition of <code>CLAUSE1</code> is thus always false, and so will\nremove the test and body of <code>CLAUSE1</code> altogether (including the\notherwise slightly problematical statement <code>false = true;</code> which it\nwill have formed by replacing <code>DEVMODE</code> in the body).  Similarly,\nwithin <code>CLAUSE2</code> both calls to <code>console.log()</code> will be removed\naltogether.\n</p>\n<p>\nIn this way you can mimic, to a limited degree, the functionality of\nthe C/C++ pre-processor to enable or completely remove blocks\ndepending on how certain symbols are defined - perhaps using UglifyJS\nto generate different versions of source aimed at different\nenvironments\n</p>\n<p>\nIt is recommmended (but not made mandatory) that symbols designed for\nthis purpose are given names consisting of <code>UPPER_CASE_LETTERS</code> to\ndistinguish them from other (normal) symbols and avoid the sort of\nclash that <code>CLAUSE3</code> above illustrates.\n</p>\n</div>\n</div>\n\n</div>\n\n<div id="outline-container-1-5" class="outline-3">\n<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Compression &ndash; how good is it? </h3>\n<div class="outline-text-3" id="text-1-5">\n\n\n<p>\nHere are updated statistics.  (I also updated my Google Closure and YUI\ninstallations).\n</p>\n<p>\nWe\'re still a lot better than YUI in terms of compression, though slightly\nslower.  We\'re still a lot faster than Closure, and compression after gzip\nis comparable.\n</p>\n<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">\n<caption></caption>\n<colgroup><col class="left" /><col class="left" /><col class="right" /><col class="left" /><col class="right" /><col class="left" /><col class="right" />\n</colgroup>\n<thead>\n<tr><th scope="col" class="left">File</th><th scope="col" class="left">UglifyJS</th><th scope="col" class="right">UglifyJS+gzip</th><th scope="col" class="left">Closure</th><th scope="col" class="right">Closure+gzip</th><th scope="col" class="left">YUI</th><th scope="col" class="right">YUI+gzip</th></tr>\n</thead>\n<tbody>\n<tr><td class="left">jquery-1.6.2.js</td><td class="left">91001 (0:01.59)</td><td class="right">31896</td><td class="left">90678 (0:07.40)</td><td class="right">31979</td><td class="left">101527 (0:01.82)</td><td class="right">34646</td></tr>\n<tr><td class="left">paper.js</td><td class="left">142023 (0:01.65)</td><td class="right">43334</td><td class="left">134301 (0:07.42)</td><td class="right">42495</td><td class="left">173383 (0:01.58)</td><td class="right">48785</td></tr>\n<tr><td class="left">prototype.js</td><td class="left">88544 (0:01.09)</td><td class="right">26680</td><td class="left">86955 (0:06.97)</td><td class="right">26326</td><td class="left">92130 (0:00.79)</td><td class="right">28624</td></tr>\n<tr><td class="left">thelib-full.js (DynarchLIB)</td><td class="left">251939 (0:02.55)</td><td class="right">72535</td><td class="left">249911 (0:09.05)</td><td class="right">72696</td><td class="left">258869 (0:01.94)</td><td class="right">76584</td></tr>\n</tbody>\n</table>\n\n\n</div>\n\n</div>\n\n<div id="outline-container-1-6" class="outline-3">\n<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Bugs? </h3>\n<div class="outline-text-3" id="text-1-6">\n\n\n<p>\nUnfortunately, for the time being there is no automated test suite.  But I\nran the compressor manually on non-trivial code, and then I tested that the\ngenerated code works as expected.  A few hundred times.\n</p>\n<p>\nDynarchLIB was started in times when there was no good JS minifier.\nTherefore I was quite religious about trying to write short code manually,\nand as such DL contains a lot of syntactic hacks<sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup> such as “foo == bar ?  a\n= 10 : b = 20”, though the more readable version would clearly be to use\n“if/else”.\n</p>\n<p>\nSince the parser/compressor runs fine on DL and jQuery, I\'m quite confident\nthat it\'s solid enough for production use.  If you can identify any bugs,\nI\'d love to hear about them (<a href="http://groups.google.com/group/uglifyjs">use the Google Group</a> or email me directly).\n</p>\n</div>\n\n</div>\n\n<div id="outline-container-1-7" class="outline-3">\n<h3 id="sec-1-7"><span class="section-number-3">1.7</span> Links </h3>\n<div class="outline-text-3" id="text-1-7">\n\n\n<ul>\n<li>Twitter: <a href="http://twitter.com/UglifyJS">@UglifyJS</a>\n</li>\n<li>Project at GitHub: <a href="http://github.com/mishoo/UglifyJS">http://github.com/mishoo/UglifyJS</a>\n</li>\n<li>Google Group: <a href="http://groups.google.com/group/uglifyjs">http://groups.google.com/group/uglifyjs</a>\n</li>\n<li>Common Lisp JS parser: <a href="http://marijn.haverbeke.nl/parse-js/">http://marijn.haverbeke.nl/parse-js/</a>\n</li>\n<li>JS-to-Lisp compiler: <a href="http://github.com/marijnh/js">http://github.com/marijnh/js</a>\n</li>\n<li>Common Lisp JS uglifier: <a href="http://github.com/mishoo/cl-uglify-js">http://github.com/mishoo/cl-uglify-js</a>\n</li>\n</ul>\n\n\n</div>\n\n</div>\n\n<div id="outline-container-1-8" class="outline-3">\n<h3 id="sec-1-8"><span class="section-number-3">1.8</span> License </h3>\n<div class="outline-text-3" id="text-1-8">\n\n\n<p>\nUglifyJS is released under the BSD license:\n</p>\n\n\n\n<pre class="example">Copyright 2010 (c) Mihai Bazon &lt;mihai.bazon@gmail.com&gt;\nBased on parse-js (http://marijn.haverbeke.nl/parse-js/).\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions\nare met:\n\n    * Redistributions of source code must retain the above\n      copyright notice, this list of conditions and the following\n      disclaimer.\n\n    * Redistributions in binary form must reproduce the above\n      copyright notice, this list of conditions and the following\n      disclaimer in the documentation and/or other materials\n      provided with the distribution.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER “AS IS” AND ANY\nEXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR\nPURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE\nLIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,\nOR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\nPROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\nPROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY\nTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR\nTORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF\nTHE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\nSUCH DAMAGE.\n</pre>\n\n\n<div id="footnotes">\n<h2 class="footnotes">Footnotes: </h2>\n<div id="text-footnotes">\n<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> I even reported a few bugs and suggested some fixes in the original\n    <a href="http://marijn.haverbeke.nl/parse-js/">parse-js</a> library, and Marijn pushed fixes literally in minutes.\n</p></div>\n</div>\n</div>\n\n</div>\n</div>\n</div>\n\n<div id="postamble">\n<p class="date">Date: 2011-12-09 14:59:08 EET</p>\n<p class="author">Author: Mihai Bazon</p>\n<p class="creator">Org version 7.7 with Emacs version 23</p>\n<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>\n\n</div>\n</body>\n</html>\n',
+331 silly resolved     readmeFilename: 'README.html',
+331 silly resolved     bugs: { url: 'https://github.com/mishoo/UglifyJS/issues' },
+331 silly resolved     homepage: 'https://github.com/mishoo/UglifyJS',
+331 silly resolved     _id: 'uglify-js@1.2.5',
+331 silly resolved     _from: 'uglify-js@1.2.5' },
+331 silly resolved   { author:
+331 silly resolved      { name: 'Felix Geisendörfer',
+331 silly resolved        email: 'felix@debuggable.com',
+331 silly resolved        url: 'http://debuggable.com/' },
+331 silly resolved     name: 'active-x-obfuscator',
+331 silly resolved     description: 'A module to (safely) obfuscate all occurrences of the string \'ActiveX\' inside any JavaScript code.',
+331 silly resolved     version: '0.0.1',
+331 silly resolved     homepage: 'https://github.com/felixge/node-active-x-obfuscator',
+331 silly resolved     repository:
+331 silly resolved      { type: 'git',
+331 silly resolved        url: 'git://github.com/felixge/node-active-x-obfuscator.git' },
+331 silly resolved     main: './index',
+331 silly resolved     scripts: { test: 'node test.js' },
+331 silly resolved     engines: { node: '*' },
+331 silly resolved     dependencies: { zeparser: '0.0.5' },
+331 silly resolved     devDependencies: {},
+331 silly resolved     optionalDependencies: {},
+331 silly resolved     readme: '# active-x-obfuscator\n\nA module to (safely) obfuscate all occurrences of the string \'ActiveX\' inside\nany JavaScript code.\n\n## Why?\n\nSome corporate firewalls /proxies such as Blue Coat block JavaScript files to be\ndownloaded if they contain the word `\'ActiveX\'`. That of course is very annoying\nfor libraries such as [socket.io][] that need to use `ActiveXObject` for\nsupporting IE8 and older.\n\n## Install\n\n```\nnpm install active-x-obfuscator\n```\n\n## Usage\n\n```js\nvar activeXObfuscator = require(\'active-x-obfuscator\');\nvar code = \'foo(new ActiveXObject());\';\n\nvar obfuscated = activeXObfuscator(code);\n// -> foo(new window[([\'Active\'].concat(\'Object\').join(\'X\'))])\n```\n\n## License\n\nLicensed under the MIT license.\n\n[socket.io]: http://socket.io/\n',
+331 silly resolved     readmeFilename: 'Readme.md',
+331 silly resolved     bugs: { url: 'https://github.com/felixge/node-active-x-obfuscator/issues' },
+331 silly resolved     _id: 'active-x-obfuscator@0.0.1',
+331 silly resolved     _from: 'active-x-obfuscator@0.0.1' },
+331 silly resolved   { name: 'xmlhttprequest',
+331 silly resolved     description: 'XMLHttpRequest for Node',
+331 silly resolved     version: '1.4.2',
+331 silly resolved     author: { name: 'Dan DeFelippi', url: 'http://driverdan.com' },
+331 silly resolved     keywords: [ 'xhr', 'ajax' ],
+331 silly resolved     licenses: [ [Object] ],
+331 silly resolved     repository:
+331 silly resolved      { type: 'git',
+331 silly resolved        url: 'git://github.com/driverdan/node-XMLHttpRequest.git' },
+331 silly resolved     bugs: { url: 'http://github.com/driverdan/node-XMLHttpRequest/issues' },
+331 silly resolved     engines: { node: '>=0.4.0' },
+331 silly resolved     directories: { lib: './lib', example: './example' },
+331 silly resolved     main: './lib/XMLHttpRequest.js',
+331 silly resolved     readme: '# node-XMLHttpRequest #\n\nnode-XMLHttpRequest is a wrapper for the built-in http client to emulate the\nbrowser XMLHttpRequest object.\n\nThis can be used with JS designed for browsers to improve reuse of code and\nallow the use of existing libraries.\n\nNote: This library currently conforms to [XMLHttpRequest 1](http://www.w3.org/TR/XMLHttpRequest/). Version 2.0 will target [XMLHttpRequest Level 2](http://www.w3.org/TR/XMLHttpRequest2/).\n\n## Usage ##\n\nHere\'s how to include the module in your project and use as the browser-based\nXHR object.\n\n\tvar XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;\n\tvar xhr = new XMLHttpRequest();\n\nNote: use the lowercase string "xmlhttprequest" in your require(). On\ncase-sensitive systems (eg Linux) using uppercase letters won\'t work.\n\n## Versions ##\n\nPrior to 1.4.0 version numbers were arbitrary. From 1.4.0 on they conform to\nthe standard major.minor.bugfix. 1.x shouldn\'t necessarily be considered\nstable just because it\'s above 0.x.\n\nSince the XMLHttpRequest API is stable this library\'s API is stable as\nwell. Major version numbers indicate significant core code changes.\nMinor versions indicate minor core code changes or better conformity to\nthe W3C spec.\n\n## Supports ##\n\n* Async and synchronous requests\n* GET, POST, PUT, and DELETE requests\n* All spec methods (open, send, abort, getRequestHeader,\n  getAllRequestHeaders, event methods)\n* Requests to all domains\n\n## Known Issues / Missing Features ##\n\nFor a list of open issues or to report your own visit the [github issues\npage](https://github.com/driverdan/node-XMLHttpRequest/issues).\n\n* Local file access may have unexpected results for non-UTF8 files\n* Synchronous requests don\'t set headers properly\n* Synchronous requests freeze node while waiting for response (But that\'s what you want, right? Stick with async!).\n* Some events are missing, such as abort\n* getRequestHeader is case-sensitive\n* Cookies aren\'t persisted between requests\n* Missing XML support\n* Missing basic auth\n',
+331 silly resolved     readmeFilename: 'README.md',
+331 silly resolved     homepage: 'https://github.com/driverdan/node-XMLHttpRequest',
+331 silly resolved     _id: 'xmlhttprequest@1.4.2',
+331 silly resolved     _from: 'xmlhttprequest@1.4.2' },
+331 silly resolved   { author:
+331 silly resolved      { name: 'Einar Otto Stangvik',
+331 silly resolved        email: 'einaros@gmail.com',
+331 silly resolved        url: 'http://2x.io' },
+331 silly resolved     name: 'ws',
+331 silly resolved     description: 'simple to use, blazing fast and thoroughly tested websocket client, server and console for node.js, up-to-date against RFC-6455',
+331 silly resolved     version: '0.4.31',
+331 silly resolved     keywords:
+331 silly resolved      [ 'Hixie',
+331 silly resolved        'HyBi',
+331 silly resolved        'Push',
+331 silly resolved        'RFC-6455',
+331 silly resolved        'WebSocket',
+331 silly resolved        'WebSockets',
+331 silly resolved        'real-time' ],
+331 silly resolved     repository: { type: 'git', url: 'git://github.com/einaros/ws.git' },
+331 silly resolved     bin: { wscat: './bin/wscat' },
+331 silly resolved     scripts:
+331 silly resolved      { test: 'make test',
+331 silly resolved        install: '(node-gyp rebuild 2> builderror.log) || (exit 0)' },
+331 silly resolved     engines: { node: '>=0.4.0' },
+331 silly resolved     dependencies:
+331 silly resolved      { commander: '~0.6.1',
+331 silly resolved        nan: '~0.3.0',
+331 silly resolved        tinycolor: '0.x',
+331 silly resolved        options: '>=0.0.5' },
+331 silly resolved     devDependencies:
+331 silly resolved      { mocha: '1.12.0',
+331 silly resolved        should: '1.2.x',
+331 silly resolved        'expect.js': '0.2.x',
+331 silly resolved        benchmark: '0.3.x',
+331 silly resolved        ansi: 'latest' },
+331 silly resolved     browser: './lib/browser.js',
+331 silly resolved     component: { scripts: [Object] },
+331 silly resolved     gypfile: true,
+331 silly resolved     readme: '[![Build Status](https://secure.travis-ci.org/einaros/ws.png)](http://travis-ci.org/einaros/ws)\n\n# ws: a node.js websocket library #\n\n`ws` is a simple to use websocket implementation, up-to-date against RFC-6455, and [probably the fastest WebSocket library for node.js](http://web.archive.org/web/20130314230536/http://hobbycoding.posterous.com/the-fastest-websocket-module-for-nodejs).\n\nPasses the quite extensive Autobahn test suite. See http://einaros.github.com/ws for the full reports.\n\nComes with a command line utility, `wscat`, which can either act as a server (--listen), or client (--connect); Use it to debug simple websocket services.\n\n## Protocol support ##\n\n* **Hixie draft 76** (Old and deprecated, but still in use by Safari and Opera. Added to ws version 0.4.2, but server only. Can be disabled by setting the `disableHixie` option to true.)\n* **HyBi drafts 07-12** (Use the option `protocolVersion: 8`, or argument `-p 8` for wscat)\n* **HyBi drafts 13-17** (Current default, alternatively option `protocolVersion: 13`, or argument `-p 13` for wscat)\n\n_See the echo.websocket.org example below for how to use the `protocolVersion` option._\n\n## Usage ##\n\n### Installing ###\n\n`npm install ws`\n\n### Sending and receiving text data ###\n\n```js\nvar WebSocket = require(\'ws\');\nvar ws = new WebSocket(\'ws://www.host.com/path\');\nws.on(\'open\', function() {\n    ws.send(\'something\');\n});\nws.on(\'message\', function(data, flags) {\n    // flags.binary will be set if a binary data is received\n    // flags.masked will be set if the data was masked\n});\n```\n\n### Sending binary data ###\n\n```js\nvar WebSocket = require(\'ws\');\nvar ws = new WebSocket(\'ws://www.host.com/path\');\nws.on(\'open\', function() {\n    var array = new Float32Array(5);\n    for (var i = 0; i < array.length; ++i) array[i] = i / 2;\n    ws.send(array, {binary: true, mask: true});\n});\n```\n\nSetting `mask`, as done for the send options above, will cause the data to be masked according to the websocket protocol. The same option applies for text data.\n\n### Server example ###\n\n```js\nvar WebSocketServer = require(\'ws\').Server\n  , wss = new WebSocketServer({port: 8080});\nwss.on(\'connection\', function(ws) {\n    ws.on(\'message\', function(message) {\n        console.log(\'received: %s\', message);\n    });\n    ws.send(\'something\');\n});\n```\n\n### Server sending broadcast data ###\n\n```js\nvar WebSocketServer = require(\'ws\').Server\n  , wss = new WebSocketServer({port: 8080});\n  \nwss.broadcast = function(data) {\n\tfor(var i in this.clients)\n\t\tthis.clients[i].send(data);\n};\n```\n\n### Error handling best practices ###\n\n```js\n// If the WebSocket is closed before the following send is attempted\nws.send(\'something\');\n\n// Errors (both immediate and async write errors) can be detected in an optional callback.\n// The callback is also the only way of being notified that data has actually been sent.\nws.send(\'something\', function(error) {\n    // if error is null, the send has been completed,\n    // otherwise the error object will indicate what failed.\n});\n\n// Immediate errors can also be handled with try/catch-blocks, but **note**\n// that since sends are inherently asynchronous, socket write failures will *not*\n// be captured when this technique is used.\ntry {\n    ws.send(\'something\');\n}\ncatch (e) {\n    // handle error\n}\n```\n\n### echo.websocket.org demo ###\n\n```js\nvar WebSocket = require(\'ws\');\nvar ws = new WebSocket(\'ws://echo.websocket.org/\', {protocolVersion: 8, origin: \'http://websocket.org\'});\nws.on(\'open\', function() {\n    console.log(\'connected\');\n    ws.send(Date.now().toString(), {mask: true});\n});\nws.on(\'close\', function() {\n    console.log(\'disconnected\');\n});\nws.on(\'message\', function(data, flags) {\n    console.log(\'Roundtrip time: \' + (Date.now() - parseInt(data)) + \'ms\', flags);\n    setTimeout(function() {\n        ws.send(Date.now().toString(), {mask: true});\n    }, 500);\n});\n```\n\n### wscat against echo.websocket.org ###\n\n    $ npm install -g ws\n    $ wscat -c ws://echo.websocket.org -p 8\n    connected (press CTRL+C to quit)\n    > hi there\n    < hi there\n    > are you a happy parrot?\n    < are you a happy parrot?\n\n### Other examples ###\n\nFor a full example with a browser client communicating with a ws server, see the examples folder.\n\nNote that the usage together with Express 3.0 is quite different from Express 2.x. The difference is expressed in the two different serverstats-examples.\n\nOtherwise, see the test cases.\n\n### Running the tests ###\n\n`make test`\n\n## API Docs ##\n\nSee the doc/ directory for Node.js-like docs for the ws classes.\n\n## License ##\n\n(The MIT License)\n\nCopyright (c) 2011 Einar Otto Stangvik &lt;einaros@gmail.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+331 silly resolved     readmeFilename: 'README.md',
+331 silly resolved     bugs: { url: 'https://github.com/einaros/ws/issues' },
+331 silly resolved     homepage: 'https://github.com/einaros/ws',
+331 silly resolved     _id: 'ws@0.4.31',
+331 silly resolved     _from: 'ws@0.4.x' } ]
+332 info install uglify-js@1.2.5 into /home/marco/TFG/licode/node_modules/socket.io-client
+333 info install active-x-obfuscator@0.0.1 into /home/marco/TFG/licode/node_modules/socket.io-client
+334 info install xmlhttprequest@1.4.2 into /home/marco/TFG/licode/node_modules/socket.io-client
+335 info install ws@0.4.31 into /home/marco/TFG/licode/node_modules/socket.io-client
+336 info installOne uglify-js@1.2.5
+337 info installOne active-x-obfuscator@0.0.1
+338 info installOne xmlhttprequest@1.4.2
+339 info installOne ws@0.4.31
+340 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js unbuild
+341 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator unbuild
+342 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest unbuild
+343 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws unbuild
+344 verbose tar unpack /root/.npm/uglify-js/1.2.5/package.tgz
+345 silly lockFile d5c9c7db-io-client-node-modules-uglify-js tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js
+346 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js /root/.npm/d5c9c7db-io-client-node-modules-uglify-js.lock
+347 silly lockFile 1759e680--npm-uglify-js-1-2-5-package-tgz tar:///root/.npm/uglify-js/1.2.5/package.tgz
+348 verbose lock tar:///root/.npm/uglify-js/1.2.5/package.tgz /root/.npm/1759e680--npm-uglify-js-1-2-5-package-tgz.lock
+349 verbose tar unpack /root/.npm/active-x-obfuscator/0.0.1/package.tgz
+350 silly lockFile 6eeb4691-node-modules-active-x-obfuscator tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+351 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator /root/.npm/6eeb4691-node-modules-active-x-obfuscator.lock
+352 silly lockFile bceb385e-e-x-obfuscator-0-0-1-package-tgz tar:///root/.npm/active-x-obfuscator/0.0.1/package.tgz
+353 verbose lock tar:///root/.npm/active-x-obfuscator/0.0.1/package.tgz /root/.npm/bceb385e-e-x-obfuscator-0-0-1-package-tgz.lock
+354 verbose tar unpack /root/.npm/xmlhttprequest/1.4.2/package.tgz
+355 silly lockFile 7ee11da0-ient-node-modules-xmlhttprequest tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest
+356 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest /root/.npm/7ee11da0-ient-node-modules-xmlhttprequest.lock
+357 silly lockFile 2529296f-xmlhttprequest-1-4-2-package-tgz tar:///root/.npm/xmlhttprequest/1.4.2/package.tgz
+358 verbose lock tar:///root/.npm/xmlhttprequest/1.4.2/package.tgz /root/.npm/2529296f-xmlhttprequest-1-4-2-package-tgz.lock
+359 verbose tar unpack /root/.npm/ws/0.4.31/package.tgz
+360 silly lockFile 7ccb68ca-socket-io-client-node-modules-ws tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+361 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws /root/.npm/7ccb68ca-socket-io-client-node-modules-ws.lock
+362 silly lockFile e494c62a-r-root-npm-ws-0-4-31-package-tgz tar:///root/.npm/ws/0.4.31/package.tgz
+363 verbose lock tar:///root/.npm/ws/0.4.31/package.tgz /root/.npm/e494c62a-r-root-npm-ws-0-4-31-package-tgz.lock
+364 silly gunzTarPerm modes [ '755', '644' ]
+365 silly gunzTarPerm modes [ '755', '644' ]
+366 silly gunzTarPerm modes [ '755', '644' ]
+367 silly gunzTarPerm modes [ '755', '644' ]
+368 silly gunzTarPerm extractEntry package.json
+369 silly gunzTarPerm extractEntry package.json
+370 silly gunzTarPerm extractEntry package.json
+371 silly gunzTarPerm extractEntry package.json
+372 silly gunzTarPerm extractEntry .npmignore
+373 silly gunzTarPerm extractEntry uglify-js.js
+374 silly gunzTarPerm extractEntry .npmignore
+375 silly gunzTarPerm extractEntry index.js
+376 silly gunzTarPerm extractEntry README.md
+377 silly gunzTarPerm extractEntry autotest.watchr
+378 silly gunzTarPerm extractEntry .npmignore
+379 silly gunzTarPerm extractEntry README.md
+380 silly gunzTarPerm extractEntry bin/uglifyjs
+381 silly gunzTarPerm extractEntry docstyle.css
+382 silly gunzTarPerm extractEntry test.js
+383 silly gunzTarPerm extractEntry Readme.md
+384 silly gunzTarPerm extractEntry example/demo.js
+385 silly gunzTarPerm extractEntry lib/XMLHttpRequest.js
+386 silly gunzTarPerm extractEntry index.js
+387 silly gunzTarPerm extractEntry test/BufferPool.test.js
+388 silly gunzTarPerm extractEntry README.html
+389 silly gunzTarPerm extractEntry README.org
+390 silly gunzTarPerm extractEntry test/Sender.hixie.test.js
+391 silly gunzTarPerm extractEntry test/Sender.test.js
+392 silly gunzTarPerm extractEntry tests/test-constants.js
+393 silly gunzTarPerm extractEntry package.json~
+394 silly gunzTarPerm extractEntry test/beautify.js
+395 silly gunzTarPerm extractEntry tests/test-events.js
+396 silly gunzTarPerm extractEntry tests/test-exceptions.js
+397 silly gunzTarPerm extractEntry tests/test-headers.js
+398 silly gunzTarPerm extractEntry tests/test-request-methods.js
+399 silly gunzTarPerm extractEntry test/Validation.test.js
+400 silly gunzTarPerm extractEntry test/Receiver.test.js
+401 silly gunzTarPerm extractEntry test/Receiver.hixie.test.js
+402 silly gunzTarPerm extractEntry test/WebSocketServer.test.js
+403 silly lockFile 6eeb4691-node-modules-active-x-obfuscator tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+404 silly lockFile 6eeb4691-node-modules-active-x-obfuscator tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+405 silly lockFile bceb385e-e-x-obfuscator-0-0-1-package-tgz tar:///root/.npm/active-x-obfuscator/0.0.1/package.tgz
+406 silly lockFile bceb385e-e-x-obfuscator-0-0-1-package-tgz tar:///root/.npm/active-x-obfuscator/0.0.1/package.tgz
+407 silly gunzTarPerm extractEntry test/testparser.js
+408 silly gunzTarPerm extractEntry test/unit/scripts.js
+409 silly gunzTarPerm extractEntry test/autobahn-server.js
+410 silly gunzTarPerm extractEntry test/autobahn.js
+411 info preinstall active-x-obfuscator@0.0.1
+412 verbose readDependencies using package.json deps
+413 verbose readDependencies using package.json deps
+414 silly gunzTarPerm extractEntry test/unit/compress/expected/array1.js
+415 silly gunzTarPerm extractEntry test/unit/compress/expected/issue17.js
+416 verbose cache add [ 'zeparser@0.0.5', null ]
+417 verbose cache add name=undefined spec="zeparser@0.0.5" args=["zeparser@0.0.5",null]
+418 verbose parsed url { protocol: null,
+418 verbose parsed url   slashes: null,
+418 verbose parsed url   auth: null,
+418 verbose parsed url   host: null,
+418 verbose parsed url   port: null,
+418 verbose parsed url   hostname: null,
+418 verbose parsed url   hash: null,
+418 verbose parsed url   search: null,
+418 verbose parsed url   query: null,
+418 verbose parsed url   pathname: 'zeparser@0.0.5',
+418 verbose parsed url   path: 'zeparser@0.0.5',
+418 verbose parsed url   href: 'zeparser@0.0.5' }
+419 verbose cache add name="zeparser" spec="0.0.5" args=["zeparser","0.0.5"]
+420 verbose parsed url { protocol: null,
+420 verbose parsed url   slashes: null,
+420 verbose parsed url   auth: null,
+420 verbose parsed url   host: null,
+420 verbose parsed url   port: null,
+420 verbose parsed url   hostname: null,
+420 verbose parsed url   hash: null,
+420 verbose parsed url   search: null,
+420 verbose parsed url   query: null,
+420 verbose parsed url   pathname: '0.0.5',
+420 verbose parsed url   path: '0.0.5',
+420 verbose parsed url   href: '0.0.5' }
+421 verbose addNamed [ 'zeparser', '0.0.5' ]
+422 verbose addNamed [ '0.0.5', '0.0.5' ]
+423 silly lockFile eb150454-zeparser-0-0-5 zeparser@0.0.5
+424 verbose lock zeparser@0.0.5 /root/.npm/eb150454-zeparser-0-0-5.lock
+425 silly gunzTarPerm extractEntry test/hybi-common.js
+426 silly gunzTarPerm extractEntry test/WebSocket.integration.js
+427 silly gunzTarPerm extractEntry tests/test-request-protocols.js
+428 silly gunzTarPerm extractEntry tests/testdata.txt
+429 verbose url raw zeparser/0.0.5
+430 verbose url resolving [ 'https://registry.npmjs.org/', './zeparser/0.0.5' ]
+431 verbose url resolved https://registry.npmjs.org/zeparser/0.0.5
+432 info trying registry request attempt 1 at 11:49:41
+433 verbose etag "2U0M9HB1NTI9GVTBEW0POB7MT"
+434 http GET https://registry.npmjs.org/zeparser/0.0.5
+435 silly gunzTarPerm extractEntry test/testserver.js
+436 silly gunzTarPerm extractEntry test/WebSocket.test.js
+437 silly gunzTarPerm extractEntry test/fixtures/agent1-cert.pem
+438 silly gunzTarPerm extractEntry test/fixtures/agent1-key.pem
+439 silly gunzTarPerm extractEntry test/fixtures/ca1-cert.pem
+440 silly gunzTarPerm extractEntry test/fixtures/ca1-key.pem
+441 silly gunzTarPerm extractEntry test/fixtures/certificate.pem
+442 silly gunzTarPerm extractEntry test/fixtures/key.pem
+443 silly lockFile 7ee11da0-ient-node-modules-xmlhttprequest tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest
+444 silly lockFile 7ee11da0-ient-node-modules-xmlhttprequest tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest
+445 silly lockFile 2529296f-xmlhttprequest-1-4-2-package-tgz tar:///root/.npm/xmlhttprequest/1.4.2/package.tgz
+446 silly lockFile 2529296f-xmlhttprequest-1-4-2-package-tgz tar:///root/.npm/xmlhttprequest/1.4.2/package.tgz
+447 silly gunzTarPerm extractEntry test/unit/compress/expected/issue20.js
+448 silly gunzTarPerm extractEntry test/unit/compress/expected/issue21.js
+449 info preinstall xmlhttprequest@1.4.2
+450 verbose readDependencies using package.json deps
+451 verbose readDependencies using package.json deps
+452 silly resolved []
+453 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest
+454 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/xmlhttprequest
+455 verbose linkStuff [ false,
+455 verbose linkStuff   false,
+455 verbose linkStuff   false,
+455 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules' ]
+456 info linkStuff xmlhttprequest@1.4.2
+457 verbose linkBins xmlhttprequest@1.4.2
+458 verbose linkMans xmlhttprequest@1.4.2
+459 verbose rebuildBundles xmlhttprequest@1.4.2
+460 info install xmlhttprequest@1.4.2
+461 info postinstall xmlhttprequest@1.4.2
+462 silly gunzTarPerm extractEntry test/unit/compress/expected/issue16.js
+463 silly gunzTarPerm extractEntry test/unit/compress/expected/issue27.js
+464 silly gunzTarPerm extractEntry test/fixtures/request.pem
+465 silly gunzTarPerm extractEntry test/fixtures/textfile
+466 silly gunzTarPerm extractEntry test/unit/compress/expected/issue278.js
+467 silly gunzTarPerm extractEntry test/unit/compress/expected/issue28.js
+468 silly gunzTarPerm extractEntry bench/parser.benchmark.js
+469 silly gunzTarPerm extractEntry bench/sender.benchmark.js
+470 silly gunzTarPerm extractEntry test/unit/compress/expected/issue29.js
+471 silly gunzTarPerm extractEntry test/unit/compress/expected/issue30.js
+472 silly gunzTarPerm extractEntry bench/speed.js
+473 silly gunzTarPerm extractEntry bench/util.js
+474 silly gunzTarPerm extractEntry bin/wscat
+475 silly gunzTarPerm extractEntry .travis.yml
+476 silly gunzTarPerm extractEntry doc/ws.md
+477 silly gunzTarPerm extractEntry examples/ssl.js
+478 silly gunzTarPerm extractEntry test/unit/compress/expected/issue14.js
+479 silly gunzTarPerm extractEntry test/unit/compress/expected/issue34.js
+480 silly gunzTarPerm extractEntry examples/fileapi/package.json
+481 silly gunzTarPerm extractEntry examples/fileapi/.npmignore
+482 silly gunzTarPerm extractEntry test/unit/compress/expected/issue13.js
+483 silly gunzTarPerm extractEntry test/unit/compress/expected/issue4.js
+484 silly gunzTarPerm extractEntry test/unit/compress/expected/issue11.js
+485 silly gunzTarPerm extractEntry test/unit/compress/expected/issue48.js
+486 silly gunzTarPerm extractEntry test/unit/compress/expected/issue10.js
+487 silly gunzTarPerm extractEntry test/unit/compress/expected/issue50.js
+488 silly gunzTarPerm extractEntry test/unit/compress/expected/ifreturn2.js
+489 silly gunzTarPerm extractEntry test/unit/compress/expected/issue53.js
+490 silly gunzTarPerm extractEntry test/unit/compress/expected/ifreturn.js
+491 silly gunzTarPerm extractEntry test/unit/compress/expected/issue54.1.js
+492 silly gunzTarPerm extractEntry test/unit/compress/expected/if.js
+493 silly gunzTarPerm extractEntry test/unit/compress/expected/issue68.js
+494 silly gunzTarPerm extractEntry test/unit/compress/expected/forstatement.js
+495 silly gunzTarPerm extractEntry test/unit/compress/expected/issue69.js
+496 silly gunzTarPerm extractEntry test/unit/compress/expected/empty-blocks.js
+497 silly gunzTarPerm extractEntry test/unit/compress/expected/issue9.js
+498 silly gunzTarPerm extractEntry test/unit/compress/expected/const.js
+499 silly gunzTarPerm extractEntry test/unit/compress/expected/mangle.js
+500 silly gunzTarPerm extractEntry test/unit/compress/expected/concatstring.js
+501 silly gunzTarPerm extractEntry test/unit/compress/expected/null_string.js
+502 silly gunzTarPerm extractEntry test/unit/compress/expected/assignment.js
+503 silly gunzTarPerm extractEntry test/unit/compress/expected/strict-equals.js
+504 silly gunzTarPerm extractEntry test/unit/compress/expected/array4.js
+505 silly gunzTarPerm extractEntry test/unit/compress/expected/var.js
+506 silly gunzTarPerm extractEntry test/unit/compress/expected/array3.js
+507 silly gunzTarPerm extractEntry test/unit/compress/expected/whitespace.js
+508 silly gunzTarPerm extractEntry examples/fileapi/server.js
+509 silly gunzTarPerm extractEntry examples/fileapi/public/app.js
+510 silly gunzTarPerm extractEntry test/unit/compress/expected/array2.js
+511 silly gunzTarPerm extractEntry test/unit/compress/expected/with.js
+512 silly gunzTarPerm extractEntry examples/fileapi/public/uploader.js
+513 silly gunzTarPerm extractEntry examples/fileapi/public/index.html
+514 silly gunzTarPerm extractEntry test/unit/compress/expected/issue25.js
+515 silly gunzTarPerm extractEntry test/unit/compress/test/array1.js
+516 silly gunzTarPerm extractEntry examples/serverstats/package.json
+517 silly gunzTarPerm extractEntry examples/serverstats/server.js
+518 silly gunzTarPerm extractEntry test/unit/compress/test/issue17.js
+519 silly gunzTarPerm extractEntry test/unit/compress/test/issue20.js
+520 silly gunzTarPerm extractEntry test/unit/compress/test/issue21.js
+521 silly gunzTarPerm extractEntry test/unit/compress/test/issue16.js
+522 silly gunzTarPerm extractEntry examples/serverstats/public/index.html
+523 silly gunzTarPerm extractEntry examples/serverstats-express_3/package.json
+524 silly gunzTarPerm extractEntry test/unit/compress/test/issue27.js
+525 silly gunzTarPerm extractEntry test/unit/compress/test/issue278.js
+526 silly gunzTarPerm extractEntry examples/serverstats-express_3/server.js
+527 silly gunzTarPerm extractEntry examples/serverstats-express_3/public/index.html
+528 silly gunzTarPerm extractEntry test/unit/compress/test/issue28.js
+529 silly gunzTarPerm extractEntry test/unit/compress/test/issue29.js
+530 silly gunzTarPerm extractEntry History.md
+531 silly gunzTarPerm extractEntry lib/BufferPool.js
+532 silly gunzTarPerm extractEntry test/unit/compress/test/issue30.js
+533 silly gunzTarPerm extractEntry test/unit/compress/test/issue14.js
+534 silly gunzTarPerm extractEntry lib/ErrorCodes.js
+535 silly gunzTarPerm extractEntry lib/Receiver.hixie.js
+536 silly gunzTarPerm extractEntry test/unit/compress/test/issue34.js
+537 silly gunzTarPerm extractEntry test/unit/compress/test/issue13.js
+538 silly gunzTarPerm extractEntry lib/Receiver.js
+539 silly gunzTarPerm extractEntry lib/BufferUtil.js
+540 silly gunzTarPerm extractEntry test/unit/compress/test/issue4.js
+541 silly gunzTarPerm extractEntry test/unit/compress/test/issue11.js
+542 silly gunzTarPerm extractEntry test/unit/compress/test/issue48.js
+543 silly gunzTarPerm extractEntry test/unit/compress/test/issue10.js
+544 silly gunzTarPerm extractEntry lib/Sender.js
+545 silly gunzTarPerm extractEntry lib/Validation.fallback.js
+546 silly gunzTarPerm extractEntry test/unit/compress/test/issue50.js
+547 silly gunzTarPerm extractEntry test/unit/compress/test/ifreturn2.js
+548 silly gunzTarPerm extractEntry test/unit/compress/test/issue53.js
+549 silly gunzTarPerm extractEntry test/unit/compress/test/ifreturn.js
+550 silly gunzTarPerm extractEntry lib/Validation.js
+551 silly gunzTarPerm extractEntry lib/WebSocket.js
+552 silly gunzTarPerm extractEntry test/unit/compress/test/issue54.1.js
+553 silly gunzTarPerm extractEntry test/unit/compress/test/if.js
+554 silly gunzTarPerm extractEntry lib/WebSocketServer.js
+555 silly gunzTarPerm extractEntry lib/BufferUtil.fallback.js
+556 silly gunzTarPerm extractEntry test/unit/compress/test/issue68.js
+557 silly gunzTarPerm extractEntry test/unit/compress/test/forstatement.js
+558 silly gunzTarPerm extractEntry test/unit/compress/test/issue69.js
+559 silly gunzTarPerm extractEntry test/unit/compress/test/empty-blocks.js
+560 silly gunzTarPerm extractEntry lib/browser.js
+561 silly gunzTarPerm extractEntry lib/Sender.hixie.js
+562 silly gunzTarPerm extractEntry test/unit/compress/test/issue9.js
+563 silly gunzTarPerm extractEntry test/unit/compress/test/const.js
+564 silly gunzTarPerm extractEntry Makefile
+565 silly gunzTarPerm extractEntry src/bufferutil.cc
+566 silly gunzTarPerm extractEntry test/unit/compress/test/mangle.js
+567 silly gunzTarPerm extractEntry test/unit/compress/test/concatstring.js
+568 silly gunzTarPerm extractEntry test/unit/compress/test/null_string.js
+569 silly gunzTarPerm extractEntry test/unit/compress/test/assignment.js
+570 silly gunzTarPerm extractEntry src/validation.cc
+571 silly gunzTarPerm extractEntry binding.gyp
+572 silly gunzTarPerm extractEntry test/unit/compress/test/strict-equals.js
+573 silly gunzTarPerm extractEntry test/unit/compress/test/array4.js
+574 silly gunzTarPerm extractEntry test/unit/compress/test/var.js
+575 silly gunzTarPerm extractEntry test/unit/compress/test/array3.js
+576 silly gunzTarPerm extractEntry test/unit/compress/test/whitespace.js
+577 silly gunzTarPerm extractEntry test/unit/compress/test/array2.js
+578 silly gunzTarPerm extractEntry test/unit/compress/test/with.js
+579 silly gunzTarPerm extractEntry test/unit/compress/test/issue25.js
+580 silly gunzTarPerm extractEntry tmp/269.js
+581 silly gunzTarPerm extractEntry tmp/embed-tokens.js
+582 silly gunzTarPerm extractEntry tmp/goto.js
+583 silly gunzTarPerm extractEntry tmp/goto2.js
+584 silly gunzTarPerm extractEntry tmp/hoist.js
+585 silly gunzTarPerm extractEntry tmp/app.js
+586 silly gunzTarPerm extractEntry tmp/instrument2.js
+587 silly gunzTarPerm extractEntry tmp/liftvars.js
+588 silly gunzTarPerm extractEntry tmp/test.js
+589 silly gunzTarPerm extractEntry tmp/uglify-hangs.js
+590 silly gunzTarPerm extractEntry tmp/uglify-hangs2.js
+591 silly gunzTarPerm extractEntry tmp/instrument.js
+592 silly gunzTarPerm extractEntry lib/object-ast.js
+593 silly gunzTarPerm extractEntry lib/parse-js.js
+594 silly gunzTarPerm extractEntry lib/process.js
+595 silly gunzTarPerm extractEntry lib/squeeze-more.js
+596 silly lockFile 7ccb68ca-socket-io-client-node-modules-ws tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+597 silly lockFile 7ccb68ca-socket-io-client-node-modules-ws tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+598 silly lockFile e494c62a-r-root-npm-ws-0-4-31-package-tgz tar:///root/.npm/ws/0.4.31/package.tgz
+599 silly lockFile e494c62a-r-root-npm-ws-0-4-31-package-tgz tar:///root/.npm/ws/0.4.31/package.tgz
+600 info preinstall ws@0.4.31
+601 verbose readDependencies using package.json deps
+602 verbose readDependencies using package.json deps
+603 verbose cache add [ 'commander@~0.6.1', null ]
+604 verbose cache add name=undefined spec="commander@~0.6.1" args=["commander@~0.6.1",null]
+605 verbose parsed url { protocol: null,
+605 verbose parsed url   slashes: null,
+605 verbose parsed url   auth: null,
+605 verbose parsed url   host: null,
+605 verbose parsed url   port: null,
+605 verbose parsed url   hostname: null,
+605 verbose parsed url   hash: null,
+605 verbose parsed url   search: null,
+605 verbose parsed url   query: null,
+605 verbose parsed url   pathname: 'commander@~0.6.1',
+605 verbose parsed url   path: 'commander@~0.6.1',
+605 verbose parsed url   href: 'commander@~0.6.1' }
+606 verbose cache add name="commander" spec="~0.6.1" args=["commander","~0.6.1"]
+607 verbose parsed url { protocol: null,
+607 verbose parsed url   slashes: null,
+607 verbose parsed url   auth: null,
+607 verbose parsed url   host: null,
+607 verbose parsed url   port: null,
+607 verbose parsed url   hostname: null,
+607 verbose parsed url   hash: null,
+607 verbose parsed url   search: null,
+607 verbose parsed url   query: null,
+607 verbose parsed url   pathname: '~0.6.1',
+607 verbose parsed url   path: '~0.6.1',
+607 verbose parsed url   href: '~0.6.1' }
+608 verbose addNamed [ 'commander', '~0.6.1' ]
+609 verbose addNamed [ null, '>=0.6.1-0 <0.7.0-0' ]
+610 silly lockFile 5c53196d-commander-0-6-1 commander@~0.6.1
+611 verbose lock commander@~0.6.1 /root/.npm/5c53196d-commander-0-6-1.lock
+612 verbose cache add [ 'nan@~0.3.0', null ]
+613 verbose cache add name=undefined spec="nan@~0.3.0" args=["nan@~0.3.0",null]
+614 verbose parsed url { protocol: null,
+614 verbose parsed url   slashes: null,
+614 verbose parsed url   auth: null,
+614 verbose parsed url   host: null,
+614 verbose parsed url   port: null,
+614 verbose parsed url   hostname: null,
+614 verbose parsed url   hash: null,
+614 verbose parsed url   search: null,
+614 verbose parsed url   query: null,
+614 verbose parsed url   pathname: 'nan@~0.3.0',
+614 verbose parsed url   path: 'nan@~0.3.0',
+614 verbose parsed url   href: 'nan@~0.3.0' }
+615 verbose cache add name="nan" spec="~0.3.0" args=["nan","~0.3.0"]
+616 verbose parsed url { protocol: null,
+616 verbose parsed url   slashes: null,
+616 verbose parsed url   auth: null,
+616 verbose parsed url   host: null,
+616 verbose parsed url   port: null,
+616 verbose parsed url   hostname: null,
+616 verbose parsed url   hash: null,
+616 verbose parsed url   search: null,
+616 verbose parsed url   query: null,
+616 verbose parsed url   pathname: '~0.3.0',
+616 verbose parsed url   path: '~0.3.0',
+616 verbose parsed url   href: '~0.3.0' }
+617 verbose addNamed [ 'nan', '~0.3.0' ]
+618 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+619 silly lockFile 7bcce2a2-nan-0-3-0 nan@~0.3.0
+620 verbose lock nan@~0.3.0 /root/.npm/7bcce2a2-nan-0-3-0.lock
+621 verbose cache add [ 'tinycolor@0.x', null ]
+622 verbose cache add name=undefined spec="tinycolor@0.x" args=["tinycolor@0.x",null]
+623 verbose parsed url { protocol: null,
+623 verbose parsed url   slashes: null,
+623 verbose parsed url   auth: null,
+623 verbose parsed url   host: null,
+623 verbose parsed url   port: null,
+623 verbose parsed url   hostname: null,
+623 verbose parsed url   hash: null,
+623 verbose parsed url   search: null,
+623 verbose parsed url   query: null,
+623 verbose parsed url   pathname: 'tinycolor@0.x',
+623 verbose parsed url   path: 'tinycolor@0.x',
+623 verbose parsed url   href: 'tinycolor@0.x' }
+624 verbose cache add name="tinycolor" spec="0.x" args=["tinycolor","0.x"]
+625 verbose parsed url { protocol: null,
+625 verbose parsed url   slashes: null,
+625 verbose parsed url   auth: null,
+625 verbose parsed url   host: null,
+625 verbose parsed url   port: null,
+625 verbose parsed url   hostname: null,
+625 verbose parsed url   hash: null,
+625 verbose parsed url   search: null,
+625 verbose parsed url   query: null,
+625 verbose parsed url   pathname: '0.x',
+625 verbose parsed url   path: '0.x',
+625 verbose parsed url   href: '0.x' }
+626 verbose addNamed [ 'tinycolor', '0.x' ]
+627 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+628 silly lockFile 8f23180d-tinycolor-0-x tinycolor@0.x
+629 verbose lock tinycolor@0.x /root/.npm/8f23180d-tinycolor-0-x.lock
+630 silly addNameRange { name: 'commander',
+630 silly addNameRange   range: '>=0.6.1-0 <0.7.0-0',
+630 silly addNameRange   hasData: false }
+631 verbose cache add [ 'options@>=0.0.5', null ]
+632 verbose cache add name=undefined spec="options@>=0.0.5" args=["options@>=0.0.5",null]
+633 verbose parsed url { protocol: null,
+633 verbose parsed url   slashes: null,
+633 verbose parsed url   auth: null,
+633 verbose parsed url   host: null,
+633 verbose parsed url   port: null,
+633 verbose parsed url   hostname: null,
+633 verbose parsed url   hash: null,
+633 verbose parsed url   search: null,
+633 verbose parsed url   query: null,
+633 verbose parsed url   pathname: 'options@%3E=0.0.5',
+633 verbose parsed url   path: 'options@%3E=0.0.5',
+633 verbose parsed url   href: 'options@%3E=0.0.5' }
+634 verbose cache add name="options" spec=">=0.0.5" args=["options",">=0.0.5"]
+635 verbose parsed url { protocol: null,
+635 verbose parsed url   slashes: null,
+635 verbose parsed url   auth: null,
+635 verbose parsed url   host: null,
+635 verbose parsed url   port: null,
+635 verbose parsed url   hostname: null,
+635 verbose parsed url   hash: null,
+635 verbose parsed url   search: null,
+635 verbose parsed url   query: null,
+635 verbose parsed url   pathname: '%3E=0.0.5',
+635 verbose parsed url   path: '%3E=0.0.5',
+635 verbose parsed url   href: '%3E=0.0.5' }
+636 verbose addNamed [ 'options', '>=0.0.5' ]
+637 verbose addNamed [ null, '>=0.0.5' ]
+638 silly lockFile 073a6bb3-options-0-0-5 options@>=0.0.5
+639 verbose lock options@>=0.0.5 /root/.npm/073a6bb3-options-0-0-5.lock
+640 silly addNameRange { name: 'nan', range: '>=0.3.0-0 <0.4.0-0', hasData: false }
+641 silly addNameRange { name: 'tinycolor',
+641 silly addNameRange   range: '>=0.0.0-0 <1.0.0-0',
+641 silly addNameRange   hasData: false }
+642 silly addNameRange { name: 'options', range: '>=0.0.5', hasData: false }
+643 verbose url raw commander
+644 verbose url resolving [ 'https://registry.npmjs.org/', './commander' ]
+645 verbose url resolved https://registry.npmjs.org/commander
+646 info trying registry request attempt 1 at 11:49:42
+647 verbose etag "CZLA9UZCM7PIICY80PHSUJEN8"
+648 http GET https://registry.npmjs.org/commander
+649 verbose url raw tinycolor
+650 verbose url resolving [ 'https://registry.npmjs.org/', './tinycolor' ]
+651 verbose url resolved https://registry.npmjs.org/tinycolor
+652 info trying registry request attempt 1 at 11:49:42
+653 verbose etag "9ATAKBSEESLOMSAKSZ8KD34ZS"
+654 http GET https://registry.npmjs.org/tinycolor
+655 verbose url raw nan
+656 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+657 verbose url resolved https://registry.npmjs.org/nan
+658 info trying registry request attempt 1 at 11:49:42
+659 verbose etag "EZRP5FS1S7MUAPIODKBYGXE1W"
+660 http GET https://registry.npmjs.org/nan
+661 verbose url raw options
+662 verbose url resolving [ 'https://registry.npmjs.org/', './options' ]
+663 verbose url resolved https://registry.npmjs.org/options
+664 info trying registry request attempt 1 at 11:49:42
+665 verbose etag "4OWNIT7EV59OCXQB6BMN36PEU"
+666 http GET https://registry.npmjs.org/options
+667 silly lockFile d5c9c7db-io-client-node-modules-uglify-js tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js
+668 silly lockFile d5c9c7db-io-client-node-modules-uglify-js tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js
+669 silly lockFile 1759e680--npm-uglify-js-1-2-5-package-tgz tar:///root/.npm/uglify-js/1.2.5/package.tgz
+670 silly lockFile 1759e680--npm-uglify-js-1-2-5-package-tgz tar:///root/.npm/uglify-js/1.2.5/package.tgz
+671 info preinstall uglify-js@1.2.5
+672 verbose readDependencies using package.json deps
+673 verbose readDependencies using package.json deps
+674 silly resolved []
+675 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js
+676 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/uglify-js
+677 verbose linkStuff [ false,
+677 verbose linkStuff   false,
+677 verbose linkStuff   false,
+677 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules' ]
+678 info linkStuff uglify-js@1.2.5
+679 verbose linkBins uglify-js@1.2.5
+680 verbose link bins [ { uglifyjs: './bin/uglifyjs' },
+680 verbose link bins   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/.bin',
+680 verbose link bins   false ]
+681 verbose linkMans uglify-js@1.2.5
+682 verbose rebuildBundles uglify-js@1.2.5
+683 info install uglify-js@1.2.5
+684 info postinstall uglify-js@1.2.5
+685 http 304 https://registry.npmjs.org/zeparser/0.0.5
+686 silly registry.get cb [ 304,
+686 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:42 GMT',
+686 silly registry.get     server: 'Apache',
+686 silly registry.get     via: '1.1 varnish',
+686 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:42 GMT',
+686 silly registry.get     'cache-control': 'max-age=1',
+686 silly registry.get     etag: '"2U0M9HB1NTI9GVTBEW0POB7MT"',
+686 silly registry.get     'x-served-by': 'cache-am72-AMS',
+686 silly registry.get     'x-cache': 'HIT',
+686 silly registry.get     'x-cache-hits': '1',
+686 silly registry.get     'x-timer': 'S1396090182.041644573,VS0,VE90',
+686 silly registry.get     vary: 'Accept',
+686 silly registry.get     'content-length': '0',
+686 silly registry.get     'keep-alive': 'timeout=10, max=50',
+686 silly registry.get     connection: 'Keep-Alive' } ]
+687 verbose etag zeparser/0.0.5 from cache
+688 silly lockFile eb150454-zeparser-0-0-5 zeparser@0.0.5
+689 silly lockFile eb150454-zeparser-0-0-5 zeparser@0.0.5
+690 silly resolved [ { author: { name: 'Peter van der Zee', url: 'http://qfox.nl/' },
+690 silly resolved     name: 'zeparser',
+690 silly resolved     description: 'My JavaScript parser',
+690 silly resolved     version: '0.0.5',
+690 silly resolved     homepage: 'https://github.com/qfox/ZeParser/',
+690 silly resolved     repository: { type: 'git', url: 'git://github.com/qfox/ZeParser.git' },
+690 silly resolved     main: './index',
+690 silly resolved     engines: { node: '*' },
+690 silly resolved     dependencies: {},
+690 silly resolved     devDependencies: {},
+690 silly resolved     readme: 'This is a JavaScript parser.\nhttp://github.com/qfox/ZeParser\n(c) Peter van der Zee\nhttp://qfox.nl\n\n\nBenchmark\nhttp://qfox.github.com/ZeParser/benchmark.html\n\nThe Tokenizer is used by the parser. The parser tells the tokenizer whether the next token may be a regular expression or not. Without the parser, the tokenizer will fail if regular expression literals are used in the input.\n\nUsage:\nZeParser.parse(input);\n\nReturns a "parse tree" which is a tree of an array of arrays with tokens (regular objects) as leafs. Meta information embedded as properties (of the arrays and the tokens).\n\nZeParser.createParser(input);\n\nReturns a new ZeParser instance which has already parsed the input. Amongst others, the ZeParser instance will have the properties .tree, .wtree and .btree.\n\n.tree is the parse tree mentioned above.\n.wtree ("white" tree) is a regular array with all the tokens encountered (including whitespace, line terminators and comments)\n.btree ("black" tree) is just like .wtree but without the whitespace, line terminators and comments. This is what the specification would call the "token stream".\n\nI\'m aware that the naming convention is a bit awkward. It\'s a tradeoff between short and descriptive. The streams are used quite often in the analysis.\n\nTokens are regular objects with several properties. Amongst them are .tokposw and .tokposw, they correspond with their own position in the .wtree and .btree.\n\nThe parser has two modes for parsing: simple and extended. Simple mode is mainly for just parsing and returning the streams and a simple parse tree. There\'s not so much meta information here and this mode is mainly built for speed. The other mode has everything required for Zeon to do its job. This mode is toggled by the instance property .ast, which is true by default :)\n\nNon-factory example:\n\nvar input = "foo";\nvar tree = []; // this should probably be refactored away some day\nvar tokenizer = new Tokenizer(input); // dito\nvar parser = new ZeParser(input, tokenizer, tree);\nparser.parse(); // returns tree..., should never throw errors\n',
+690 silly resolved     readmeFilename: 'README',
+690 silly resolved     bugs: { url: 'https://github.com/qfox/ZeParser/issues' },
+690 silly resolved     _id: 'zeparser@0.0.5',
+690 silly resolved     _from: 'zeparser@0.0.5' } ]
+691 info install zeparser@0.0.5 into /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+692 info installOne zeparser@0.0.5
+693 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser unbuild
+694 verbose tar unpack /root/.npm/zeparser/0.0.5/package.tgz
+695 silly lockFile f7b6b25c-obfuscator-node-modules-zeparser tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser
+696 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser /root/.npm/f7b6b25c-obfuscator-node-modules-zeparser.lock
+697 silly lockFile f4df0221-t-npm-zeparser-0-0-5-package-tgz tar:///root/.npm/zeparser/0.0.5/package.tgz
+698 verbose lock tar:///root/.npm/zeparser/0.0.5/package.tgz /root/.npm/f4df0221-t-npm-zeparser-0-0-5-package-tgz.lock
+699 silly gunzTarPerm modes [ '755', '644' ]
+700 silly gunzTarPerm extractEntry package.json
+701 silly gunzTarPerm extractEntry .npmignore
+702 silly gunzTarPerm extractEntry README
+703 silly gunzTarPerm extractEntry LICENSE
+704 silly gunzTarPerm extractEntry Tokenizer.js
+705 silly gunzTarPerm extractEntry ZeParser.js
+706 silly gunzTarPerm extractEntry tests.js
+707 silly gunzTarPerm extractEntry unicodecategories.js
+708 silly gunzTarPerm extractEntry index.js
+709 silly gunzTarPerm extractEntry test-parser.html
+710 silly gunzTarPerm extractEntry test-tokenizer.html
+711 silly gunzTarPerm extractEntry benchmark.html
+712 http 304 https://registry.npmjs.org/nan
+713 silly registry.get cb [ 304,
+713 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:42 GMT',
+713 silly registry.get     server: 'Apache',
+713 silly registry.get     via: '1.1 varnish',
+713 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:42 GMT',
+713 silly registry.get     'cache-control': 'max-age=1',
+713 silly registry.get     etag: '"EZRP5FS1S7MUAPIODKBYGXE1W"',
+713 silly registry.get     'x-served-by': 'cache-am72-AMS',
+713 silly registry.get     'x-cache': 'HIT',
+713 silly registry.get     'x-cache-hits': '1',
+713 silly registry.get     'x-timer': 'S1396090182.218770981,VS0,VE102',
+713 silly registry.get     vary: 'Accept',
+713 silly registry.get     'content-length': '0',
+713 silly registry.get     'keep-alive': 'timeout=10, max=50',
+713 silly registry.get     connection: 'Keep-Alive' } ]
+714 verbose etag nan from cache
+715 silly addNameRange number 2 { name: 'nan', range: '>=0.3.0-0 <0.4.0-0', hasData: true }
+716 silly addNameRange versions [ 'nan',
+716 silly addNameRange   [ '0.3.0-wip',
+716 silly addNameRange     '0.3.0-wip2',
+716 silly addNameRange     '0.3.0',
+716 silly addNameRange     '0.3.1',
+716 silly addNameRange     '0.3.2',
+716 silly addNameRange     '0.4.0',
+716 silly addNameRange     '0.4.1',
+716 silly addNameRange     '0.4.2',
+716 silly addNameRange     '0.4.3',
+716 silly addNameRange     '0.4.4',
+716 silly addNameRange     '0.5.0',
+716 silly addNameRange     '0.5.1',
+716 silly addNameRange     '0.5.2',
+716 silly addNameRange     '0.6.0',
+716 silly addNameRange     '0.7.0',
+716 silly addNameRange     '0.7.1',
+716 silly addNameRange     '0.8.0' ] ]
+717 verbose addNamed [ 'nan', '0.3.2' ]
+718 verbose addNamed [ '0.3.2', '0.3.2' ]
+719 silly lockFile 98ceedb5-nan-0-3-2 nan@0.3.2
+720 verbose lock nan@0.3.2 /root/.npm/98ceedb5-nan-0-3-2.lock
+721 silly lockFile 98ceedb5-nan-0-3-2 nan@0.3.2
+722 silly lockFile 98ceedb5-nan-0-3-2 nan@0.3.2
+723 silly lockFile 7bcce2a2-nan-0-3-0 nan@~0.3.0
+724 silly lockFile 7bcce2a2-nan-0-3-0 nan@~0.3.0
+725 http 304 https://registry.npmjs.org/commander
+726 silly registry.get cb [ 304,
+726 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:42 GMT',
+726 silly registry.get     server: 'Apache',
+726 silly registry.get     via: '1.1 varnish',
+726 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:42 GMT',
+726 silly registry.get     'cache-control': 'max-age=1',
+726 silly registry.get     etag: '"CZLA9UZCM7PIICY80PHSUJEN8"',
+726 silly registry.get     'x-served-by': 'cache-am69-AMS',
+726 silly registry.get     'x-cache': 'HIT',
+726 silly registry.get     'x-cache-hits': '1',
+726 silly registry.get     'x-timer': 'S1396090182.169800043,VS0,VE180',
+726 silly registry.get     vary: 'Accept',
+726 silly registry.get     'content-length': '0',
+726 silly registry.get     'keep-alive': 'timeout=10, max=50',
+726 silly registry.get     connection: 'Keep-Alive' } ]
+727 verbose etag commander from cache
+728 silly addNameRange number 2 { name: 'commander', range: '>=0.6.1-0 <0.7.0-0', hasData: true }
+729 silly addNameRange versions [ 'commander',
+729 silly addNameRange   [ '0.0.1',
+729 silly addNameRange     '0.0.3',
+729 silly addNameRange     '0.0.4',
+729 silly addNameRange     '0.0.5',
+729 silly addNameRange     '0.1.0',
+729 silly addNameRange     '0.2.0',
+729 silly addNameRange     '0.2.1',
+729 silly addNameRange     '0.3.0',
+729 silly addNameRange     '0.3.1',
+729 silly addNameRange     '0.3.2',
+729 silly addNameRange     '0.3.3',
+729 silly addNameRange     '0.4.0',
+729 silly addNameRange     '0.4.1',
+729 silly addNameRange     '0.4.2',
+729 silly addNameRange     '0.4.3',
+729 silly addNameRange     '0.5.0',
+729 silly addNameRange     '0.5.1',
+729 silly addNameRange     '0.6.0',
+729 silly addNameRange     '0.6.1',
+729 silly addNameRange     '0.5.2',
+729 silly addNameRange     '1.0.0',
+729 silly addNameRange     '1.0.1',
+729 silly addNameRange     '1.0.2',
+729 silly addNameRange     '1.0.3',
+729 silly addNameRange     '1.0.4',
+729 silly addNameRange     '1.0.5',
+729 silly addNameRange     '1.1.0',
+729 silly addNameRange     '1.1.1',
+729 silly addNameRange     '1.2.0',
+729 silly addNameRange     '1.3.0',
+729 silly addNameRange     '1.3.1',
+729 silly addNameRange     '1.3.2',
+729 silly addNameRange     '2.0.0',
+729 silly addNameRange     '2.1.0' ] ]
+730 verbose addNamed [ 'commander', '0.6.1' ]
+731 verbose addNamed [ '0.6.1', '0.6.1' ]
+732 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+733 verbose lock commander@0.6.1 /root/.npm/fa16a2ce-commander-0-6-1.lock
+734 http 304 https://registry.npmjs.org/options
+735 silly registry.get cb [ 304,
+735 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:42 GMT',
+735 silly registry.get     server: 'Apache',
+735 silly registry.get     via: '1.1 varnish',
+735 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:42 GMT',
+735 silly registry.get     'cache-control': 'max-age=1',
+735 silly registry.get     etag: '"4OWNIT7EV59OCXQB6BMN36PEU"',
+735 silly registry.get     'x-served-by': 'cache-am72-AMS',
+735 silly registry.get     'x-cache': 'HIT',
+735 silly registry.get     'x-cache-hits': '1',
+735 silly registry.get     'x-timer': 'S1396090182.179304600,VS0,VE175',
+735 silly registry.get     vary: 'Accept',
+735 silly registry.get     'content-length': '0',
+735 silly registry.get     'keep-alive': 'timeout=10, max=50',
+735 silly registry.get     connection: 'Keep-Alive' } ]
+736 verbose etag options from cache
+737 silly addNameRange number 2 { name: 'options', range: '>=0.0.5', hasData: true }
+738 silly addNameRange versions [ 'options', [ '0.0.1', '0.0.2', '0.0.3', '0.0.4', '0.0.5' ] ]
+739 verbose addNamed [ 'options', '0.0.5' ]
+740 verbose addNamed [ '0.0.5', '0.0.5' ]
+741 silly lockFile dc9591a5-options-0-0-5 options@0.0.5
+742 verbose lock options@0.0.5 /root/.npm/dc9591a5-options-0-0-5.lock
+743 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+744 silly lockFile fa16a2ce-commander-0-6-1 commander@0.6.1
+745 silly lockFile 5c53196d-commander-0-6-1 commander@~0.6.1
+746 silly lockFile 5c53196d-commander-0-6-1 commander@~0.6.1
+747 silly lockFile dc9591a5-options-0-0-5 options@0.0.5
+748 silly lockFile dc9591a5-options-0-0-5 options@0.0.5
+749 silly lockFile 073a6bb3-options-0-0-5 options@>=0.0.5
+750 silly lockFile 073a6bb3-options-0-0-5 options@>=0.0.5
+751 http 304 https://registry.npmjs.org/tinycolor
+752 silly registry.get cb [ 304,
+752 silly registry.get   { date: 'Sat, 29 Mar 2014 10:49:42 GMT',
+752 silly registry.get     server: 'Apache',
+752 silly registry.get     via: '1.1 varnish',
+752 silly registry.get     'last-modified': 'Sat, 29 Mar 2014 10:49:42 GMT',
+752 silly registry.get     'cache-control': 'max-age=1',
+752 silly registry.get     etag: '"9ATAKBSEESLOMSAKSZ8KD34ZS"',
+752 silly registry.get     'x-served-by': 'cache-am76-AMS',
+752 silly registry.get     'x-cache': 'HIT',
+752 silly registry.get     'x-cache-hits': '1',
+752 silly registry.get     'x-timer': 'S1396090182.192775011,VS0,VE179',
+752 silly registry.get     vary: 'Accept',
+752 silly registry.get     'content-length': '0',
+752 silly registry.get     'keep-alive': 'timeout=10, max=50',
+752 silly registry.get     connection: 'Keep-Alive' } ]
+753 verbose etag tinycolor from cache
+754 silly addNameRange number 2 { name: 'tinycolor', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+755 silly addNameRange versions [ 'tinycolor', [ '0.0.1' ] ]
+756 verbose addNamed [ 'tinycolor', '0.0.1' ]
+757 verbose addNamed [ '0.0.1', '0.0.1' ]
+758 silly lockFile 8ace0652-tinycolor-0-0-1 tinycolor@0.0.1
+759 verbose lock tinycolor@0.0.1 /root/.npm/8ace0652-tinycolor-0-0-1.lock
+760 silly lockFile 8ace0652-tinycolor-0-0-1 tinycolor@0.0.1
+761 silly lockFile 8ace0652-tinycolor-0-0-1 tinycolor@0.0.1
+762 silly lockFile 8f23180d-tinycolor-0-x tinycolor@0.x
+763 silly lockFile 8f23180d-tinycolor-0-x tinycolor@0.x
+764 silly resolved [ { name: 'nan',
+764 silly resolved     version: '0.3.2',
+764 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+764 silly resolved     main: '.index.js',
+764 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+764 silly resolved     contributors: [ [Object], [Object], [Object] ],
+764 silly resolved     license: 'MIT',
+764 silly resolved     readme: 'Native Abstractions for Node.js\n===============================\n\n**A header file filled with macro and utility goodness for making addon development for Node.js easier across versions 0.8, 0.10 and 0.11, and eventually 0.12.**\n\n***Current version: 0.3.2*** *(See [nan.h](https://github.com/rvagg/nan/blob/master/nan.h) for changelog)*\n\n[![NPM](https://nodei.co/npm/nan.png?downloads=true&stars=true)](https://nodei.co/npm/nan/) [![NPM](https://nodei.co/npm-dl/nan.png?months=6)](https://nodei.co/npm/nan/)\n\nThanks to the crazy changes in V8 (and some in Node core), keeping native addons compiling happily across versions, particularly 0.10 to 0.11/0.12, is a minor nightmare. The goal of this project is to store all logic necessary to develop native Node.js addons without having to inspect `NODE_MODULE_VERSION` and get yourself into a macro-tangle.\n\nThis project also contains some helper utilities that make addon development a bit more pleasant.\n\n * **[Usage](#usage)**\n * **[Example](#example)**\n * **[API](#api)**\n\n<a name="usage"></a>\n## Usage\n\nSimply add **NAN** as a dependency in the *package.json* of your Node addon:\n\n```js\n"dependencies": {\n    ...\n    "nan" : "~0.3.1"\n    ...\n}\n```\n\nPull in the path to **NAN** in your *binding.gyp* so that you can use `#include "nan.h"` in your *.cpp*:\n\n```js\n"include_dirs" : [\n    ...\n    "<!(node -p -e \\"require(\'path\').dirname(require.resolve(\'nan\'))\\")"\n    ...\n]\n```\n\nThis works like a `-I<path-to-NAN>` when compiling your addon.\n\n<a name="example"></a>\n## Example\n\nSee **[LevelDOWN](https://github.com/rvagg/node-leveldown/pull/48)** for a full example of **NAN** in use.\n\nFor a simpler example, see the **[async pi estimation example](https://github.com/rvagg/nan/tree/master/examples/async_pi_estimate)** in the examples directory for full code and an explanation of what this Monte Carlo Pi estimation example does. Below are just some parts of the full example that illustrate the use of **NAN**.\n\nCompare to the current 0.10 version of this example, found in the [node-addon-examples](https://github.com/rvagg/node-addon-examples/tree/master/9_async_work) repository and also a 0.11 version of the same found [here](https://github.com/kkoopa/node-addon-examples/tree/5c01f58fc993377a567812597e54a83af69686d7/9_async_work).\n\nNote that there is no embedded version sniffing going on here and also the async work is made much simpler, see below for details on the `NanAsyncWorker` class.\n\n```c++\n// addon.cc\n#include <node.h>\n#include "nan.h"\n// ...\n\nusing namespace v8;\n\nvoid InitAll(Handle<Object> exports) {\n  exports->Set(NanSymbol("calculateSync"),\n    FunctionTemplate::New(CalculateSync)->GetFunction());\n\n  exports->Set(NanSymbol("calculateAsync"),\n    FunctionTemplate::New(CalculateAsync)->GetFunction());\n}\n\nNODE_MODULE(addon, InitAll)\n```\n\n```c++\n// sync.h\n#include <node.h>\n#include "nan.h"\n\nNAN_METHOD(CalculateSync);\n```\n\n```c++\n// sync.cc\n#include <node.h>\n#include "nan.h"\n#include "sync.h"\n// ...\n\nusing namespace v8;\n\n// Simple synchronous access to the `Estimate()` function\nNAN_METHOD(CalculateSync) {\n  NanScope();\n\n  // expect a number as the first argument\n  int points = args[0]->Uint32Value();\n  double est = Estimate(points);\n\n  NanReturnValue(Number::New(est));\n}\n```\n\n```c++\n// async.cc\n#include <node.h>\n#include "nan.h"\n#include "async.h"\n\n// ...\n\nusing namespace v8;\n\nclass PiWorker : public NanAsyncWorker {\n public:\n  PiWorker(NanCallback *callback, int points)\n    : NanAsyncWorker(callback), points(points) {}\n  ~PiWorker() {}\n\n  // Executed inside the worker-thread.\n  // It is not safe to access V8, or V8 data structures\n  // here, so everything we need for input and output\n  // should go on `this`.\n  void Execute () {\n    estimate = Estimate(points);\n  }\n\n  // Executed when the async work is complete\n  // this function will be run inside the main event loop\n  // so it is safe to use V8 again\n  void HandleOKCallback () {\n    NanScope();\n\n    Local<Value> argv[] = {\n        Local<Value>::New(Null())\n      , Number::New(estimate)\n    };\n\n    callback->Call(2, argv);\n  };\n\n private:\n  int points;\n  double estimate;\n};\n\n// Asynchronous access to the `Estimate()` function\nNAN_METHOD(CalculateAsync) {\n  NanScope();\n\n  int points = args[0]->Uint32Value();\n  NanCallback *callback = new NanCallback(args[1].As<Function>());\n\n  NanAsyncQueueWorker(new PiWorker(callback, points));\n  NanReturnUndefined();\n}\n```\n\n<a name="api"></a>\n## API\n\n * <a href="#api_nan_method"><b><code>NAN_METHOD</code></b></a>\n * <a href="#api_nan_getter"><b><code>NAN_GETTER</code></b></a>\n * <a href="#api_nan_setter"><b><code>NAN_SETTER</code></b></a>\n * <a href="#api_nan_property_getter"><b><code>NAN_PROPERTY_GETTER</code></b></a>\n * <a href="#api_nan_property_setter"><b><code>NAN_PROPERTY_SETTER</code></b></a>\n * <a href="#api_nan_property_enumerator"><b><code>NAN_PROPERTY_ENUMERATOR</code></b></a>\n * <a href="#api_nan_property_deleter"><b><code>NAN_PROPERTY_DELETER</code></b></a>\n * <a href="#api_nan_property_query"><b><code>NAN_PROPERTY_QUERY</code></b></a>\n * <a href="#api_nan_weak_callback"><b><code>NAN_WEAK_CALLBACK</code></b></a>\n * <a href="#api_nan_return_value"><b><code>NanReturnValue</code></b></a>\n * <a href="#api_nan_return_undefined"><b><code>NanReturnUndefined</code></b></a>\n * <a href="#api_nan_return_null"><b><code>NanReturnNull</code></b></a>\n * <a href="#api_nan_return_empty_string"><b><code>NanReturnEmptyString</code></b></a>\n * <a href="#api_nan_scope"><b><code>NanScope</code></b></a>\n * <a href="#api_nan_locker"><b><code>NanLocker</code></b></a>\n * <a href="#api_nan_unlocker"><b><code>NanUnlocker</code></b></a>\n * <a href="#api_nan_get_internal_field_pointer"><b><code>NanGetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_set_internal_field_pointer"><b><code>NanSetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_object_wrap_handle"><b><code>NanObjectWrapHandle</code></b></a>\n * <a href="#api_nan_make_weak"><b><code>NanMakeWeak</code></b></a>\n * <a href="#api_nan_symbol"><b><code>NanSymbol</code></b></a>\n * <a href="#api_nan_get_pointer_safe"><b><code>NanGetPointerSafe</code></b></a>\n * <a href="#api_nan_set_pointer_safe"><b><code>NanSetPointerSafe</code></b></a>\n * <a href="#api_nan_from_v8_string"><b><code>NanFromV8String</code></b></a>\n * <a href="#api_nan_boolean_option_value"><b><code>NanBooleanOptionValue</code></b></a>\n * <a href="#api_nan_uint32_option_value"><b><code>NanUInt32OptionValue</code></b></a>\n * <a href="#api_nan_throw_error"><b><code>NanThrowError</code></b>, <b><code>NanThrowTypeError</code></b>, <b><code>NanThrowRangeError</code></b>, <b><code>NanThrowError(Handle<Value>)</code></b>, <b><code>NanThrowError(Handle<Value>, int)</code></b></a>\n * <a href="#api_nan_new_buffer_handle"><b><code>NanNewBufferHandle(char *, size_t, FreeCallback, void *)</code></b>, <b><code>NanNewBufferHandle(char *, uint32_t)</code></b>, <b><code>NanNewBufferHandle(uint32_t)</code></b></a>\n * <a href="#api_nan_buffer_use"><b><code>NanBufferUse(char *, uint32_t)</code></b></a>\n * <a href="#api_nan_new_context_handle"><b><code>NanNewContextHandle</code></b></a>\n * <a href="#api_nan_has_instance"><b><code>NanHasInstance</code></b></a>\n * <a href="#api_nan_persistent_to_local"><b><code>NanPersistentToLocal</code></b></a>\n * <a href="#api_nan_dispose"><b><code>NanDispose</code></b></a>\n * <a href="#api_nan_assign_persistent"><b><code>NanAssignPersistent</code></b></a>\n * <a href="#api_nan_init_persistent"><b><code>NanInitPersistent</code></b></a>\n * <a href="#api_nan_callback"><b><code>NanCallback</code></b></a>\n * <a href="#api_nan_async_worker"><b><code>NanAsyncWorker</code></b></a>\n * <a href="#api_nan_async_queue_worker"><b><code>NanAsyncQueueWorker</code></b></a>\n\n<a name="api_nan_method"></a>\n### NAN_METHOD(methodname)\n\nUse `NAN_METHOD` to define your V8 accessible methods:\n\n```c++\n// .h:\nclass Foo : public node::ObjectWrap {\n  ...\n\n  static NAN_METHOD(Bar);\n  static NAN_METHOD(Baz);\n}\n\n\n// .cc:\nNAN_METHOD(Foo::Bar) {\n  ...\n}\n\nNAN_METHOD(Foo::Baz) {\n  ...\n}\n```\n\nThe reason for this macro is because of the method signature change in 0.11:\n\n```c++\n// 0.10 and below:\nHandle<Value> name(const Arguments& args)\n\n// 0.11 and above\nvoid name(const FunctionCallbackInfo<Value>& args)\n```\n\nThe introduction of `FunctionCallbackInfo` brings additional complications:\n\n<a name="api_nan_getter"></a>\n### NAN_GETTER(methodname)\n\nUse `NAN_GETTER` to declare your V8 accessible getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act like the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_GETTER`.\n\n<a name="api_nan_setter"></a>\n### NAN_SETTER(methodname)\n\nUse `NAN_SETTER` to declare your V8 accessible setters. Same as `NAN_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_SETTER`.\n\n<a name="api_nan_property_getter"></a>\n### NAN_PROPERTY_GETTER(cbname)\nUse `NAN_PROPERTY_GETTER` to declare your V8 accessible property getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act similar to the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_GETTER`.\n\n<a name="api_nan_property_setter"></a>\n### NAN_PROPERTY_SETTER(cbname)\nUse `NAN_PROPERTY_SETTER` to declare your V8 accessible property setters. Same as `NAN_PROPERTY_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_SETTER`.\n\n<a name="api_nan_property_enumerator"></a>\n### NAN_PROPERTY_ENUMERATOR(cbname)\nUse `NAN_PROPERTY_ENUMERATOR` to declare your V8 accessible property enumerators. You get an appropriately typed `args` object like the `args` argument to a `NAN_PROPERTY_GETTER` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_ENUMERATOR`.\n\n<a name="api_nan_property_deleter"></a>\n### NAN_PROPERTY_DELETER(cbname)\nUse `NAN_PROPERTY_DELETER` to declare your V8 accessible property deleters. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_DELETER`.\n\n<a name="api_nan_property_query"></a>\n### NAN_PROPERTY_QUERY(cbname)\nUse `NAN_PROPERTY_QUERY` to declare your V8 accessible property queries. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_QUERY`.\n\n<a name="api_nan_weak_callback"></a>\n### NAN_WEAK_CALLBACK(type, cbname)\n\nUse `NAN_WEAK_CALLBACK` to declare your V8 WeakReference callbacks. There is an object argument accessible through `NAN_WEAK_CALLBACK_OBJECT`. The `type` argument gives the type of the `data` argument, accessible through `NAN_WEAK_CALLBACK_DATA(type)`.\n\n```c++\nstatic NAN_WEAK_CALLBACK(BufferReference*, WeakCheck) {\n  if (NAN_WEAK_CALLBACK_DATA(BufferReference*)->noLongerNeeded_) {\n    delete NAN_WEAK_CALLBACK_DATA(BufferReference*);\n  } else {\n    // Still in use, revive, prevent GC\n    NanMakeWeak(NAN_WEAK_CALLBACK_OBJECT, NAN_WEAK_CALLBACK_DATA(BufferReference*), &WeakCheck);\n  }\n}\n\n```\n<a name="api_nan_return_value"></a>\n### NanReturnValue(Handle&lt;Value&gt;)\n\nUse `NanReturnValue` when you want to return a value from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  ...\n\n  NanReturnValue(String::New("FooBar!"));\n}\n```\n\nNo `return` statement required.\n\n<a name="api_nan_return_undefined"></a>\n### NanReturnUndefined()\n\nUse `NanReturnUndefined` when you don\'t want to return anything from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnUndefined();\n}\n```\n\n<a name="api_nan_return_null"></a>\n### NanReturnNull()\n\nUse `NanReturnNull` when you want to return `Null` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnNull();\n}\n```\n\n<a name="api_nan_return_empty_string"></a>\n### NanReturnEmptyString()\n\nUse `NanReturnEmptyString` when you want to return an empty `String` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnEmptyString();\n}\n```\n\n<a name="api_nan_scope"></a>\n### NanScope()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanScope()` necessary, use it in place of `HandleScope scope`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanScope();\n\n  NanReturnValue(String::New("FooBar!"));\n}\n```\n\n<a name="api_nan_locker"></a>\n### NanLocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanLocker()` necessary, use it in place of `Locker locker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_unlocker"></a>\n### NanUnlocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanUnlocker()` necessary, use it in place of `Unlocker unlocker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_get_internal_field_pointer"></a>\n### void * NanGetInternalFieldPointer(Handle&lt;Object&gt;, int)\n\nGets a pointer to the internal field with at `index` from a V8 `Object` handle.\n\n```c++\nLocal<Object> obj;\n...\nNanGetInternalFieldPointer(obj, 0);\n```\n<a name="api_nan_set_internal_field_pointer"></a>\n### void NanSetInternalFieldPointer(Handle&lt;Object&gt;, int, void *)\n\nSets the value of the internal field at `index` on a V8 `Object` handle.\n\n```c++\nstatic Persistent<Function> dataWrapperCtor;\n...\nLocal<Object> wrapper = NanPersistentToLocal(dataWrapperCtor)->NewInstance();\nNanSetInternalFieldPointer(wrapper, 0, this);\n```\n\n<a name="api_nan_object_wrap_handle"></a>\n### Local&lt;Object&gt; NanObjectWrapHandle(Object)\n\nWhen you want to fetch the V8 object handle from a native object you\'ve wrapped with Node\'s `ObjectWrap`, you should use `NanObjectWrapHandle`:\n\n```c++\nNanObjectWrapHandle(iterator)->Get(String::NewSymbol("end"))\n```\n\n<a name="api_nan_make_weak"></a>\n### NanMakeWeak(Persistent&lt;T&gt;, parameter, callback)\n\nMake a persistent reference weak.\n\n<a name="api_nan_symbol"></a>\n### String NanSymbol(char *)\n\nThis isn\'t strictly about compatibility, it\'s just an easier way to create string symbol objects (i.e. `String::NewSymbol(x)`), for getting and setting object properties, or names of objects.\n\n```c++\nbool foo = false;\nif (obj->Has(NanSymbol("foo")))\n  foo = optionsObj->Get(NanSymbol("foo"))->BooleanValue()\n```\n\n<a name="api_nan_get_pointer_safe"></a>\n### Type NanGetPointerSafe(Type *[, Type])\n\nA helper for getting values from optional pointers. If the pointer is `NULL`, the function returns the optional default value, which defaults to `0`.  Otherwise, the function returns the value the pointer points to.\n\n```c++\nchar *plugh(uint32_t *optional) {\n  char res[] = "xyzzy";\n  uint32_t param = NanGetPointerSafe<uint32_t>(optional, 0x1337);\n  switch (param) {\n    ...\n  }\n  NanSetPointerSafe<uint32_t>(optional, 0xDEADBEEF);\n}  \n```\n\n<a name="api_nan_set_pointer_safe"></a>\n### bool NanSetPointerSafe(Type *, Type)\n\nA helper for setting optional argument pointers. If the pointer is `NULL`, the function simply return `false`.  Otherwise, the value is assigned to the variable the pointer points to.\n\n```c++\nconst char *plugh(size_t *outputsize) {\n  char res[] = "xyzzy";\n  if !(NanSetPointerSafe<size_t>(outputsize, strlen(res) + 1)) {\n    ...\n  }\n\n  ...\n}\n```\n\n<a name="api_nan_from_v8_string"></a>\n### char* NanFromV8String(Handle&lt;Value&gt;[, enum Nan::Encoding, size_t *, char *, size_t, int])\n\nWhen you want to convert a V8 `String` to a `char*` use `NanFromV8String`. It is possible to define an encoding that defaults to `Nan::UTF8` as well as a pointer to a variable that will be assigned the number of bytes in the returned string. It is also possible to supply a buffer and its length to the function in order not to have a new buffer allocated. The final argument allows optionally setting `String::WriteOptions`, which default to `String::HINT_MANY_WRITES_EXPECTED | String::NO_NULL_TERMINATION`.\nJust remember that you\'ll end up with an object that you\'ll need to `delete[]` at some point unless you supply your own buffer:\n\n```c++\nsize_t count;\nchar* name = NanFromV8String(args[0]);\nchar* decoded = NanFromV8String(args[1], Nan::BASE64, &count, NULL, 0, String::HINT_MANY_WRITES_EXPECTED);\nchar param_copy[count];\nmemcpy(param_copy, decoded, count);\ndelete[] decoded;\n```\n\n<a name="api_nan_boolean_option_value"></a>\n### bool NanBooleanOptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;[, bool])\n\nWhen you have an "options" object that you need to fetch properties from, boolean options can be fetched with this pair. They check first if the object exists (`IsEmpty`), then if the object has the given property (`Has`) then they get and convert/coerce the property to a `bool`.\n\nThe optional last parameter is the *default* value, which is `false` if left off:\n\n```c++\n// `foo` is false unless the user supplies a truthy value for it\nbool foo = NanBooleanOptionValue(optionsObj, NanSymbol("foo"));\n// `bar` is true unless the user supplies a falsy value for it\nbool bar = NanBooleanOptionValueDefTrue(optionsObj, NanSymbol("bar"), true);\n```\n\n<a name="api_nan_uint32_option_value"></a>\n### uint32_t NanUInt32OptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;, uint32_t)\n\nSimilar to `NanBooleanOptionValue`, use `NanUInt32OptionValue` to fetch an integer option from your options object. Can be any kind of JavaScript `Number` and it will be coerced to an unsigned 32-bit integer.\n\nRequires all 3 arguments as a default is not optional:\n\n```c++\nuint32_t count = NanUInt32OptionValue(optionsObj, NanSymbol("count"), 1024);\n```\n\n<a name="api_nan_throw_error"></a>\n### NanThrowError(message), NanThrowTypeError(message), NanThrowRangeError(message), NanThrowError(Local&lt;Value&gt;), NanThrowError(Local&lt;Value&gt;, int)\n\nFor throwing `Error`, `TypeError` and `RangeError` objects. You should `return` this call:\n\n```c++\nreturn NanThrowError("you must supply a callback argument");\n```\n\nCan also handle any custom object you may want to throw. If used with the error code argument, it will add the supplied error code to the error object as a property called `code`.\n\n<a name="api_nan_new_buffer_handle"></a>\n### Local&lt;Object&gt; NanNewBufferHandle(char *, uint32_t), Local&lt;Object&gt; NanNewBufferHandle(uint32_t)\n\nThe `Buffer` API has changed a little in Node 0.11, this helper provides consistent access to `Buffer` creation:\n\n```c++\nNanNewBufferHandle((char*)value.data(), value.size());\n```\n\nCan also be used to initialize a `Buffer` with just a `size` argument.\n\nCan also be supplied with a `NAN_WEAK_CALLBACK` and a hint for the garbage collector, when dealing with weak references.\n\n<a name="api_nan_buffer_use"></a>\n### Local&lt;Object&gt; NanBufferUse(char*, uint32_t)\n\n`Buffer::New(char*, uint32_t)` prior to 0.11 would make a copy of the data.\nWhile it was possible to get around this, it required a shim by passing a\ncallback. So the new API `Buffer::Use(char*, uint32_t)` was introduced to remove\nneeding to use this shim.\n\n`NanBufferUse` uses the `char*` passed as the backing data, and will free the\nmemory automatically when the weak callback is called. Keep this in mind, as\ncareless use can lead to "double free or corruption" and other cryptic failures.\n\n<a name="api_nan_has_instance"></a>\n### bool NanHasInstance(Persistent&lt;FunctionTemplate&gt;&, Handle&lt;Value&gt;)\n\nCan be used to check the type of an object to determine it is of a particular class you have already defined and have a `Persistent<FunctionTemplate>` handle for.\n\n<a name="api_nan_persistent_to_local"></a>\n### Local&lt;Type&gt; NanPersistentToLocal(Persistent&lt;Type&gt;&)\n\nAside from `FunctionCallbackInfo`, the biggest and most painful change to V8 in Node 0.11 is the many restrictions now placed on `Persistent` handles. They are difficult to assign and difficult to fetch the original value out of.\n\nUse `NanPersistentToLocal` to convert a `Persistent` handle back to a `Local` handle.\n\n```c++\nLocal<Object> handle = NanPersistentToLocal(persistentHandle);\n```\n\n<a href="#api_nan_new_context_handle">\n### Local&lt;Context&gt; NanNewContextHandle([ExtensionConfiguration*, Handle&lt;ObjectTemplate&gt;, Handle&lt;Value&gt;])\nCreates a new `Local<Context>` handle.\n\n```c++\nLocal<FunctionTemplate> ftmpl = FunctionTemplate::New();\nLocal<ObjectTemplate> otmpl = ftmpl->InstanceTemplate();\nLocal<Context> ctx =  NanNewContextHandle(NULL, otmpl);\n```\n\n<a name="api_nan_dispose"></a>\n### void NanDispose(Persistent&lt;T&gt; &)\n\nUse `NanDispose` to dispose a `Persistent` handle.\n\n```c++\nNanDispose(persistentHandle);\n```\n\n<a name="api_nan_assign_persistent"></a>\n### NanAssignPersistent(type, handle, object)\n\nUse `NanAssignPersistent` to assign a non-`Persistent` handle to a `Persistent` one. You can no longer just declare a `Persistent` handle and assign directly to it later, you have to `Reset` it in Node 0.11, so this makes it easier.\n\nIn general it is now better to place anything you want to protect from V8\'s garbage collector as properties of a generic `Object` and then assign that to a `Persistent`. This works in older versions of Node also if you use `NanAssignPersistent`:\n\n```c++\nPersistent<Object> persistentHandle;\n\n...\n\nLocal<Object> obj = Object::New();\nobj->Set(NanSymbol("key"), keyHandle); // where keyHandle might be a Local<String>\nNanAssignPersistent(Object, persistentHandle, obj)\n```\n\n<a name="api_nan_init_persistent"></a>\n### NanInitPersistent(type, name, object)\n\nUser `NanInitPersistent` to declare and initialize a new `Persistent` with the supplied object. The assignment operator for `Persistent` is no longer public in Node 0.11, so this macro makes it easier to declare and initializing a new `Persistent`. See <a href="#api_nan_assign_persistent"><b><code>NanAssignPersistent</code></b></a> for more information.\n\n```c++\nLocal<Object> obj = Object::New();\nobj->Set(NanSymbol("key"), keyHandle); // where keyHandle might be a Local<String>\nNanInitPersistent(Object, persistentHandle, obj);\n```\n\n<a name="api_nan_callback"></a>\n### NanCallback\n\nBecause of the difficulties imposed by the changes to `Persistent` handles in V8 in Node 0.11, creating `Persistent` versions of your `Local<Function>` handles is annoyingly tricky. `NanCallback` makes it easier by taking your `Local` handle, making it persistent until the `NanCallback` is deleted and even providing a handy `Call()` method to fetch and execute the callback `Function`.\n\n```c++\nLocal<Function> callbackHandle = callback = args[0].As<Function>();\nNanCallback *callback = new NanCallback(callbackHandle);\n// pass `callback` around and it\'s safe from GC until you:\ndelete callback;\n```\n\nYou can execute the callback like so:\n\n```c++\n// no arguments:\ncallback->Call(0, NULL);\n\n// an error argument:\nLocal<Value> argv[] = {\n  Exception::Error(String::New("fail!"))\n};\ncallback->Call(1, argv);\n\n// a success argument:\nLocal<Value> argv[] = {\n  Local<Value>::New(Null()),\n  String::New("w00t!")\n};\ncallback->Call(2, argv);\n```\n\n`NanCallback` also has a `Local<Function> GetCallback()` method that you can use to fetch a local handle to the underlying callback function if you need it.\n\n<a name="api_nan_async_worker"></a>\n### NanAsyncWorker\n\n`NanAsyncWorker` is an abstract class that you can subclass to have much of the annoying async queuing and handling taken care of for you. It can even store arbitrary V8 objects for you and have them persist while the async work is in progress.\n\nSee a rough outline of the implementation:\n\n```c++\nclass NanAsyncWorker {\npublic:\n  NanAsyncWorker (NanCallback *callback);\n\n  // Clean up persistent handles and delete the *callback\n  virtual ~NanAsyncWorker ();\n\n  // Check the `char *errmsg` property and call HandleOKCallback()\n  // or HandleErrorCallback depending on whether it has been set or not\n  virtual void WorkComplete ();\n\n  // You must implement this to do some async work. If there is an\n  // error then allocate `errmsg` to to a message and the callback will\n  // be passed that string in an Error object\n  virtual void Execute ();\n\nprotected:\n  // Set this if there is an error, otherwise it\'s NULL\n  const char *errmsg;\n\n  // Save a V8 object in a Persistent handle to protect it from GC\n  void SavePersistent(const char *key, Local<Object> &obj);\n\n  // Fetch a stored V8 object (don\'t call from within `Execute()`)\n  Local<Object> GetFromPersistent(const char *key);\n\n  // Default implementation calls the callback function with no arguments.\n  // Override this to return meaningful data\n  virtual void HandleOKCallback ();\n\n  // Default implementation calls the callback function with an Error object\n  // wrapping the `errmsg` string\n  virtual void HandleErrorCallback ();\n};\n```\n\n<a name="api_nan_async_queue_worker"></a>\n### NanAsyncQueueWorker(NanAsyncWorker *)\n\n`NanAsyncQueueWorker` will run a `NanAsyncWorker` asynchronously via libuv. Both the *execute* and *after_work* steps are taken care of for you&mdash;most of the logic for this is embedded in `NanAsyncWorker`.\n\n### Contributors\n\nNAN is only possible due to the excellent work of the following contributors:\n\n<table><tbody>\n<tr><th align="left">Rod Vagg</th><td><a href="https://github.com/rvagg">GitHub/rvagg</a></td><td><a href="http://twitter.com/rvagg">Twitter/@rvagg</a></td></tr>\n<tr><th align="left">Benjamin Byholm</th><td><a href="https://github.com/kkoopa/">GitHub/kkoopa</a></td></tr>\n<tr><th align="left">Trevor Norris</th><td><a href="https://github.com/trevnorris">GitHub/trevnorris</a></td><td><a href="http://twitter.com/trevnorris">Twitter/@trevnorris</a></td></tr>\n</tbody></table>\n\nLicence &amp; copyright\n-----------------------\n\nCopyright (c) 2013 Rod Vagg & NAN contributors (listed above).\n\nNative Abstractions for Node.js is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.\n',
+764 silly resolved     readmeFilename: 'README.md',
+764 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+764 silly resolved     homepage: 'https://github.com/rvagg/nan',
+764 silly resolved     _id: 'nan@0.3.2',
+764 silly resolved     _from: 'nan@~0.3.0' },
+764 silly resolved   { name: 'commander',
+764 silly resolved     version: '0.6.1',
+764 silly resolved     description: 'the complete solution for node.js command-line programs',
+764 silly resolved     keywords: [ 'command', 'option', 'parser', 'prompt', 'stdin' ],
+764 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+764 silly resolved     repository:
+764 silly resolved      { type: 'git',
+764 silly resolved        url: 'https://github.com/visionmedia/commander.js.git' },
+764 silly resolved     dependencies: {},
+764 silly resolved     devDependencies: { should: '>= 0.0.1' },
+764 silly resolved     scripts: { test: 'make test' },
+764 silly resolved     main: 'index',
+764 silly resolved     engines: { node: '>= 0.4.x' },
+764 silly resolved     readme: '# Commander.js\n\n  The complete solution for [node.js](http://nodejs.org) command-line interfaces, inspired by Ruby\'s [commander](https://github.com/visionmedia/commander).\n\n [![Build Status](https://secure.travis-ci.org/visionmedia/commander.js.png)](http://travis-ci.org/visionmedia/commander.js)\n\n## Installation\n\n    $ npm install commander\n\n## Option parsing\n\n Options with commander are defined with the `.option()` method, also serving as documentation for the options. The example below parses args and options from `process.argv`, leaving remaining args as the `program.args` array which were not consumed by options.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'commander\');\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-p, --peppers\', \'Add peppers\')\n  .option(\'-P, --pineapple\', \'Add pineapple\')\n  .option(\'-b, --bbq\', \'Add bbq sauce\')\n  .option(\'-c, --cheese [type]\', \'Add the specified type of cheese [marble]\', \'marble\')\n  .parse(process.argv);\n\nconsole.log(\'you ordered a pizza with:\');\nif (program.peppers) console.log(\'  - peppers\');\nif (program.pineapple) console.log(\'  - pineappe\');\nif (program.bbq) console.log(\'  - bbq\');\nconsole.log(\'  - %s cheese\', program.cheese);\n```\n\n Short flags may be passed as a single arg, for example `-abc` is equivalent to `-a -b -c`. Multi-word options such as "--template-engine" are camel-cased, becoming `program.templateEngine` etc.\n\n## Automated --help\n\n The help information is auto-generated based on the information commander already knows about your program, so the following `--help` info is for free:\n\n```  \n $ ./examples/pizza --help\n\n   Usage: pizza [options]\n\n   Options:\n\n     -V, --version        output the version number\n     -p, --peppers        Add peppers\n     -P, --pineapple      Add pineappe\n     -b, --bbq            Add bbq sauce\n     -c, --cheese <type>  Add the specified type of cheese [marble]\n     -h, --help           output usage information\n\n```\n\n## Coercion\n\n```js\nfunction range(val) {\n  return val.split(\'..\').map(Number);\n}\n\nfunction list(val) {\n  return val.split(\',\');\n}\n\nprogram\n  .version(\'0.0.1\')\n  .usage(\'[options] <file ...>\')\n  .option(\'-i, --integer <n>\', \'An integer argument\', parseInt)\n  .option(\'-f, --float <n>\', \'A float argument\', parseFloat)\n  .option(\'-r, --range <a>..<b>\', \'A range\', range)\n  .option(\'-l, --list <items>\', \'A list\', list)\n  .option(\'-o, --optional [value]\', \'An optional value\')\n  .parse(process.argv);\n\nconsole.log(\' int: %j\', program.integer);\nconsole.log(\' float: %j\', program.float);\nconsole.log(\' optional: %j\', program.optional);\nprogram.range = program.range || [];\nconsole.log(\' range: %j..%j\', program.range[0], program.range[1]);\nconsole.log(\' list: %j\', program.list);\nconsole.log(\' args: %j\', program.args);\n```\n\n## Custom help\n\n You can display arbitrary `-h, --help` information\n by listening for "--help". Commander will automatically\n exit once you are done so that the remainder of your program\n does not execute causing undesired behaviours, for example\n in the following executable "stuff" will not output when\n `--help` is used.\n\n```js\n#!/usr/bin/env node\n\n/**\n * Module dependencies.\n */\n\nvar program = require(\'../\');\n\nfunction list(val) {\n  return val.split(\',\').map(Number);\n}\n\nprogram\n  .version(\'0.0.1\')\n  .option(\'-f, --foo\', \'enable some foo\')\n  .option(\'-b, --bar\', \'enable some bar\')\n  .option(\'-B, --baz\', \'enable some baz\');\n\n// must be before .parse() since\n// node\'s emit() is immediate\n\nprogram.on(\'--help\', function(){\n  console.log(\'  Examples:\');\n  console.log(\'\');\n  console.log(\'    $ custom-help --help\');\n  console.log(\'    $ custom-help -h\');\n  console.log(\'\');\n});\n\nprogram.parse(process.argv);\n\nconsole.log(\'stuff\');\n```\n\nyielding the following help output:\n\n```\n\nUsage: custom-help [options]\n\nOptions:\n\n  -h, --help     output usage information\n  -V, --version  output the version number\n  -f, --foo      enable some foo\n  -b, --bar      enable some bar\n  -B, --baz      enable some baz\n\nExamples:\n\n  $ custom-help --help\n  $ custom-help -h\n\n```\n\n## .prompt(msg, fn)\n\n Single-line prompt:\n\n```js\nprogram.prompt(\'name: \', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Multi-line prompt:\n\n```js\nprogram.prompt(\'description:\', function(name){\n  console.log(\'hi %s\', name);\n});\n```\n\n Coercion:\n\n```js\nprogram.prompt(\'Age: \', Number, function(age){\n  console.log(\'age: %j\', age);\n});\n```\n\n```js\nprogram.prompt(\'Birthdate: \', Date, function(date){\n  console.log(\'date: %s\', date);\n});\n```\n\n## .password(msg[, mask], fn)\n\nPrompt for password without echoing:\n\n```js\nprogram.password(\'Password: \', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\nPrompt for password with mask char "*":\n\n```js\nprogram.password(\'Password: \', \'*\', function(pass){\n  console.log(\'got "%s"\', pass);\n  process.stdin.destroy();\n});\n```\n\n## .confirm(msg, fn)\n\n Confirm with the given `msg`:\n\n```js\nprogram.confirm(\'continue? \', function(ok){\n  console.log(\' got %j\', ok);\n});\n```\n\n## .choose(list, fn)\n\n Let the user choose from a `list`:\n\n```js\nvar list = [\'tobi\', \'loki\', \'jane\', \'manny\', \'luna\'];\n\nconsole.log(\'Choose the coolest pet:\');\nprogram.choose(list, function(i){\n  console.log(\'you chose %d "%s"\', i, list[i]);\n});\n```\n\n## Links\n\n - [API documentation](http://visionmedia.github.com/commander.js/)\n - [ascii tables](https://github.com/LearnBoost/cli-table)\n - [progress bars](https://github.com/visionmedia/node-progress)\n - [more progress bars](https://github.com/substack/node-multimeter)\n - [examples](https://github.com/visionmedia/commander.js/tree/master/examples)\n\n## License \n\n(The MIT License)\n\nCopyright (c) 2011 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.',
+764 silly resolved     readmeFilename: 'Readme.md',
+764 silly resolved     bugs: { url: 'https://github.com/visionmedia/commander.js/issues' },
+764 silly resolved     homepage: 'https://github.com/visionmedia/commander.js',
+764 silly resolved     _id: 'commander@0.6.1',
+764 silly resolved     _from: 'commander@~0.6.1' },
+764 silly resolved   { author:
+764 silly resolved      { name: 'Einar Otto Stangvik',
+764 silly resolved        email: 'einaros@gmail.com',
+764 silly resolved        url: 'http://2x.io' },
+764 silly resolved     name: 'options',
+764 silly resolved     description: 'A very light-weight in-code option parsers for node.js.',
+764 silly resolved     version: '0.0.5',
+764 silly resolved     repository: { type: 'git', url: 'git://github.com/einaros/options.js.git' },
+764 silly resolved     main: 'lib/options',
+764 silly resolved     scripts: { test: 'make test' },
+764 silly resolved     engines: { node: '>=0.4.0' },
+764 silly resolved     dependencies: {},
+764 silly resolved     devDependencies: { mocha: 'latest' },
+764 silly resolved     readme: '# options.js #\n\nA very light-weight in-code option parsers for node.js.\n\n## License ##\n\n(The MIT License)\n\nCopyright (c) 2012 Einar Otto Stangvik &lt;einaros@gmail.com&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+764 silly resolved     readmeFilename: 'README.md',
+764 silly resolved     bugs: { url: 'https://github.com/einaros/options.js/issues' },
+764 silly resolved     homepage: 'https://github.com/einaros/options.js',
+764 silly resolved     _id: 'options@0.0.5',
+764 silly resolved     _from: 'options@>=0.0.5' },
+764 silly resolved   { author:
+764 silly resolved      { name: 'Einar Otto Stangvik',
+764 silly resolved        email: 'einaros@gmail.com',
+764 silly resolved        url: 'http://2x.io' },
+764 silly resolved     name: 'tinycolor',
+764 silly resolved     description: 'a to-the-point color module for node',
+764 silly resolved     version: '0.0.1',
+764 silly resolved     repository: { type: 'git', url: 'git://github.com/einaros/tinycolor.git' },
+764 silly resolved     engines: { node: '>=0.4.0' },
+764 silly resolved     dependencies: {},
+764 silly resolved     devDependencies: {},
+764 silly resolved     main: 'tinycolor',
+764 silly resolved     readme: '# tinycolor #\n\nThis is a no-fuzz, barebone, zero muppetry color module for node.js.',
+764 silly resolved     readmeFilename: 'README.md',
+764 silly resolved     bugs: { url: 'https://github.com/einaros/tinycolor/issues' },
+764 silly resolved     homepage: 'https://github.com/einaros/tinycolor',
+764 silly resolved     _id: 'tinycolor@0.0.1',
+764 silly resolved     _from: 'tinycolor@0.x' } ]
+765 info install nan@0.3.2 into /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+766 info install commander@0.6.1 into /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+767 info install options@0.0.5 into /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+768 info install tinycolor@0.0.1 into /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+769 info installOne nan@0.3.2
+770 info installOne commander@0.6.1
+771 info installOne options@0.0.5
+772 info installOne tinycolor@0.0.1
+773 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan unbuild
+774 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander unbuild
+775 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options unbuild
+776 info /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor unbuild
+777 verbose tar unpack /root/.npm/nan/0.3.2/package.tgz
+778 silly lockFile 0a7e79d9-node-modules-ws-node-modules-nan tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan
+779 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan /root/.npm/0a7e79d9-node-modules-ws-node-modules-nan.lock
+780 silly lockFile 6e62e6f8-r-root-npm-nan-0-3-2-package-tgz tar:///root/.npm/nan/0.3.2/package.tgz
+781 verbose lock tar:///root/.npm/nan/0.3.2/package.tgz /root/.npm/6e62e6f8-r-root-npm-nan-0-3-2-package-tgz.lock
+782 verbose tar unpack /root/.npm/commander/0.6.1/package.tgz
+783 silly lockFile 1bcc0835-odules-ws-node-modules-commander tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander
+784 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander /root/.npm/1bcc0835-odules-ws-node-modules-commander.lock
+785 silly lockFile 9fad8d2b--npm-commander-0-6-1-package-tgz tar:///root/.npm/commander/0.6.1/package.tgz
+786 verbose lock tar:///root/.npm/commander/0.6.1/package.tgz /root/.npm/9fad8d2b--npm-commander-0-6-1-package-tgz.lock
+787 verbose tar unpack /root/.npm/options/0.0.5/package.tgz
+788 silly lockFile 776f23a6--modules-ws-node-modules-options tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options
+789 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options /root/.npm/776f23a6--modules-ws-node-modules-options.lock
+790 silly lockFile 51770cc0-ot-npm-options-0-0-5-package-tgz tar:///root/.npm/options/0.0.5/package.tgz
+791 verbose lock tar:///root/.npm/options/0.0.5/package.tgz /root/.npm/51770cc0-ot-npm-options-0-0-5-package-tgz.lock
+792 verbose tar unpack /root/.npm/tinycolor/0.0.1/package.tgz
+793 silly lockFile 374256cb-odules-ws-node-modules-tinycolor tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor
+794 verbose lock tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor /root/.npm/374256cb-odules-ws-node-modules-tinycolor.lock
+795 silly lockFile 0f251b15--npm-tinycolor-0-0-1-package-tgz tar:///root/.npm/tinycolor/0.0.1/package.tgz
+796 verbose lock tar:///root/.npm/tinycolor/0.0.1/package.tgz /root/.npm/0f251b15--npm-tinycolor-0-0-1-package-tgz.lock
+797 silly gunzTarPerm modes [ '755', '644' ]
+798 silly gunzTarPerm modes [ '755', '644' ]
+799 silly gunzTarPerm modes [ '755', '644' ]
+800 silly gunzTarPerm modes [ '755', '644' ]
+801 silly gunzTarPerm extractEntry package.json
+802 silly gunzTarPerm extractEntry package.json
+803 silly gunzTarPerm extractEntry package.json
+804 silly gunzTarPerm extractEntry package.json
+805 silly gunzTarPerm extractEntry README.md
+806 silly gunzTarPerm extractEntry LICENSE
+807 silly gunzTarPerm extractEntry .index.js
+808 silly gunzTarPerm extractEntry nan.h
+809 silly gunzTarPerm extractEntry .npmignore
+810 silly gunzTarPerm extractEntry index.js
+811 silly gunzTarPerm extractEntry .npmignore
+812 silly gunzTarPerm extractEntry README.md
+813 silly gunzTarPerm extractEntry .npmignore
+814 silly gunzTarPerm extractEntry README.md
+815 silly gunzTarPerm extractEntry .travis.yml
+816 silly gunzTarPerm extractEntry History.md
+817 silly gunzTarPerm extractEntry Makefile
+818 silly gunzTarPerm extractEntry lib/options.js
+819 silly gunzTarPerm extractEntry example.js
+820 silly gunzTarPerm extractEntry tinycolor.js
+821 silly gunzTarPerm extractEntry test/options.test.js
+822 silly gunzTarPerm extractEntry test/fixtures/test.conf
+823 silly gunzTarPerm extractEntry Makefile
+824 silly gunzTarPerm extractEntry Readme.md
+825 silly gunzTarPerm extractEntry lib/commander.js
+826 silly lockFile 374256cb-odules-ws-node-modules-tinycolor tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor
+827 silly lockFile 374256cb-odules-ws-node-modules-tinycolor tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor
+828 silly lockFile 0f251b15--npm-tinycolor-0-0-1-package-tgz tar:///root/.npm/tinycolor/0.0.1/package.tgz
+829 silly lockFile 0f251b15--npm-tinycolor-0-0-1-package-tgz tar:///root/.npm/tinycolor/0.0.1/package.tgz
+830 info preinstall tinycolor@0.0.1
+831 verbose readDependencies using package.json deps
+832 verbose readDependencies using package.json deps
+833 silly resolved []
+834 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor
+835 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/tinycolor
+836 verbose linkStuff [ false,
+836 verbose linkStuff   false,
+836 verbose linkStuff   false,
+836 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules' ]
+837 info linkStuff tinycolor@0.0.1
+838 verbose linkBins tinycolor@0.0.1
+839 verbose linkMans tinycolor@0.0.1
+840 verbose rebuildBundles tinycolor@0.0.1
+841 info install tinycolor@0.0.1
+842 info postinstall tinycolor@0.0.1
+843 silly lockFile 776f23a6--modules-ws-node-modules-options tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options
+844 silly lockFile 776f23a6--modules-ws-node-modules-options tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options
+845 silly lockFile 51770cc0-ot-npm-options-0-0-5-package-tgz tar:///root/.npm/options/0.0.5/package.tgz
+846 silly lockFile 51770cc0-ot-npm-options-0-0-5-package-tgz tar:///root/.npm/options/0.0.5/package.tgz
+847 info preinstall options@0.0.5
+848 verbose readDependencies using package.json deps
+849 verbose readDependencies using package.json deps
+850 silly resolved []
+851 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options
+852 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/options
+853 verbose linkStuff [ false,
+853 verbose linkStuff   false,
+853 verbose linkStuff   false,
+853 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules' ]
+854 info linkStuff options@0.0.5
+855 verbose linkBins options@0.0.5
+856 verbose linkMans options@0.0.5
+857 verbose rebuildBundles options@0.0.5
+858 info install options@0.0.5
+859 info postinstall options@0.0.5
+860 silly lockFile 1bcc0835-odules-ws-node-modules-commander tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander
+861 silly lockFile 1bcc0835-odules-ws-node-modules-commander tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander
+862 silly lockFile 9fad8d2b--npm-commander-0-6-1-package-tgz tar:///root/.npm/commander/0.6.1/package.tgz
+863 silly lockFile 9fad8d2b--npm-commander-0-6-1-package-tgz tar:///root/.npm/commander/0.6.1/package.tgz
+864 info preinstall commander@0.6.1
+865 verbose readDependencies using package.json deps
+866 verbose readDependencies using package.json deps
+867 silly resolved []
+868 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander
+869 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/commander
+870 verbose linkStuff [ false,
+870 verbose linkStuff   false,
+870 verbose linkStuff   false,
+870 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules' ]
+871 info linkStuff commander@0.6.1
+872 verbose linkBins commander@0.6.1
+873 verbose linkMans commander@0.6.1
+874 verbose rebuildBundles commander@0.6.1
+875 info install commander@0.6.1
+876 info postinstall commander@0.6.1
+877 silly lockFile 0a7e79d9-node-modules-ws-node-modules-nan tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan
+878 silly lockFile 0a7e79d9-node-modules-ws-node-modules-nan tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan
+879 silly lockFile 6e62e6f8-r-root-npm-nan-0-3-2-package-tgz tar:///root/.npm/nan/0.3.2/package.tgz
+880 silly lockFile 6e62e6f8-r-root-npm-nan-0-3-2-package-tgz tar:///root/.npm/nan/0.3.2/package.tgz
+881 info preinstall nan@0.3.2
+882 verbose readDependencies using package.json deps
+883 verbose readDependencies using package.json deps
+884 silly resolved []
+885 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan
+886 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules/nan
+887 verbose linkStuff [ false,
+887 verbose linkStuff   false,
+887 verbose linkStuff   false,
+887 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws/node_modules' ]
+888 info linkStuff nan@0.3.2
+889 verbose linkBins nan@0.3.2
+890 verbose linkMans nan@0.3.2
+891 verbose rebuildBundles nan@0.3.2
+892 info install nan@0.3.2
+893 info postinstall nan@0.3.2
+894 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+895 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/ws
+896 verbose linkStuff [ false,
+896 verbose linkStuff   false,
+896 verbose linkStuff   false,
+896 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules' ]
+897 info linkStuff ws@0.4.31
+898 verbose linkBins ws@0.4.31
+899 verbose link bins [ { wscat: './bin/wscat' },
+899 verbose link bins   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/.bin',
+899 verbose link bins   false ]
+900 verbose linkMans ws@0.4.31
+901 verbose rebuildBundles ws@0.4.31
+902 verbose rebuildBundles [ 'commander', 'nan', 'options', 'tinycolor' ]
+903 info install ws@0.4.31
+904 verbose unsafe-perm in lifecycle false
+905 silly lockFile f7b6b25c-obfuscator-node-modules-zeparser tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser
+906 silly lockFile f7b6b25c-obfuscator-node-modules-zeparser tar:///home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser
+907 silly lockFile f4df0221-t-npm-zeparser-0-0-5-package-tgz tar:///root/.npm/zeparser/0.0.5/package.tgz
+908 silly lockFile f4df0221-t-npm-zeparser-0-0-5-package-tgz tar:///root/.npm/zeparser/0.0.5/package.tgz
+909 info preinstall zeparser@0.0.5
+910 verbose readDependencies using package.json deps
+911 verbose readDependencies using package.json deps
+912 silly resolved []
+913 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser
+914 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules/zeparser
+915 verbose linkStuff [ false,
+915 verbose linkStuff   false,
+915 verbose linkStuff   false,
+915 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator/node_modules' ]
+916 info linkStuff zeparser@0.0.5
+917 verbose linkBins zeparser@0.0.5
+918 verbose linkMans zeparser@0.0.5
+919 verbose rebuildBundles zeparser@0.0.5
+920 info install zeparser@0.0.5
+921 info postinstall zeparser@0.0.5
+922 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+923 info build /home/marco/TFG/licode/node_modules/socket.io-client/node_modules/active-x-obfuscator
+924 verbose linkStuff [ false,
+924 verbose linkStuff   false,
+924 verbose linkStuff   false,
+924 verbose linkStuff   '/home/marco/TFG/licode/node_modules/socket.io-client/node_modules' ]
+925 info linkStuff active-x-obfuscator@0.0.1
+926 verbose linkBins active-x-obfuscator@0.0.1
+927 verbose linkMans active-x-obfuscator@0.0.1
+928 verbose rebuildBundles active-x-obfuscator@0.0.1
+929 verbose rebuildBundles [ 'zeparser' ]
+930 info install active-x-obfuscator@0.0.1
+931 info postinstall active-x-obfuscator@0.0.1
+932 info postinstall ws@0.4.31
+933 verbose about to build /home/marco/TFG/licode/node_modules/socket.io-client
+934 info build /home/marco/TFG/licode/node_modules/socket.io-client
+935 verbose linkStuff [ false, false, false, '/home/marco/TFG/licode/node_modules' ]
+936 info linkStuff socket.io-client@0.9.16
+937 verbose linkBins socket.io-client@0.9.16
+938 verbose linkMans socket.io-client@0.9.16
+939 verbose rebuildBundles socket.io-client@0.9.16
+940 verbose rebuildBundles [ '.bin',
+940 verbose rebuildBundles   'active-x-obfuscator',
+940 verbose rebuildBundles   'uglify-js',
+940 verbose rebuildBundles   'ws',
+940 verbose rebuildBundles   'xmlhttprequest' ]
+941 info install socket.io-client@0.9.16
+942 info postinstall socket.io-client@0.9.16
+943 error peerinvalid The package karma-requirejs does not satisfy its siblings' peerDependencies requirements!
+943 error peerinvalid Peer karma@0.10.10 wants karma-requirejs@~0.2.0
+944 error System Linux 3.11.0-18-generic
+945 error command "/usr/bin/node" "/usr/bin/npm" "install" "socket.io-client"
+946 error cwd /home/marco/TFG/licode/extras/mnserver/public
+947 error node -v v0.10.26
+948 error npm -v 1.4.3
+949 error code EPEERINVALID
+950 verbose exit [ 1, true ]

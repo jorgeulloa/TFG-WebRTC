@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <title>Licode MN server</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Bubbler+One' rel='stylesheet' type='text/css'>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      function mazo()
+      {  
+        var socket = io.connect('http://localhost:3005');
+        socket.on('connected', function(data){
+          console.log(data);
+        });
+      }
+    </script>
+    
+
+    <link rel="stylesheet" type="text/css" href="styles/style.css"> 
+  </head>
+
+  <body style="background-color:white;">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+              <div class="container">
+                <a class="brand" href="#">MNspace</a>
+                <ul class="nav">
+                  <li id="supMenuIndex"><a href="#"><i class="icon-home"></i> Home</a></li>
+                  <li><a id="supMenuDebate" href="" onclick="javascript: loadDebate();"><i class="icon-user"></i> Debate</a></li>
+                  <li class="active"><a id="supAbout" href="/about.html" target="_blank"><i class="icon-info-sign"></i> About</a></li>
+                  <li>
+                    <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="row-fluid" style="margin-top:16px;">
+        <div class="span8 offset2">
+          <div class="hero-unit">
+            <h1>Marco Nattero</h1><br>
+            <p class="lead">Trabajo Fin Grado</p> <h3><em>"Diseño e Implementación de un entorno de colaboración en tiempo real utilizando webRTC"</em></h3><br>
+            <div class="text-center">
+              <small>Escuela Técnica Superior de Ingenieros de Telecomunicación (UPM)</small><br>
+              <small>Madrid, Julio de 2014</small><br><br>
+            </div>
+            <p>
+              <a class="btn btn-info" target="_blank" href="https://drive.google.com/file/d/0ByuY2DkESVxTYUdIdzhMVXBVdjA/edit?usp=sharing"><img src="images/pdf_img.png" width="54px"/> Memoria</a>
+              <a class="btn btn-info" target="_blank" href="https://drive.google.com/file/d/0ByuY2DkESVxTYUdIdzhMVXBVdjA/edit?usp=sharing"><img src="images/ppt_img.png" width="54px"/> Presentación</a>
+              <a class="btn btn-info" target="_blank" href="https://www.github.com/MarcoNattero/tfg"><img src="images/octocat.png" width="65px"/> Repositorio</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="span8 offset2">
+          <div class="span4 text-center">
+            <img src="images/webrtc.png" width="95px">
+            <h3>WebRTC</h3>
+            <p>
+              Es la revolución de las comunicaciones por Internet. WebRTC permite establecer una conexión P2P entre varios sistemas y compartir flujos de vídeo, audio y datos en tiempo real.
+            </p>
+          </div>
+          <div class="span4 text-center">
+            <img src="images/licode.png" width="130px">
+            <h3>Licode</h3>
+            <p>
+              Es una plataforma de comunicaciones basada en WebRTC y de código abierto. Hace de WebRTC una herramienta con la que trabajar de manera sencilla y eficaz.
+            </p>
+          </div>
+          <div class="span4 text-center">
+            <img src="images/socket.png" width="240px">
+            <h3>Socket.IO</h3>
+            <p>
+              Es una librería que permite controlar eventos en tiempo real a través de conexiones TCP, salvando cualquier problema de compatibilidad entre los distintos equipos involucrados.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="span6 offset3 text-center">
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type"><p class="muted credit"><small>TFG: "Diseño e implementación de un entorno de colaboración basado en WebRTC"</span> por <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Marco Nattero Santiago</span> se distribuye bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribución-NoComercial-SinDerivar 4.0 Internacional</small></p></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
