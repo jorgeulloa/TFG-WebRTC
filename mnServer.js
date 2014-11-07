@@ -16,6 +16,7 @@ var app = express();
 
 var names = new Array();
 var nameCorrect;
+var nameLock;
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -190,12 +191,17 @@ io.sockets.on('connection', function(socket){
         socket.broadcast.emit('principalRol', {name: data.name});
     });
 
-    socket.on('lockClosed', function(){
+    socket.on('lockClosed', function(data){
+        nameLock = data.name
         socket.broadcast.emit('lockClosed');
     });
 
-    socket.on('lockOpen', function(){
-        socket.broadcast.emit('lockOpen');
+    socket.on('lockOpen', function(data){
+        if (data.name == nameLock){
+            socket.broadcast.emit('lockOpen');
+        } else{
+            return
+        }
     });
 
     socket.on('getUserNameById', function(data){
@@ -208,11 +214,15 @@ io.sockets.on('connection', function(socket){
 
     socket.on('eraseName', function(data){
         var eraseName = data.name;
+        console.log("recibido " + data.name + " el del candado " + nameLock);
         
         checkName(eraseName);
         if(!nameCorrect){
             var i = names.indexOf(eraseName);
             names.splice(i,1);
+            if (data.name == nameLock){
+                socket.emit('lockOpen');
+            }
         }else{
             return;
         }
@@ -225,7 +235,6 @@ io.sockets.on('connection', function(socket){
 
         socket.emit('updateListaNombres', {names: tempNames});
         socket.broadcast.emit('updateListaNombres', {names: tempNames});
-        socket.emit('lockOpen');
     });
 
     socket.on('wannabePrincipal', function(data){

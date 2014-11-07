@@ -74,12 +74,12 @@ function toggleLockPrincipalRol(){
 		document.getElementById("imgLock").setAttribute("src", "images/closed.png");
 		//toPrincipalRol();
 		lockState = "closedByMe";
-		socket.emit('lockClosed');
+		socket.emit('lockClosed', {name:nombre});
 	}else if(lockState == "closedByMe"){
 		document.getElementById("imgLock").setAttribute("src", "images/open.png");
 		document.getElementById("principalRolBtn").disabled=false;
 		lockState ="open";
-		socket.emit('lockOpen');
+		socket.emit('lockOpen', {name:nombre});
 	}else{
 		$("#cannotOpenLock").show();
 		//alert("No puedes abrir el cerrojo.");
@@ -110,7 +110,7 @@ function changeToPrincipal(principalName, principalId){
 socket.on('lockOpen', function(){
 	document.getElementById("principalRolBtn").disabled=false;
 	document.getElementById("imgLock").setAttribute("src", "images/open.png");
-	lockState="open";
+	lockState="open";	
 });
 
 socket.on('lockClosed', function(){

@@ -157,7 +157,6 @@ window.onload = function () {
         var stream = streamEvent.stream;
         var att = stream.getAttributes();
         socket.emit('eraseName', {name: att.name});
-        //alert(att.name + " se ha desconectado");
         document.getElementById("userDiscon").innerHTML = att.name;
         $("#disconnectedUser").show();
         if (stream.elementID !== undefined) {
