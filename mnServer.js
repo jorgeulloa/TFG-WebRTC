@@ -221,7 +221,7 @@ io.sockets.on('connection', function(socket){
             var i = names.indexOf(eraseName);
             names.splice(i,1);
             if (data.name == nameLock){
-                socket.emit('lockOpen');
+                socket.emit('lockDisconnect');
             }
         }else{
             return;

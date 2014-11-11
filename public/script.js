@@ -156,14 +156,16 @@ window.onload = function () {
         // Remove stream from DOM
         var stream = streamEvent.stream;
         var att = stream.getAttributes();
-        socket.emit('eraseName', {name: att.name});
         document.getElementById("userDiscon").innerHTML = att.name;
         $("#disconnectedUser").show();
+        socket.emit('eraseName', {name: att.name});
         if (stream.elementID !== undefined) {
+          //alert("in " + stream.getID());
           var element = document.getElementById("otrosVideos");
-          var eraseElem = document.getElementById(stream.elementID);
+          var eraseElem = document.getElementById(stream.getID());
           element.removeChild(eraseElem);
         }
+
       });
       /*** FIN GESTIÓN DE EVENTOS DE LA ROOM ***/
 
