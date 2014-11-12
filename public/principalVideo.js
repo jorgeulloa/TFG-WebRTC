@@ -3,6 +3,8 @@
 function cambiarAModoPrincipal(){
 	document.getElementById("myVideo").innerHTML = "";
 	document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + nombre;
+	
+    document.getElementById("divPrincipalName").style.display = "block !important";
 	socket.emit("wantToBePrincipal", {name:nombre});
 	localStream.show("myVideo");
 }
@@ -13,5 +15,7 @@ socket.on("wantToBePrincipal", function(data){
 	var newName = data.name;
 	var newStream = room.getStreamsByAttribute("name", newName);
 	document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + newName;
+
+    document.getElementById("divPrincipalName").style.display = "block !important";
 	newStream[0].show("myVideo");
 })

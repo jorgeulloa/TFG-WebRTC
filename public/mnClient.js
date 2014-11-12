@@ -60,12 +60,10 @@ function toPrincipalRol(){
 	if(principalNow == nombre){
 		socket.emit('wannabePrincipal', {name:nombre, id:idStream});
 		document.getElementById("principalRolBtn").disabled=true;
-		document.getElementById("divPrincipalName").style.display = "inherit";
 	}else{
 		document.getElementById("myVideo").innerHTML="";
 		socket.emit('wannabePrincipal', {name:nombre, id:idStream});
 		document.getElementById("principalRolBtn").disabled=true;
-		document.getElementById("divPrincipalName").style.display = "inherit";
 		localStream.show("myVideo");
 		document.getElementById("videoAux").innerHTML="";
 	}
@@ -99,7 +97,6 @@ function changeToPrincipal(principalName, principalId){
 	localStream.show("videoAux");
     document.getElementById("myVideo").innerHTML="";
     //localStream.hide();
-    document.getElementById("divPrincipalName").style.display = "inherit";
     var streamNewPrincipal = room.getStreamsByAttribute('name', principalName);
     //streamNewPrincipal[0].hide();
     streamPrincipal = streamNewPrincipal;
@@ -126,7 +123,7 @@ socket.on('lockDisconnect', function(){
 	document.getElementById("principalRolBtn").disabled=false;
 	document.getElementById("imgLock").setAttribute("src", "images/open.png");
 	document.getElementById("myVideo").innerHTML = "<div class='hero-unit'><small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small></div>";
-	document.getElementById("divPrincipalName").style.display = "none";
+	document.getElementById("principalName").innerHTML = "";
 	lockState="open";
 	
 	
