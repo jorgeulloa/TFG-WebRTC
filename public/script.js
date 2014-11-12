@@ -17,6 +17,7 @@ var idVideos = new Array(); //Guarda los IDs de cada vídeo de invitado con su r
 var nombre; //username
 var idStream; //id
 var listaNombres;
+var type; //tipo de sala
 
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -51,10 +52,28 @@ window.onload = function () {
 
   // Recibe un 'deny' si el nombre ya está siendo utilizado
   socket.on('setName', function(data){
-    if(data.a == 'deny')
+    if(data.a == 'deny'){
       getName();
+    }
+    else{
+      socket.emit('getNumConnection');
+    }
   });
 
+  socket.on('getNumConnection', function(data){
+    if(data.a == 'ok'){
+      type = prompt("Elige tipo de sala entre 'reunion' o 'aula'");  
+      socket.emit('setRoomType', {type: type});
+    } else{
+      socket.emit('sendRoomType');
+    }
+  });
+
+  socket.on('sendRoomType', function(){
+    document.getElementById("activeBlackboard").style.display = "none";
+    document.getElementById("activeYouTube").style.display = "none";
+    document.getElementById("activePrezi").style.display = "none";
+  });
   // Si el nombre está siendo utilizado lo pide de nuevo
   function getName(){
     nombre = prompt("Nombre no válido. Elige otro.");

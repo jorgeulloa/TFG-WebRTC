@@ -17,6 +17,7 @@ var app = express();
 var names = new Array();
 var nameCorrect;
 var nameLock;
+var typeRoom;
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -302,7 +303,33 @@ io.sockets.on('connection', function(socket){
 
     socket.on("loadClassView", function(){
         socket.broadcast.emit("loadClassView");
-    })
+    });
+
+    socket.on("getNumConnection", function(){
+        if(names.length == 1){
+            socket.emit('getNumConnection', {a: 'ok'});
+        }else{
+            socket.emit('getNumConnection', {a: 'deny'});
+        }
+    });
+    socket.on("setRoomType", function(data){
+        if(data.type == "aula"){
+            typeRoom = data.type;
+        }else{
+            if(data.type == "reunion"){
+                typeRoom = data.type;
+            }
+            else{
+
+            }
+        }
+    });
+
+    socket.on("sendRoomType", function(){
+        if (typeRoom == "aula"){
+            socket.emit("sendRoomType");
+        } 
+    });
 });
 
 
