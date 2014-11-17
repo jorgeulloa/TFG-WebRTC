@@ -56,10 +56,12 @@ window.onload = function () {
       getName();
     }
     else{
-      socket.emit('getNumConnection');
+      socket.emit('getNumConnection'); //Cuando el nombre es correcto mira a ver cuantos hay ya
     }
   });
 
+  // Recibe ok si es el primero en la room y permite elegir tipo de sala y lo fija. Si recibe deny
+  // pide el tipo de sala para saber que controles pintar
   socket.on('getNumConnection', function(data){
     if(data.a == 'ok'){
       type = prompt("Elige tipo de sala entre 'reunion' o 'aula'");  
@@ -69,10 +71,16 @@ window.onload = function () {
     }
   });
 
-  socket.on('sendRoomType', function(){
-    document.getElementById("activeBlackboard").style.display = "none";
-    document.getElementById("activeYouTube").style.display = "none";
-    document.getElementById("activePrezi").style.display = "none";
+  // Si recibe este mensaje, es que el tipo es aula y no tiene que pintar ciertos controles
+  socket.on('sendRoomType', function(data){
+    if (data.a == 'aula'){
+      document.getElementById("activeBlackboard").style.display = "none";
+      document.getElementById("activeYouTube").style.display = "none";
+      document.getElementById("activePrezi").style.display = "none";
+      socket.emit('setEstado');
+    } else{
+      socket.emit('setEstado');
+    }
   });
   // Si el nombre está siendo utilizado lo pide de nuevo
   function getName(){
@@ -86,6 +94,7 @@ window.onload = function () {
   // Coloca el nombre de usuario en pantalla
   document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
   /*** FIN CAPTURA USERNAME ***/
+
 
 
   /*** INICIALIZACIÓN DEL STREAM ***/

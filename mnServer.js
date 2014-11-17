@@ -18,6 +18,8 @@ var names = new Array();
 var nameCorrect;
 var nameLock;
 var typeRoom;
+var state = 'blackboard';
+var idYoutube;
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -181,10 +183,13 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('youtubeMode', function(data){
+        state = 'youtube';
+        idYoutube = data.id;
         socket.broadcast.emit('youtubeMode', {id: data.id});
     });
 
     socket.on('blackboardMode',function(){
+        state = 'blackboard';
         socket.broadcast.emit('blackboardMode');
     });
 
@@ -247,6 +252,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('preziMode', function(data){
+        state = 'prezi';
         socket.broadcast.emit('preziMode', {id: data.id});
     });
 
@@ -259,6 +265,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('debateNow', function(data){
+        state = 'debate';
         socket.broadcast.emit("debateNow", {moderator: data.moderator, startTime: data.startTime});
     });
 
@@ -305,6 +312,8 @@ io.sockets.on('connection', function(socket){
         socket.broadcast.emit("loadClassView");
     });
 
+    // Comprobaciones del tipo de sala en el momento de conexión
+
     socket.on("getNumConnection", function(){
         if(names.length == 1){
             socket.emit('getNumConnection', {a: 'ok'});
@@ -327,9 +336,28 @@ io.sockets.on('connection', function(socket){
 
     socket.on("sendRoomType", function(){
         if (typeRoom == "aula"){
-            socket.emit("sendRoomType");
-        } 
+            socket.emit("sendRoomType", {a: 'aula'});
+        } else{
+            socket.emit("sendRoomType", {a: 'reunion'});
+        }
     });
+
+    socket.on('setEstado', function() {
+        console.log("El estado es "+state);
+        if (state == "youtube"){
+            socket.emit('youtubeMode', {id: idYoutube});
+        }
+        if (state == "blackboard"){
+            socket.emit('blackboardMode');
+        }
+        if (state == "prezi"){
+            socket.emit('preziMode');
+        }
+        if (state == "debate"){
+            socket.emit("debateNow");
+        }
+
+    })
 });
 
 
