@@ -13,7 +13,6 @@ function cambiarAModoPrincipal(){
 
 socket.on("wantToBePrincipal", function(data){
 	document.getElementById("myVideo").innerHTML = "";
-	alert(data.name);
 	var newName = data.name;
 	var newStream = room.getStreamsByAttribute("name", newName);
 	document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + newName;

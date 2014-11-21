@@ -65,12 +65,11 @@ window.onload = function () {
   // pide el tipo de sala para saber que controles pintar
   socket.on('getNumConnection', function(data){
     if(data.a == 'ok'){
-      numeroConexion = 'primero';
       type = window.confirm("Pulsa 'aceptar' para que la sala sea del tipo 'aula' o cancela para que sea del tipo 'reunión'");
       socket.emit('setRoomType', {type: type});
     } else{
-      numeroConexion = 'segundo';
       socket.emit('sendRoomType');
+      getPrincipal();
     }
   });
 
@@ -91,14 +90,16 @@ window.onload = function () {
     socket.emit('setName', {name: nombre});
   }
 
+  function getPrincipal(){
+    socket.emit('getPrincipal');
+  }
+
   // Pide al servidor la lista de nombres para actualizarla
   socket.emit('getListaNombres');
 
   // Coloca el nombre de usuario en pantalla
   document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
-  if (numeroConexion == 'segundo'){
-    socket.emit('getPrincipal');
-  }
+
 
 
 

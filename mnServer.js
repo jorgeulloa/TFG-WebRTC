@@ -22,6 +22,8 @@ var state = 'blackboard';
 var idYoutube;
 var preziId;
 var principalName;
+var debateModerator;
+var debateStartTime;
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -269,6 +271,8 @@ io.sockets.on('connection', function(socket){
 
     socket.on('debateNow', function(data){
         state = 'debate';
+        debateModerator = data.moderator;
+        depateStartTime = data.startTime;
         socket.broadcast.emit("debateNow", {moderator: data.moderator, startTime: data.startTime});
     });
 
@@ -352,7 +356,7 @@ io.sockets.on('connection', function(socket){
             socket.emit('preziMode', {id: preziId});
         }
         if (state == "debate"){
-            socket.emit("debateNow");
+            socket.emit("debateNow", {moderator: debateModerator, startTime: debateStartTime});
         }
         
     });
