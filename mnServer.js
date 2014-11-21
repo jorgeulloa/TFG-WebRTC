@@ -20,6 +20,8 @@ var nameLock;
 var typeRoom;
 var state = 'blackboard';
 var idYoutube;
+var preziId;
+var principalName;
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -253,6 +255,7 @@ io.sockets.on('connection', function(socket){
 
     socket.on('preziMode', function(data){
         state = 'prezi';
+        preziId = data.id;
         socket.broadcast.emit('preziMode', {id: data.id});
     });
 
@@ -297,6 +300,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on("wantToBePrincipal", function(data){
+        principalName = data.name;
         socket.broadcast.emit("wantToBePrincipal", {name: data.name});
     });
 
@@ -322,15 +326,10 @@ io.sockets.on('connection', function(socket){
         }
     });
     socket.on("setRoomType", function(data){
-        if(data.type == "aula"){
-            typeRoom = data.type;
+        if(data.type == true){
+            typeRoom = "aula";
         }else{
-            if(data.type == "reunion"){
-                typeRoom = data.type;
-            }
-            else{
-
-            }
+            typeRoom = "reunion";
         }
     });
 
@@ -343,7 +342,6 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('setEstado', function() {
-        console.log("El estado es "+state);
         if (state == "youtube"){
             socket.emit('youtubeMode', {id: idYoutube});
         }
@@ -351,13 +349,19 @@ io.sockets.on('connection', function(socket){
             socket.emit('blackboardMode');
         }
         if (state == "prezi"){
-            socket.emit('preziMode');
+            socket.emit('preziMode', {id: preziId});
         }
         if (state == "debate"){
             socket.emit("debateNow");
         }
+        
+    });
 
-    })
+    socket.on('getPrincipal', function() {
+        socket.emit("wantToBePrincipal", {name: principalName});
+
+    });
+   
 });
 
 

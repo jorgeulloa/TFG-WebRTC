@@ -18,6 +18,7 @@ var nombre; //username
 var idStream; //id
 var listaNombres;
 var type; //tipo de sala
+var numeroConexion;
 
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -64,9 +65,11 @@ window.onload = function () {
   // pide el tipo de sala para saber que controles pintar
   socket.on('getNumConnection', function(data){
     if(data.a == 'ok'){
-      type = prompt("Elige tipo de sala entre 'reunion' o 'aula'");  
+      numeroConexion = 'primero';
+      type = window.confirm("Pulsa 'aceptar' para que la sala sea del tipo 'aula' o cancela para que sea del tipo 'reunión'");
       socket.emit('setRoomType', {type: type});
     } else{
+      numeroConexion = 'segundo';
       socket.emit('sendRoomType');
     }
   });
@@ -87,12 +90,18 @@ window.onload = function () {
     nombre = prompt("Nombre no válido. Elige otro.");
     socket.emit('setName', {name: nombre});
   }
-  
+
   // Pide al servidor la lista de nombres para actualizarla
   socket.emit('getListaNombres');
 
   // Coloca el nombre de usuario en pantalla
   document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
+  if (numeroConexion == 'segundo'){
+    socket.emit('getPrincipal');
+  }
+
+
+
   /*** FIN CAPTURA USERNAME ***/
 
 
