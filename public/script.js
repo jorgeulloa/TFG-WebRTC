@@ -69,7 +69,7 @@ window.onload = function () {
       socket.emit('setRoomType', {type: type});
     } else{
       socket.emit('sendRoomType');
-      getPrincipal();
+      
     }
   });
 
@@ -91,9 +91,21 @@ window.onload = function () {
   }
 
   function getPrincipal(){
-    socket.emit('getPrincipal');
+    socket.emit('getPrincipal', {name: nombre, a: numeroConexion});
   }
 
+  socket.on("returnPrincipal", function(data){
+  document.getElementById("myVideo").innerHTML = "";
+  var newName = data.name;
+  var newStream = room.getStreamsByAttribute("name", newName);
+  document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + newName;
+  document.getElementById("principalRolBtn").disabled=false;
+    document.getElementById("divPrincipalName").style.display = "block !important";
+  newStream[0].show("myVideo");
+  numeroConexion = "segunda";
+});
+
+  
   // Pide al servidor la lista de nombres para actualizarla
   socket.emit('getListaNombres');
 
@@ -160,6 +172,7 @@ window.onload = function () {
       room.addEventListener("stream-subscribed", function(streamEvent) {
         var stream = streamEvent.stream;
         principalNow = nombre;
+        numeroConexion = "primera";
 
         var div = document.createElement('div');
         div.setAttribute("style", "width: 45%; height: 120px; margin: 2%; float:left; margin-top:9%;");
@@ -179,6 +192,7 @@ window.onload = function () {
 
         document.getElementById("otrosVideos").appendChild(div);
         stream.show(stream.getID()); //Muestra el vídeo del invitado
+        getPrincipal();
       });
 
       room.addEventListener("stream-added", function (streamEvent) {

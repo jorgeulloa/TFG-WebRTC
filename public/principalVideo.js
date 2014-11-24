@@ -19,4 +19,4 @@ socket.on("wantToBePrincipal", function(data){
 	document.getElementById("principalRolBtn").disabled=false;
     document.getElementById("divPrincipalName").style.display = "block !important";
 	newStream[0].show("myVideo");
-})
+});

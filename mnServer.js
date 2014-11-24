@@ -231,7 +231,11 @@ io.sockets.on('connection', function(socket){
             var i = names.indexOf(eraseName);
             names.splice(i,1);
             if (data.name == nameLock){
-                socket.emit('lockDisconnect');
+                socket.emit('lockDisconnect', {a: "candado"});
+            }else if (data.name == principalName){
+                socket.emit('lockDisconnect' , {a: "video"});
+            } else if (data.name == principalName && data.name == nameLock){
+                socket.emit('lockDisconnect' , {a: "ambos"});
             }
         }else{
             return;
@@ -361,8 +365,10 @@ io.sockets.on('connection', function(socket){
         
     });
 
-    socket.on('getPrincipal', function() {
-        socket.emit("wantToBePrincipal", {name: principalName});
+    socket.on('getPrincipal', function(data) {
+        if (principalName != null && principalName != data.name && data.a == "primera"){
+            socket.emit("returnPrincipal", {name: principalName});
+        }
 
     });
    

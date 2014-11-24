@@ -119,15 +119,20 @@ socket.on('lockClosed', function(){
 
 });
 
-socket.on('lockDisconnect', function(){
-	document.getElementById("principalRolBtn").disabled=false;
-	document.getElementById("imgLock").setAttribute("src", "images/open.png");
-	document.getElementById("myVideo").innerHTML = "<div class='hero-unit'><small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small></div>";
-	document.getElementById("principalName").innerHTML = "";
-	lockState="open";
+socket.on('lockDisconnect', function(data){
+	if(data.a == "video" || data.a=="ambos"){
+		document.getElementById("principalRolBtn").disabled=false;
+		document.getElementById("myVideo").innerHTML = "<div class='hero-unit'><small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small></div>";
+		document.getElementById("principalName").innerHTML = "";
+	}
+	if (data.a == "candado" || data.a=="ambos"){
+		document.getElementById("imgLock").setAttribute("src", "images/open.png");
+		lockState="open";
+	}
 	
 	
 });
+
 
 function openLock(){
 	//Meter el contenido de arriba
