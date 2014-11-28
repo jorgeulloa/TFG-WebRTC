@@ -15,6 +15,7 @@
     <script type="text/javascript" src="blackboard.js"></script>
     <script type="text/javascript" src="prezi.js"></script>
     <script type="text/javascript" src="prezi_player.js"></script>
+    <script type="text/javascript" src="roomType.js"></script>
 
     
     <link href='http://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
@@ -23,6 +24,8 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script>
       function mazo()
       {  
@@ -55,13 +58,52 @@
             <li>
               <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
             </li>
+            <li id="supMenuPanel">
+              <a href="#" id="alternar-panel-oculto" >Tipo de aula</a>
+            </li>
           </ul></div>
         </div>
       </div>
     </div>
-
+  <div class="alert alert-info" id="selectionRoom" align="center" style="display:none; margin-top: 3em;">
+              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton1" onclick="javascript: getRoomReunion();">Reunión</button>
+              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton2" onclick="javascript: getRoomAula();" >Aula</button>
+              <br>
+              Seleccione Reunión si desea configurar la sala con igualdad de derechos para todos los usuarios.
+              <br>
+              Si lo que desea es tener el control único sobre las acciones de la sala, seleccione la opción Aula
+  </div>
   </div></div>
 
+  <script>
+  $('#alternar-panel-oculto').toggle(
+ 
+        /*
+            Primer click.
+            Función que descubre un panel oculto
+            y cambia el texto del botón.
+        */
+        function(e){
+            $('#selectionRoom').slideDown();
+            $(this).text('Cerrar el panel');
+            document.getElementById("supMenuPanel").setAttribute("class", "active");
+            e.preventDefault();
+        }, // Separamos las dos funciones con una coma
+     
+        /*
+            Segundo click.
+            Función que oculta el panel
+            y vuelve a cambiar el texto del botón.
+        */
+        function(e){
+            $('#selectionRoom').slideUp();
+            $(this).text('Tipo de aula');
+            document.getElementById("supMenuPanel").setAttribute("class", "");
+            e.preventDefault();
+        }
+ 
+    );
+  </script> 
     
       <div class="row-fluid" style="margin-top:16px; text-align:center;"><div class="span3">
         
@@ -107,6 +149,7 @@
         <div id="videoDestacado">
           <div id="myVideo">
             <!--<div class="well span6 offset3">Nobody has been placed on the preferred site. Be the first by clicking on <div class="well well-small"><i class="icon-hand-up"></i> Principal</div></div>-->
+
             <div class="hero-unit">
               <blockquote class="push-left"><p>Nobody has been placed on the principal site. Be the first by clicking on <button onclick="javascript: cambiarAModoPrincipal();" class="btn btn-info"><i class="icon-hand-up"></i> Principal</button></p><br>
               <small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small>

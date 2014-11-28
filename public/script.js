@@ -65,9 +65,11 @@ window.onload = function () {
   // pide el tipo de sala para saber que controles pintar
   socket.on('getNumConnection', function(data){
     if(data.a == 'ok'){
-      type = window.confirm("Pulsa 'aceptar' para que la sala sea del tipo 'aula' o cancela para que sea del tipo 'reunión'");
-      socket.emit('setRoomType', {type: type});
+      $("#selectionRoom").show();
+      $("#alternar-panel-oculto").text('Cerrar el panel');
+
     } else{
+      document.getElementById("supMenuPanel").innerHTML="";
       socket.emit('sendRoomType');
       
     }
@@ -90,7 +92,7 @@ window.onload = function () {
     socket.emit('setName', {name: nombre});
   }
 
-  function getPrincipal(){
+    function getPrincipal(){
     socket.emit('getPrincipal', {name: nombre, a: numeroConexion});
   }
 

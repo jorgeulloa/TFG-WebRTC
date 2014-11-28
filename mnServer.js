@@ -336,8 +336,10 @@ io.sockets.on('connection', function(socket){
     socket.on("setRoomType", function(data){
         if(data.type == true){
             typeRoom = "aula";
+            socket.broadcast.emit("changeRoomType", {a: typeRoom});
         }else{
             typeRoom = "reunion";
+            socket.broadcast.emit("changeRoomType", {a: typeRoom});
         }
     });
 
