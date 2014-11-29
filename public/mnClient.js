@@ -120,12 +120,17 @@ socket.on('lockClosed', function(){
 });
 
 socket.on('lockDisconnect', function(data){
-	if(data.a == "video" || data.a=="ambos"){
+	if(data.a == "video"){
 		document.getElementById("principalRolBtn").disabled=false;
 		document.getElementById("myVideo").innerHTML = "<div class='hero-unit'><small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small></div>";
 		document.getElementById("principalName").innerHTML = "";
-	}
-	if (data.a == "candado" || data.a=="ambos"){
+	}else if (data.a == "candado" ){
+		document.getElementById("imgLock").setAttribute("src", "images/open.png");
+		lockState="open";
+	} else if (data.a=="ambos"){
+		document.getElementById("principalRolBtn").disabled=false;
+		document.getElementById("myVideo").innerHTML = "<div class='hero-unit'><small>Tip: you can press the lock to block your video stream in the principal site. Unlock it to let the other participants share their video.</small></div>";
+		document.getElementById("principalName").innerHTML = "";
 		document.getElementById("imgLock").setAttribute("src", "images/open.png");
 		lockState="open";
 	}

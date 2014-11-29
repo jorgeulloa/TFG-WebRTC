@@ -67,6 +67,7 @@ window.onload = function () {
     if(data.a == 'ok'){
       $("#selectionRoom").show();
       $("#alternar-panel-oculto").text('Cerrar el panel');
+      document.getElementById("supMenuPanel").setAttribute("class", "active");
 
     } else{
       document.getElementById("supMenuPanel").innerHTML="";

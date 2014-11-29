@@ -59,7 +59,7 @@
               <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
             </li>
             <li id="supMenuPanel">
-              <a href="#" id="alternar-panel-oculto" >Tipo de aula</a>
+              <a href="#" id="alternar-panel-oculto" >Tipo de sala</a>
             </li>
           </ul></div>
         </div>
@@ -80,25 +80,25 @@
  
         /*
             Primer click.
-            Función que descubre un panel oculto
+            Función que oculta el panel
             y cambia el texto del botón.
         */
         function(e){
-            $('#selectionRoom').slideDown();
-            $(this).text('Cerrar el panel');
-            document.getElementById("supMenuPanel").setAttribute("class", "active");
+            $('#selectionRoom').slideUp();
+            $(this).text('Tipo de sala');
+            document.getElementById("supMenuPanel").setAttribute("class", "");
             e.preventDefault();
         }, // Separamos las dos funciones con una coma
      
         /*
             Segundo click.
-            Función que oculta el panel
+            Función que descubre un panel oculto
             y vuelve a cambiar el texto del botón.
         */
         function(e){
-            $('#selectionRoom').slideUp();
-            $(this).text('Tipo de aula');
-            document.getElementById("supMenuPanel").setAttribute("class", "");
+            $('#selectionRoom').slideDown();
+            $(this).text('Cerrar el panel');
+            document.getElementById("supMenuPanel").setAttribute("class", "active");
             e.preventDefault();
         }
  

@@ -24,6 +24,7 @@ var preziId;
 var principalName;
 var debateModerator;
 var debateStartTime;
+var arrayDibujo = [];
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -175,6 +176,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('drawing', function(data){
+        arrayDibujo.push(data);
         socket.broadcast.emit('draw', {x: data.x, y:data.y});
     });
 
@@ -183,6 +185,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('clearCanvas', function(){
+        arrayDibujo = [];
         socket.broadcast.emit('clearCanvas');
     });
 
@@ -230,9 +233,9 @@ io.sockets.on('connection', function(socket){
         if(!nameCorrect){
             var i = names.indexOf(eraseName);
             names.splice(i,1);
-            if (data.name == nameLock){
+            if (data.name == nameLock && data.name != principalName){
                 socket.emit('lockDisconnect', {a: "candado"});
-            }else if (data.name == principalName){
+            }else if (data.name == principalName && data.name != nameLock){
                 socket.emit('lockDisconnect' , {a: "video"});
             } else if (data.name == principalName && data.name == nameLock){
                 socket.emit('lockDisconnect' , {a: "ambos"});
@@ -356,7 +359,7 @@ io.sockets.on('connection', function(socket){
             socket.emit('youtubeMode', {id: idYoutube});
         }
         if (state == "blackboard"){
-            socket.emit('blackboardMode');
+            socket.emit('blackboardInitial', {dibujo: arrayDibujo});
         }
         if (state == "prezi"){
             socket.emit('preziMode', {id: preziId});
