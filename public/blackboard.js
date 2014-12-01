@@ -23,5 +23,7 @@ function blackboardModeRender(){
 
 socket.on('blackboardMode', function(){
 	blackboardModeRender();
-})
+});
+
+
 

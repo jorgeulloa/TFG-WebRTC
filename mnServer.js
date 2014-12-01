@@ -24,7 +24,8 @@ var preziId;
 var principalName;
 var debateModerator;
 var debateStartTime;
-var arrayDibujo = [];
+var arrayDibujoX = [];
+var arrayDibujoY = [];
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -176,7 +177,8 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('drawing', function(data){
-        arrayDibujo.push(data);
+        arrayDibujoX.push(data.x);
+        arrayDibujoY.push(data.y);
         socket.broadcast.emit('draw', {x: data.x, y:data.y});
     });
 
@@ -359,7 +361,8 @@ io.sockets.on('connection', function(socket){
             socket.emit('youtubeMode', {id: idYoutube});
         }
         if (state == "blackboard"){
-            socket.emit('blackboardInitial', {dibujo: arrayDibujo});
+            socket.emit('blackboardMode');
+            initialDraw();
         }
         if (state == "prezi"){
             socket.emit('preziMode', {id: preziId});
@@ -376,6 +379,13 @@ io.sockets.on('connection', function(socket){
         }
 
     });
+
+    function initialDraw(){
+        for (var index = 0; index < arrayDibujoX.length; index++) {
+            socket.emit('draw', {x: arrayDibujoX[index], y:arrayDibujoY[index]});
+            
+        }
+    }
    
 });
 
