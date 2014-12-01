@@ -92,15 +92,11 @@ function blackboardModeRender(){
   document.getElementById("otrosVideos").setAttribute('style', 'text-align:center; margin: auto;')
 }
 
-socket.on('blackboardMode', function(){
-  blackboardModeRender();
-})
 
 socket.on('blackboardInitial', function(data){
   blackboardModeRender();
-  var index;
-  for (index = 0; index < data.dibujo.length; index++) {
-    alert(data.dibujo[index].x);
+  for (var index = 0; index < data.dibujo.length; index++) {
+    alert("aqui " + data.dibujo[index]);
     ctx.lineTo(data.dibujo[index].x, data.dibujo[index].y);
     ctx.stroke();
   }

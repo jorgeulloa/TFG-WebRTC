@@ -64,6 +64,7 @@ window.onload = function () {
   // Recibe ok si es el primero en la room y permite elegir tipo de sala y lo fija. Si recibe deny
   // pide el tipo de sala para saber que controles pintar
   socket.on('getNumConnection', function(data){
+    updateLista ();
     if(data.a == 'ok'){
       $("#selectionRoom").show();
       $("#alternar-panel-oculto").text('Cerrar el panel');
@@ -93,29 +94,36 @@ window.onload = function () {
     socket.emit('setName', {name: nombre});
   }
 
-    function getPrincipal(){
+  function getPrincipal(){
     socket.emit('getPrincipal', {name: nombre, a: numeroConexion});
   }
 
   socket.on("returnPrincipal", function(data){
-  document.getElementById("myVideo").innerHTML = "";
-  var newName = data.name;
-  var newStream = room.getStreamsByAttribute("name", newName);
-  document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + newName;
-  document.getElementById("principalRolBtn").disabled=false;
+    document.getElementById("myVideo").innerHTML = "";
+    var newName = data.name;
+    var newStream = room.getStreamsByAttribute("name", newName);
+    document.getElementById("principalName").innerHTML = "<i class=\"icon-user\"></i> " + newName;
+    document.getElementById("principalRolBtn").disabled=false;
     document.getElementById("divPrincipalName").style.display = "block !important";
-  newStream[0].show("myVideo");
-  numeroConexion = "segunda";
-});
+    newStream[0].show("myVideo");
+    numeroConexion = "segunda";
+  });
 
-  
   // Pide al servidor la lista de nombres para actualizarla
-  socket.emit('getListaNombres');
+  //socket.emit('getListaNombres');
 
   // Coloca el nombre de usuario en pantalla
-  document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
+  //document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
+  
+  function updateLista(){
+    // Pide al servidor la lista de nombres para actualizarla
+    socket.emit('getListaNombres');
 
-
+    // Coloca el nombre de usuario en pantalla
+    document.getElementById("nombreUsuario").innerHTML = "Connected as  <strong>" + nombre + "</strong>"; //"<li id=\"titleControl\"><span style=\"margin-left:80px;\">" + nombre + "</span></li>";
+    
+    //localStream.setAttributes({name: nombre});
+  
 
 
   /*** FIN CAPTURA USERNAME ***/
@@ -141,6 +149,7 @@ window.onload = function () {
     req.setRequestHeader('Content-Type', 'application/json');
     req.send(JSON.stringify(body));
   };
+
 
   // Creo el Token con el nombre y el rol (en este caso, siempre "presenter")
   createToken(nombre, "presenter", function (response) {
@@ -222,6 +231,8 @@ window.onload = function () {
         }
 
       });
+
+      
       /*** FIN GESTIÓN DE EVENTOS DE LA ROOM ***/
 
       room.connect();
@@ -230,4 +241,5 @@ window.onload = function () {
 
     localStream.init();
   });
+  }
 };
