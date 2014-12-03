@@ -286,6 +286,7 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on("updateTimers", function(data){
+        debateStartTime = data.newTime;
         socket.broadcast.emit("updateTimers", {newTime: data.newTime});
     });
 
@@ -368,6 +369,10 @@ io.sockets.on('connection', function(socket){
             socket.emit('preziMode', {id: preziId});
         }
         if (state == "debate"){
+            console.log("tiempo " + debateStartTime);
+            if(debateStartTime==null){
+                debateStartTime=30;
+            }
             socket.emit("debateNow", {moderator: debateModerator, startTime: debateStartTime});
         }
         
