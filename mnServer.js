@@ -27,6 +27,7 @@ var debateStartTime;
 var arrayDibujoX = [];
 var arrayDibujoY = [];
 
+
 var userCounter = 0; //Sólo para getUserNameById
 
 app.use(express.bodyParser());
@@ -359,7 +360,8 @@ io.sockets.on('connection', function(socket){
 
     socket.on('setEstado', function() {
         if (state == "youtube"){
-            socket.emit('youtubeMode', {id: idYoutube});
+            getMinuto();
+            
         }
         if (state == "blackboard"){
             socket.emit('blackboardMode');
@@ -391,7 +393,19 @@ io.sockets.on('connection', function(socket){
             
         }
     }
-   
+
+    function getMinuto(){
+        socket.broadcast.emit('getMinuto');
+    }
+
+    socket.on('setMinuto', function(data){
+        var minCompleto = "" + data.min;
+        var minuto = minCompleto.split(".")[0];
+        console.log("minuto "+minuto);
+        socket.broadcast.emit('youtubeMode', {id: idYoutube, min: minuto} );
+    });
+
+       
 });
 
 

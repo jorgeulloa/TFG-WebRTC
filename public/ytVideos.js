@@ -90,6 +90,7 @@ function appearYTVideo(){
 function loadYTVideo(){
 	//idVid = prompt("Pega aquí la URL del vídeo (YouTube)");
 	idVid = document.getElementById("idVideoYT").value;
+	minVid = 0;
 	if(idVid == "" || idVid == null){
 		$("#idYouTubeAlert").show();
 		return;
@@ -106,7 +107,7 @@ function ytModeRender(){
 }
 
 function ytVideoLoader(){
-	player.loadVideoById(idVid, 0, 'large');
+	player.loadVideoById(idVid, minVid, 'large');
 }
 
 function showYTdiv(){
@@ -119,8 +120,22 @@ function showYTdiv(){
 }
 
 socket.on('youtubeMode', function(data){
-	idVid = data.id;
+	if (data.min != null){
+		idVid = data.id;
+		minVid = data.min;
+
+	}else{
+		idVid = data.id;
+		minVid = 0;
+	}
 	showYTdiv();
 	ytModeRender();
 	ytVideoLoader();
+	
+});
+
+socket.on('getMinuto', function(){
+	var minutos = player.getCurrentTime();
+	socket.emit('setMinuto', {min: minutos});
+
 });
