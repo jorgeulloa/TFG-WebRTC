@@ -7,6 +7,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
+var stepYoutube = 0;
 
 function onYouTubeIframeAPIReady() {
 player = new YT.Player('player', {
@@ -132,11 +133,13 @@ socket.on('youtubeMode', function(data){
 	showYTdiv();
 	ytModeRender();
 	ytVideoLoader();
+	stepYoutube = 0;
 	
 });
 
 socket.on('getMinuto', function(){
 	var minutos = player.getCurrentTime();
-	socket.emit('setMinuto', {min: minutos});
+	socket.emit('setMinuto', {min: minutos, step: stepYoutube});
+	stepYoutube++;
 
 });

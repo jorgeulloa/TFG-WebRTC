@@ -27,6 +27,8 @@ var debateStartTime;
 var arrayDibujoX = [];
 var arrayDibujoY = [];
 
+var stepPrezi = 0;
+
 
 var userCounter = 0; //Sólo para getUserNameById
 
@@ -360,6 +362,7 @@ io.sockets.on('connection', function(socket){
 
     socket.on('setEstado', function() {
         if (state == "youtube"){
+            stepYoutube = 0;
             getMinuto();
             
         }
@@ -368,7 +371,8 @@ io.sockets.on('connection', function(socket){
             initialDraw();
         }
         if (state == "prezi"){
-            socket.emit('preziMode', {id: preziId});
+            getPreziStep();
+            //socket.emit('preziMode', {id: preziId});
         }
         if (state == "debate"){
             console.log("tiempo " + debateStartTime);
@@ -398,10 +402,24 @@ io.sockets.on('connection', function(socket){
         socket.broadcast.emit('getMinuto');
     }
 
+    function getPreziStep(){
+        socket.broadcast.emit('getPreziStep');
+       //.getCurrentStep()
+    }
+
     socket.on('setMinuto', function(data){
-        var minCompleto = "" + data.min;
-        var minuto = minCompleto.split(".")[0];
-        socket.broadcast.emit('youtubeMode', {id: idYoutube, min: minuto} );
+        if (data.step == 0){
+            var minCompleto = "" + data.min;
+            var minuto = minCompleto.split(".")[0];
+            socket.broadcast.emit('youtubeMode', {id: idYoutube, min: minuto} );
+        }
+    });
+
+    socket.on('setPreziStep', function(data){
+        if (data.turno == 0){
+            var step = data.step;
+            socket.broadcast.emit('preziMode', {id: preziId, step: step} );
+        }
     });
 
        

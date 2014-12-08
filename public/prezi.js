@@ -1,6 +1,7 @@
 var idPrezi;
 var pP;
 var playerPrezi;
+var turnoPrezi = 0;
 
 function loadPrezi(){
 	//idVid = prompt("Pega aquí la URL del vídeo (YouTube)");
@@ -14,7 +15,7 @@ function loadPrezi(){
 	//ytVideoLoader();
 	socket.emit('preziMode', {id:idPrezi});
 	preziRender();
-	preziLoader(idPrezi);
+	preziLoader(idPrezi, 0);
 }
 
 function preziRender(){
@@ -22,7 +23,7 @@ function preziRender(){
 	document.getElementById("prezi").setAttribute("style", "display:block; margin-top:0px;");
 }
 
-function preziLoader(id){
+function preziLoader(id, step){
 	playerPrezi = new PreziPlayer('prezi-player', {
     	'preziId' : id,
     	explorable: true
@@ -32,7 +33,9 @@ function preziLoader(id){
 	    if (event.value == PreziPlayer.STATUS_CONTENT_READY) {
 	        //document.getElementById("btnNextPrezi").disabled=false;
 	        //document.getElementById("btnPrevPrezi").disabled=false;
-	        
+	        if (step != 0){
+				playerPrezi.flyToStep(step);
+			}
 	    }
 	});
 
@@ -75,5 +78,13 @@ socket.on('preziPrevStep', function(data){
 socket.on('preziMode', function(data){
 	showPreziDiv();
 	preziRender();
-	preziLoader(data.id);
+	preziLoader(data.id, data.step);
+	//playerPrezi.flyToStep(data.step);
+	turnoPrezi=0;
+});
+
+socket.on('getPreziStep', function(data){
+	var step = playerPrezi.getCurrentStep();
+	socket.emit('setPreziStep', {step: step, turno: turnoPrezi});
+	turnoPrezi++;
 });
