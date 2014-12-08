@@ -24,7 +24,7 @@ player = new YT.Player('player', {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
 	//event.target.playVideo();
-	player.cueVideoById(idVid, 0, "large");
+	player.cueVideoById(idVid, minVid, "large");
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -108,6 +108,7 @@ function ytModeRender(){
 
 function ytVideoLoader(){
 	player.loadVideoById(idVid, minVid, 'large');
+	player.playVideo();
 }
 
 function showYTdiv(){

@@ -401,7 +401,6 @@ io.sockets.on('connection', function(socket){
     socket.on('setMinuto', function(data){
         var minCompleto = "" + data.min;
         var minuto = minCompleto.split(".")[0];
-        console.log("minuto "+minuto);
         socket.broadcast.emit('youtubeMode', {id: idYoutube, min: minuto} );
     });
 
