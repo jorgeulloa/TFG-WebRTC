@@ -29,8 +29,10 @@ function preziLoader(id, step){
     	explorable: true
 	});
 
-	player.on(PreziPlayer.EVENT_STATUS, function(event) {
+
+	playerPrezi.on(PreziPlayer.EVENT_STATUS, function(event) {
 	    if (event.value == PreziPlayer.STATUS_CONTENT_READY) {
+	    	
 	        //document.getElementById("btnNextPrezi").disabled=false;
 	        //document.getElementById("btnPrevPrezi").disabled=false;
 	        if (step != 0){
@@ -41,6 +43,7 @@ function preziLoader(id, step){
 
 	pP = playerPrezi;
 }
+
 
 function showPreziDiv(){
 	document.getElementById("activeBlackboard").setAttribute("class", "");

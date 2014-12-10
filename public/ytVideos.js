@@ -122,17 +122,19 @@ function showYTdiv(){
 }
 
 socket.on('youtubeMode', function(data){
-	if (data.min != null){
-		idVid = data.id;
-		minVid = data.min;
+	if (stepYoutube == 0){
+		if (data.min != null){
+			idVid = data.id;
+			minVid = data.min;
 
-	}else{
-		idVid = data.id;
-		minVid = 0;
+		}else{
+			idVid = data.id;
+			minVid = 0;
+		}
+		showYTdiv();
+		ytModeRender();
+		ytVideoLoader();
 	}
-	showYTdiv();
-	ytModeRender();
-	ytVideoLoader();
 	stepYoutube = 0;
 	
 });
