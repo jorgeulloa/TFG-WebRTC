@@ -423,8 +423,9 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('setPreziStep', function(data){
-        if (stepYoutube == 0){
+        if (stepPrezi == 0){
             var step = data.step;
+            stepPrezi++;
             socket.broadcast.emit('preziMode', {id: preziId, step: step} );
         }
         

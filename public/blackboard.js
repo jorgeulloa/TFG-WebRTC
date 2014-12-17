@@ -15,6 +15,7 @@ function blackboardModeRender(){
 	document.getElementById("paintArea").style.display = 'block';
 	centerDiv.appendChild(document.getElementById("paintArea"));
 	document.getElementById("yt").style.display = 'none';
+	document.getElementById("prezi").style.display = 'none';
 	document.getElementById("videoDestacado").setAttribute('style', 'width:80%; text-align:center; margin:auto;');
 	document.getElementById("myVideo").setAttribute('style', 'height:40%;');
 	leftDiv.appendChild(document.getElementById("otrosVideos"));

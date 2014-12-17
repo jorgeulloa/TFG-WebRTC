@@ -79,10 +79,12 @@ socket.on('preziPrevStep', function(data){
 });
 
 socket.on('preziMode', function(data){
-	showPreziDiv();
-	preziRender();
-	preziLoader(data.id, data.step);
-	//playerPrezi.flyToStep(data.step);
+	if (turnoPrezi == 0){
+		showPreziDiv();
+		preziRender();
+		preziLoader(data.id, data.step);
+		//playerPrezi.flyToStep(data.step);
+	}
 	turnoPrezi=0;
 });
 
