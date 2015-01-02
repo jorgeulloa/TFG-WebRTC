@@ -70,6 +70,11 @@ function prevStep(){
 	}
 }
 
+function changePrezi(){
+	document.getElementById("prezi").style.display = 'none';
+	document.getElementById("idInputPrezi").style.display = 'block';
+}
+
 socket.on('preziNextStep', function(data){
 	playerPrezi.flyToStep(data.step);
 });

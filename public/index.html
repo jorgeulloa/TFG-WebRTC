@@ -59,19 +59,19 @@
               <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
             </li>
             <li id="supMenuPanel">
-              <a href="#" id="alternar-panel-oculto" >Tipo de sala</a>
+              <a href="#" id="alternar-panel-oculto" >Room Type</a>
             </li>
           </ul></div>
         </div>
       </div>
     </div>
   <div class="alert alert-info" id="selectionRoom" align="center" style="display:none; margin-top: 3em;">
-              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton1" onclick="javascript: getRoomReunion();">Reunión</button>
-              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton2" onclick="javascript: getRoomAula();" >Aula</button>
+              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton1" onclick="javascript: getRoomReunion();">Meeting</button>
+              <button  type="button" class="btn btn-info btn-lg" id="roomTypeButton2" onclick="javascript: getRoomAula();" >Classroom</button>
               <br>
-              Seleccione Reunión si desea configurar la sala con igualdad de derechos para todos los usuarios.
+              Select Meeting if you want to configure the room with equality of rights for all the users 
               <br>
-              Si lo que desea es tener el control único sobre las acciones de la sala, seleccione la opción Aula
+              If what you want is to be the only one with the control of the actons in the room, select the Classroom option
   </div>
   </div></div>
 
@@ -248,7 +248,7 @@
                     <!-- CONTROLES PREZI -->
                     <button type="button" id="btnPrevPrezi" value="prev" onclick="prevStep();"><i class="icon-step-backward"></i> Prev</button>
                     <button type="button" id="btnNextPrezi" value="next" onclick="nextStep();"s><i class="icon-step-forward"></i> Next</button>
-                    
+                    <input type="button" id="btnChangePrezi" value="Change Prezi" onclick="changePrezi();">
                   </div> 
                 </div>
             </div>
@@ -321,7 +321,7 @@
     </div>
 
     <footer>
-      <p>&copy; Marco Nattero | 2014 - ETSIT UPM</p>
+      <p> Jorge Ulloa Núñez </p>
     </footer>
     <script>
       initCanvas();
