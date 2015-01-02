@@ -1,6 +1,8 @@
 /******* CANVAS *******/
 var ctx;
 var mouse = {x: 0, y: 0};
+var lastx;
+var lasty;
 function initCanvas(){
 canvas = document.createElement('canvas');
 canvas.setAttribute('id', 'paintArea');
@@ -57,8 +59,25 @@ var onPaint = function() {
 };
 
 socket.on('draw', function(data){
-	ctx.lineTo(data.x, data.y);
-	ctx.stroke();
+  if (lastx == null && lasty == null){
+    lastx = data.x;
+    lasty = data.y;
+  }else{
+    if (lastx != data.x && lasty != null){
+      ctx.beginPath();
+      ctx.moveTo(data.x, data.y);
+      ctx.lineTo(data.x, data.y);
+      ctx.stroke();
+      lastx = data.x;
+      lasty = data.y;
+    } else{
+      ctx.lineTo(data.x, data.y);
+      ctx.stroke();
+      lastx = data.x;
+      lasty = data.y;
+    }
+  }
+	
 });
 
 socket.on('stopDraw', function(){
