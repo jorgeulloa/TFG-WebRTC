@@ -119,6 +119,16 @@ socket.on('lockClosed', function(){
 
 });
 
+socket.on('lockInitialClosed', function(){
+	if(lockState == "open"){
+
+		document.getElementById("principalRolBtn").disabled=true;
+		document.getElementById("imgLock").setAttribute("src", "images/closed.png");
+		lockState="closed";
+	}
+
+});
+
 socket.on('lockDisconnect', function(data){
 	if(data.a == "video"){
 		document.getElementById("principalRolBtn").disabled=false;

@@ -17,7 +17,7 @@ var app = express();
 var names = new Array();
 var nameCorrect;
 var nameLock;
-var typeRoom;
+var typeRoom = "reunion";
 var state = 'blackboard';
 var idYoutube;
 var preziId;
@@ -221,6 +221,7 @@ io.sockets.on('connection', function(socket){
     socket.on('lockOpen', function(data){
         if (data.name == nameLock){
             socket.broadcast.emit('lockOpen');
+            nameLock = null;
         } else{
             return
         }
@@ -394,7 +395,15 @@ io.sockets.on('connection', function(socket){
             socket.emit("returnPrincipal", {name: principalName});
         }
 
+        if (nameLock != null){
+            setInitialLock();
+        }
+
     });
+
+    function setInitialLock(){
+        socket.emit('lockInitialClosed');
+    }
 
     function initialDraw(){
         for (var index = 0; index < arrayDibujoX.length; index++) {

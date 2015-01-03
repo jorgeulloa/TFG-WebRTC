@@ -67,8 +67,10 @@ window.onload = function () {
     updateLista ();
     if(data.a == 'ok'){
       $("#selectionRoom").show();
-      $("#alternar-panel-oculto").text('Cerrar el panel');
+      $("#alternar-panel-oculto").text('Close the menu');
       document.getElementById("supMenuPanel").setAttribute("class", "active");
+      document.getElementById("roomTypeButton1").setAttribute("class", "");
+      document.getElementById("roomTypeButton1").setAttribute("class", "btn btn-warning");
 
     } else{
       document.getElementById("supMenuPanel").innerHTML="";
@@ -107,6 +109,7 @@ window.onload = function () {
     document.getElementById("divPrincipalName").style.display = "block !important";
     newStream[0].show("myVideo");
     numeroConexion = "segunda";
+    
   });
 
   // Pide al servidor la lista de nombres para actualizarla
@@ -173,6 +176,7 @@ window.onload = function () {
 
         room.publish(localStream, {maxVideoBW: 300});
         subscribeToStreams(roomEvent.streams);
+        numeroConexion = "primera";
       });
 
       // Alguien se conecta a la misma room
@@ -184,7 +188,7 @@ window.onload = function () {
       room.addEventListener("stream-subscribed", function(streamEvent) {
         var stream = streamEvent.stream;
         principalNow = nombre;
-        numeroConexion = "primera";
+        
 
         var div = document.createElement('div');
         div.setAttribute("style", "width: 45%; height: 120px; margin: 2%; float:left; margin-top:9%;");

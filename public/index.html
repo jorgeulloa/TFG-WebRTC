@@ -59,7 +59,7 @@
               <div class="" style="margin-left:80px; padding:10px;" id="nombreUsuario"></div>
             </li>
             <li id="supMenuPanel">
-              <a href="#" id="alternar-panel-oculto" >Room Type</a>
+              <a href="#" id="alternar-panel-oculto" >Room type</a>
             </li>
           </ul></div>
         </div>
@@ -85,7 +85,7 @@
         */
         function(e){
             $('#selectionRoom').slideUp();
-            $(this).text('Tipo de sala');
+            $(this).text('Room type');
             document.getElementById("supMenuPanel").setAttribute("class", "");
             e.preventDefault();
         }, // Separamos las dos funciones con una coma
@@ -97,7 +97,7 @@
         */
         function(e){
             $('#selectionRoom').slideDown();
-            $(this).text('Cerrar el panel');
+            $(this).text('Close the menu');
             document.getElementById("supMenuPanel").setAttribute("class", "active");
             e.preventDefault();
         }
