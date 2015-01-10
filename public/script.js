@@ -57,7 +57,7 @@ window.onload = function () {
       getName();
     }
     else{
-      socket.emit('getNumConnection'); //Cuando el nombre es correcto mira a ver cuantos hay ya
+      socket.emit('getNumConnection', {name: nombre}); //Cuando el nombre es correcto mira a ver cuantos hay ya
     }
   });
 

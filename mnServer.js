@@ -28,6 +28,7 @@ var arrayDibujoX = [];
 var arrayDibujoY = [];
 var stepYoutube = 0;
 var stepPrezi = 0;
+var nameAdmin;
 
 
 var userCounter = 0; //Sólo para getUserNameById
@@ -340,8 +341,9 @@ io.sockets.on('connection', function(socket){
 
     // Comprobaciones del tipo de sala en el momento de conexión
 
-    socket.on("getNumConnection", function(){
-        if(names.length == 1){
+    socket.on("getNumConnection", function(data){
+        if(names.length == 1 || nameAdmin == data.name){
+            nameAdmin = data.name;
             socket.emit('getNumConnection', {a: 'ok'});
         }else{
             socket.emit('getNumConnection', {a: 'deny'});
