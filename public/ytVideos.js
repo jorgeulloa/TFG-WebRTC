@@ -8,6 +8,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 //    after the API code downloads.
 var player;
 var stepYoutube = 0;
+var autoPlay = false;
 
 function onYouTubeIframeAPIReady() {
 player = new YT.Player('player', {
@@ -25,7 +26,12 @@ player = new YT.Player('player', {
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
 	//event.target.playVideo();
-	player.cueVideoById(idVid, minVid, "large");
+	if (autoPlay == true){
+		player.loadVideoById(idVid, minVid, "large");
+		autoPlay=false;
+	} else{
+		player.cueVideoById(idVid, minVid, "large");
+	}
 }
 
 // 5. The API calls this function when the player's state changes.
@@ -126,6 +132,8 @@ socket.on('youtubeMode', function(data){
 		if (data.min != null){
 			idVid = data.id;
 			minVid = data.min;
+
+			autoPlay = true;
 
 		}else{
 			idVid = data.id;
