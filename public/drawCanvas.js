@@ -70,6 +70,11 @@ socket.on('draw', function(data){
     } else{
       ctx.lineTo(data.x, data.y);
       ctx.stroke();
+      if (data.x == "salto" && data.y == "salto"){
+        ctx.beginPath();
+        ctx.stroke();
+      }
+
     }
   
 	

@@ -172,6 +172,7 @@ io.sockets.on('connection', function(socket){
         socket.broadcast.emit('stop_yt');
     });
 
+
     socket.on('yt_pause', function(){
         socket.broadcast.emit('pause_yt');
     });
@@ -208,7 +209,7 @@ io.sockets.on('connection', function(socket){
         state = 'blackboard';
         socket.broadcast.emit('blackboardMode');
 
-        initialDraw();
+        //initialDraw();
 
     });
 
@@ -271,9 +272,9 @@ io.sockets.on('connection', function(socket){
         socket.broadcast.emit('newPrincipal', {name: data.name, id: data.id});
     });
 
-    socket.on('blackboardMode', function(){
+    /*socket.on('blackboardMode', function(){
         socket.emit('blackboardMode');
-    });
+    });*/
 
     socket.on('preziMode', function(data){
         state = 'prezi';
