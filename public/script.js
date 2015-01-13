@@ -19,6 +19,7 @@ var idStream; //id
 var listaNombres;
 var type; //tipo de sala
 var numeroConexion;
+var admin = false;
 
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
@@ -66,6 +67,7 @@ window.onload = function () {
   socket.on('getNumConnection', function(data){
     updateLista ();
     if(data.a == 'ok'){
+      admin = true;
       $("#selectionRoom").show();
       $("#alternar-panel-oculto").text('Close the menu');
       document.getElementById("supMenuPanel").setAttribute("class", "active");
@@ -73,6 +75,7 @@ window.onload = function () {
       document.getElementById("roomTypeButton1").setAttribute("class", "btn btn-warning");
 
     }else if (data.a =='admin'){
+      admin = true;
       $("#selectionRoom").show();
       $("#alternar-panel-oculto").text('Close the menu');
       document.getElementById("supMenuPanel").setAttribute("class", "active");
@@ -88,12 +91,18 @@ window.onload = function () {
 
   // Si recibe este mensaje, es que el tipo es aula y no tiene que pintar ciertos controles
   socket.on('sendRoomType', function(data){
-    if (data.a == 'aula'){
+    if (data.a == 'aula' && admin == false){
       document.getElementById("activeBlackboard").style.display = "none";
       document.getElementById("activeYouTube").style.display = "none";
       document.getElementById("activePrezi").style.display = "none";
       socket.emit('setEstado');
     } else{
+      if (data.a == 'aula'){
+        document.getElementById("roomTypeButton2").setAttribute("class", "");
+        document.getElementById("roomTypeButton2").setAttribute("class", "btn btn-warning");
+        document.getElementById("roomTypeButton1").setAttribute("class", "");
+         document.getElementById("roomTypeButton1").setAttribute("class", "btn btn-info");
+      }
       socket.emit('setEstado');
     }
   });
