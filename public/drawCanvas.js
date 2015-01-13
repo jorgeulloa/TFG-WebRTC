@@ -59,24 +59,19 @@ var onPaint = function() {
 };
 
 socket.on('draw', function(data){
-  if (lastx == null && lasty == null){
-    lastx = data.x;
-    lasty = data.y;
-  }else{
-    if (lastx != data.x && lasty != null){
+  lastx = data.x;
+  lasty = data.y;
+    
+    if (lastx == "salto" && lasty == "salto"){
       ctx.beginPath();
       ctx.moveTo(data.x, data.y);
       ctx.lineTo(data.x, data.y);
       ctx.stroke();
-      lastx = data.x;
-      lasty = data.y;
     } else{
       ctx.lineTo(data.x, data.y);
       ctx.stroke();
-      lastx = data.x;
-      lasty = data.y;
     }
-  }
+  
 	
 });
 

@@ -187,6 +187,8 @@ io.sockets.on('connection', function(socket){
     });
 
     socket.on('stopDrawing', function(){
+        arrayDibujoX.push("salto");
+        arrayDibujoY.push("salto");
         socket.broadcast.emit('stopDraw');
     });
 
