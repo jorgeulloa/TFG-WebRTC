@@ -72,6 +72,13 @@ window.onload = function () {
       document.getElementById("roomTypeButton1").setAttribute("class", "");
       document.getElementById("roomTypeButton1").setAttribute("class", "btn btn-warning");
 
+    }else if (data.a =='admin'){
+      $("#selectionRoom").show();
+      $("#alternar-panel-oculto").text('Close the menu');
+      document.getElementById("supMenuPanel").setAttribute("class", "active");
+      document.getElementById("roomTypeButton1").setAttribute("class", "");
+      document.getElementById("roomTypeButton1").setAttribute("class", "btn btn-warning");
+      socket.emit('sendRoomType');
     } else{
       document.getElementById("supMenuPanel").innerHTML="";
       socket.emit('sendRoomType');

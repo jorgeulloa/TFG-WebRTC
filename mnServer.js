@@ -249,10 +249,14 @@ io.sockets.on('connection', function(socket){
             names.splice(i,1);
             if (data.name == nameLock && data.name != principalName){
                 socket.emit('lockDisconnect', {a: "candado"});
+                nameLock = null;
             }else if (data.name == principalName && data.name != nameLock){
                 socket.emit('lockDisconnect' , {a: "video"});
+                principalName = null;
             } else if (data.name == principalName && data.name == nameLock){
                 socket.emit('lockDisconnect' , {a: "ambos"});
+                nameLock = null;
+                principalName = null;
             }
         }else{
             return;
@@ -345,9 +349,11 @@ io.sockets.on('connection', function(socket){
     // Comprobaciones del tipo de sala en el momento de conexión
 
     socket.on("getNumConnection", function(data){
-        if(names.length == 1 || nameAdmin == data.name){
+        if(names.length == 1){
             nameAdmin = data.name;
             socket.emit('getNumConnection', {a: 'ok'});
+        }else if (nameAdmin == data.name){
+            socket.emit('getNumConnection', {a: 'admin'});
         }else{
             socket.emit('getNumConnection', {a: 'deny'});
         }
