@@ -1,6 +1,6 @@
 /* 
- *  MN.RTC
- *   Marco Nattero Santiago (2014)
+ *  JUN.RTC
+ *   Jorge Ulloa Núñez (2015)
  *
  *
  * Posee el método window.onload, que se encarga de:
