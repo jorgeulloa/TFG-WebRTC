@@ -1,5 +1,9 @@
 /*global require, __dirname, console*/
+
 var express = require('express'),
+    bodyParser = require('body-parser'),
+    errorhandler = require('errorhandler'),
+    morgan = require('morgan'),
     net = require('net'),
     N = require('./nuve'),
     fs = require("fs"),
@@ -12,7 +16,7 @@ var options = {
     cert: fs.readFileSync('cert/cert.pem').toString()
 };
 
-var app = express();
+//var app = express();
 
 var names = new Array();
 var nameCorrect;
@@ -33,7 +37,27 @@ var nameAdmin;
 
 var userCounter = 0; //Sólo para getUserNameById
 
-app.use(express.bodyParser());
+var app = express();
+
+// app.configure ya no existe
+"use strict";
+app.use(errorhandler({
+    dumpExceptions: true,
+    showStack: true
+}));
+app.use(morgan('dev'));
+app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+//app.set('views', __dirname + '/../views/');
+//disable layout
+//app.set("view options", {layout: false});
+
+/*app.use(express.bodyParser());
 
 app.configure(function () {
     "use strict";
@@ -43,7 +67,7 @@ app.configure(function () {
     //app.set('views', __dirname + '/../views/');
     //disable layout
     //app.set("view options", {layout: false});
-});
+});*/
 
 app.use(function (req, res, next) {
     "use strict";
